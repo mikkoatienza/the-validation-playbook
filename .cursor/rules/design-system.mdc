@@ -97,6 +97,14 @@ Every section follows this pattern:
 - Cards have hover lift effect (`hover:-translate-y-0.5`)
 - Order follows `lib/reading-order.ts` canonical sequence, not filesystem order
 
+### Introduction Page Pattern
+The Introduction (`content/docs/index.mdx`) uses these visual elements:
+- **Evidence Ladder**: visual staircase with amber gradient bars (widths 100%/80%/60%/40%), matching the landing page hero. Not a plain numbered list.
+- **Signal vs Noise**: side-by-side cards with amber left border (signal) vs muted left border (noise), italic example quotes.
+- **IDEAL System**: 5 display-only stage cards with colored letter circles. Non-linked (gating rules).
+- **Founder's Pact**: `warn` Callout with 4 commitments.
+- **Before You Begin**: 2x3 grid of compact dashed-border cards consolidating all FAQ entries (Honesty Rule, No-Pitch Rule, have idea, no idea, stop, team).
+
 ### Stage Opening Template (5 Pages)
 Stage openings (`stage-N-xxx/index.mdx`) follow this structure. Use Stage 1 as the reference (`stage-1-identify/index.mdx`):
 1. **Idea Callout** -- "The promise of this stage" with the specific deliverable target (bold)
