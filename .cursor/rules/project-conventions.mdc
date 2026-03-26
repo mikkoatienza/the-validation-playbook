@@ -1,0 +1,49 @@
+# Project Conventions
+
+## Tech Stack
+- **Framework**: Next.js 16 (App Router) with React 19
+- **Content**: Fumadocs MDX (fumadocs-mdx v14, fumadocs-core v16, fumadocs-ui v16)
+- **Styling**: Tailwind CSS v4 with Fumadocs neutral theme preset
+- **Fonts**: Inter (body) + Instrument Serif (display), loaded via `next/font/google`
+- **Deployment**: Vercel (standard Next.js, no special config)
+
+## Content Structure
+- Content lives in `content/docs/` as `.mdx` files with YAML frontmatter (`title`, `description`)
+- Navigation is controlled by `meta.json` files in each content folder
+- Content source configured in `source.config.ts`, loaded via `lib/source.ts`
+- The manuscript source of truth lives in a separate repo (`trilogy-project/manuscript/`)
+
+## IDEAL Framework (Content Organization)
+- 5 stages: Identify, Diagnose, Earn, Assess, Lock
+- 3 modules per stage (15 total) + 5 stage openings + 5 stage closings
+- 2 extensions + 1 closing chapter = 30 content pages total
+- Sidebar order: Overview > Stage 1-5 > Extensions > Closing
+
+## Route Structure
+- `/` — Landing page (`app/(home)/page.tsx`)
+- `/docs` — Documentation index (Introduction)
+- `/docs/[...slug]` — All doc pages
+- `/api/search` — Orama search endpoint
+
+## File Organization
+- `app/(home)/` — Landing page and home layout
+- `app/docs/` — Documentation layout and catch-all page
+- `app/api/` — API routes (search)
+- `content/docs/` — MDX content files + meta.json navigation
+- `lib/source.ts` — Fumadocs content loader
+- `components/mdx.tsx` — MDX component overrides
+- `scripts/` — Build and audit scripts
+
+## Content Frontmatter
+Every MDX file requires:
+```yaml
+---
+title: "Page Title"
+description: "One-line description for SEO and page header."
+---
+```
+
+## Known MDX Caveats
+- `# ` at the start of a list item is parsed as a heading. Escape as `\#` or rewrite as "Number of".
+- The `compiled/Chapters.md` legacy file from the manuscript is excluded from the doc site.
+- Fumadocs renders the frontmatter `title` as the page H1. Do not include an H1 in the MDX body.

@@ -1,0 +1,65 @@
+# Design System Standards
+
+This project has a comprehensive design system documented in `DESIGN-SYSTEM.md` at the repo root. Read it before making any visual or structural changes.
+
+## Quick Reference
+
+### Colors
+- **Warm accent** (`--accent-warm`): Amber `#D97706` in light, brighter in dark. Used for primary CTAs, section labels, icons, focus rings, hover borders.
+- **Stage colors** (`--stage-1` through `--stage-5`): Warm-to-cool gradient (amber > orange > red-orange > rose > purple). Used ONLY in the IDEAL stepper component.
+- **Fumadocs tokens**: `fd-primary`, `fd-muted`, `fd-muted-foreground`, `fd-accent`, `fd-card`, `fd-border`, `fd-background`. Use these for all neutral/structural UI.
+- **Rule**: No one-off hex values. All colors come from CSS custom properties in `app/global.css`.
+
+### Typography
+- **Display font**: Instrument Serif (class: `font-display`). Use for hero headings, section titles, pull quotes, stat callouts on marketing/landing pages.
+- **Body font**: Inter (default, no class needed). Use for all body text, UI labels, nav, and all documentation content.
+- **Rule**: Instrument Serif is NEVER used inside docs pages. Docs use Inter exclusively.
+
+### Section Structure (Landing/Marketing Pages)
+Every section follows this pattern:
+- Uppercase label: `text-sm font-medium uppercase tracking-widest text-fd-muted-foreground`
+- Display title: `font-display text-2xl md:text-3xl`
+- Content width: `max-w-5xl` (1280px)
+- Horizontal padding: `px-6`
+- Vertical padding: minimum `py-24 md:py-28`
+- Alternate backgrounds between sections (`bg-fd-card` vs transparent)
+
+### Buttons
+- **Primary**: `bg-accent-warm` with dark foreground text. Rounded-lg, font-semibold.
+- **Secondary**: `border border-fd-border` outlined. Rounded-lg, font-medium.
+- **Rule**: Never place two amber buttons side by side.
+
+### Cards
+- Standard: `rounded-xl border border-fd-border bg-fd-background p-5`
+- Interactive: Add `group hover:border-accent-warm hover:shadow-sm` and arrow with `group-hover:translate-x-1`
+
+### Icons
+- Heroicons outline style, 24x24 viewBox, `h-8 w-8 text-accent-warm`, `strokeWidth={1.5}`
+
+### Texture Effects
+- `hero-grain`: CSS noise overlay (3% light / 6% dark). Used on hero and final CTA ONLY.
+- `hero-gradient`: Radial gradients (warm amber top, purple bottom-right). Subtle, never competes with text.
+- Content inside grain sections must have `relative z-10` to sit above the pseudo-element.
+
+### Dark Mode
+- All custom colors have explicit dark overrides in `global.css`.
+- Amber is brighter in dark mode. Stage colors boosted 5-10% lightness.
+- Always test changes in both modes.
+
+### Boundary: Landing vs Docs
+- Landing page: warm, editorial, Instrument Serif headings, amber accents, grain textures.
+- Docs pages: clean, neutral, Inter only, Fumadocs default theme. No landing page styles leak into docs.
+
+### Copy Source
+- All user-facing marketing copy is derived from the manuscript (`front-matter/intro.md` and `front-matter/Foundation.md`). Do not invent new language.
+
+### Checklist for New Sections
+- [ ] Uses `max-w-5xl` content width
+- [ ] Has `px-6` horizontal padding and `py-24 md:py-28` minimum vertical padding
+- [ ] Uses label + title pattern
+- [ ] Alternates background with adjacent sections
+- [ ] Uses only defined color tokens
+- [ ] Display text uses `font-display`, body uses Inter
+- [ ] CTAs follow primary/secondary pattern
+- [ ] Tested in light and dark mode
+- [ ] Copy derived from manuscript
