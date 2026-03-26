@@ -34,7 +34,11 @@ Every docs page automatically gets these via the page template (`app/docs/[[...s
 When editing content pages, use these Fumadocs components for visual richness:
 - **`<Callout type="idea" title="...">`** -- for key concepts, core messages, framing statements
 - **`<Callout type="info" title="...">`** -- for process explanations, cadences, rules
-- **`<Cards>` + `<Card title="..." description="..." href="...">`** -- for linked navigation grids (personas, stage overviews, learning outcomes)
+- **`<Cards>` + `<Card>`** -- Fumadocs built-in, but visually plain (gray boxes, no icons). Only use for simple navigation lists.
+- **Custom inline JSX cards** -- for visually rich sections (overview pages, summary pages), use inline `<div>`/`<a>` elements with Tailwind classes. This gives control over icons, stage colors, and hover effects. See Executive Summary page for the established patterns:
+  - **Icon cards**: `flex gap-3` with colored icon badge in tinted circle + title + description
+  - **Persona cards**: amber uppercase label + bold headline + description
+  - **Stage cards**: colored IDEAL letter circle + stage name + question + modules + hover "Read" arrow
 - **Bold labels** (`**Output for this module**`, `**Exercise:**`, `**Template**`) are auto-detected by the enhanced MDX `strong` component and rendered with icons and color highlights
 - **Do not duplicate the H1 title** in the body. Fumadocs renders the frontmatter `title` as H1. Starting the body with `## Same Title` creates a redundant double heading.
 - **Remove publisher metadata** from reader-facing pages (back cover copy, one-page pitches, stage maps for authors). If it's not useful to the reader, it doesn't belong.
