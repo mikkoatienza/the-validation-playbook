@@ -1,91 +1,89 @@
 ---
 title: "Stage 1: Identify"
 description: "Find real pain worth solving. Earn proof that the problem exists before you build anything."
+full: true
 ---
 
-You do not need a perfect idea to begin.  
-You need proof that real pain exists.  
-Stage 1 is where you earn that proof.
+<div className="mx-auto max-w-3xl">
 
-## Stage Promise
-By the end of Stage 1, you should have 3 validated ideal customer profile
-(ICP)–problem pairs with
-evidence notes. That is the raw material for everything that follows.
-Keep it small and real.
+<Callout type="idea" title="The promise of this stage">
+By the end of Stage 1, you should have **3 validated ICP-problem pairs** with evidence notes. That is the raw material for everything that follows. If you cannot name the buyer and the pain, you are still guessing. This stage is how you stop guessing.
+</Callout>
 
-If you cannot name the buyer and the pain, you are still guessing. That is
-normal at the start. This stage is how you stop guessing.
+You do not need a perfect idea to begin. You need proof that real pain exists. Stage 1 is where you earn that proof. It moves you from intuition to evidence.
 
-## What This Stage Produces
-Stage 1 moves you from intuition to evidence. You will build a small set of
-artifacts that make the problem real and testable:
+## What You Will Build
 
-- **Friction Inventory** (20 friction items and top patterns)
-- **Customer Truth Notes** (proof of past behavior and spend)
-- **ICP Definition (ideal customer profile)** (buyer map, access path, decision context)
+<div className="mt-4 grid gap-3 sm:grid-cols-3">
+  <div className="rounded-xl border border-fd-border p-4">
+    <span className="flex h-8 w-8 items-center justify-center rounded-lg" style={{backgroundColor: 'hsl(var(--stage-1) / 0.12)'}}>
+      <svg className="h-4 w-4" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+    </span>
+    <p className="mt-2 text-sm font-semibold text-fd-foreground">Friction Inventory</p>
+    <p className="mt-0.5 text-xs text-fd-muted-foreground">20 friction items and top patterns</p>
+  </div>
+  <div className="rounded-xl border border-fd-border p-4">
+    <span className="flex h-8 w-8 items-center justify-center rounded-lg" style={{backgroundColor: 'hsl(var(--stage-1) / 0.12)'}}>
+      <svg className="h-4 w-4" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+    </span>
+    <p className="mt-2 text-sm font-semibold text-fd-foreground">Customer Truth Notes</p>
+    <p className="mt-0.5 text-xs text-fd-muted-foreground">Proof of past behavior and spend</p>
+  </div>
+  <div className="rounded-xl border border-fd-border p-4">
+    <span className="flex h-8 w-8 items-center justify-center rounded-lg" style={{backgroundColor: 'hsl(var(--stage-1) / 0.12)'}}>
+      <svg className="h-4 w-4" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+    </span>
+    <p className="mt-2 text-sm font-semibold text-fd-foreground">ICP Definition</p>
+    <p className="mt-0.5 text-xs text-fd-muted-foreground">Buyer map, access path, decision context</p>
+  </div>
+</div>
 
 These are not essays. They are working tools you will use in Stage 2.
 
-## Stage Rules (Keep It Honest)
-This stage works best when you follow a few rules:
+## The Three Modules
 
+Each module builds on the last. If Module 1 is weak, Module 2 turns fuzzy. If Module 2 is vague, Module 3 becomes guesswork. Do them in order.
+
+<div className="mt-4 flex flex-col gap-3">
+  <a href="/docs/stage-1-identify/friction-scan" className="group flex items-center gap-4 rounded-xl border border-fd-border p-4 no-underline transition-all hover:-translate-y-0.5 hover:border-[hsl(var(--stage-1)/0.5)] hover:shadow-sm">
+    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>1</span>
+    <span className="flex-1">
+      <span className="text-sm font-semibold text-fd-foreground">Friction Scan</span>
+      <span className="mt-0.5 block text-xs text-fd-muted-foreground">Find a problem people will pay to fix. Collect raw friction and turn it into patterns that repeat.</span>
+    </span>
+    <span className="text-xs text-fd-muted-foreground opacity-0 transition-opacity group-hover:opacity-100">Start &rarr;</span>
+  </a>
+  <a href="/docs/stage-1-identify/truth-signals" className="group flex items-center gap-4 rounded-xl border border-fd-border p-4 no-underline transition-all hover:-translate-y-0.5 hover:border-[hsl(var(--stage-1)/0.5)] hover:shadow-sm">
+    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>2</span>
+    <span className="flex-1">
+      <span className="text-sm font-semibold text-fd-foreground">Truth Interviews</span>
+      <span className="mt-0.5 block text-xs text-fd-muted-foreground">Get the truth about what people actually do. Test patterns against real behavior, not polite interest.</span>
+    </span>
+    <span className="text-xs text-fd-muted-foreground opacity-0 transition-opacity group-hover:opacity-100">Start &rarr;</span>
+  </a>
+  <a href="/docs/stage-1-identify/buyer-definition" className="group flex items-center gap-4 rounded-xl border border-fd-border p-4 no-underline transition-all hover:-translate-y-0.5 hover:border-[hsl(var(--stage-1)/0.5)] hover:shadow-sm">
+    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>3</span>
+    <span className="flex-1">
+      <span className="text-sm font-semibold text-fd-foreground">Buyer Definition</span>
+      <span className="mt-0.5 block text-xs text-fd-muted-foreground">Identify who decides and pays. Map the buyer, the user, and the decision path so you stop guessing.</span>
+    </span>
+    <span className="text-xs text-fd-muted-foreground opacity-0 transition-opacity group-hover:opacity-100">Start &rarr;</span>
+  </a>
+</div>
+
+## Stage Rules
+
+<Callout type="warn" title="Keep it honest">
 - Evidence beats opinions. Past behavior beats future promises.
 - Avoid pitching. When you pitch, you poison the signal.
 - You are allowed to be wrong. You are not allowed to skip the evidence.
 - If the pain is weak, narrow the problem or walk away.
+</Callout>
 
 Clarity is not a feeling. It is a trail of proof.
 
-## How the Modules Fit
-This stage has three modules, each with a specific activity:
+## Evidence Standard
 
-1. **Find a problem people will pay to fix** (Activity: Friction Scan)  
-   You collect raw friction and turn it into patterns that repeat.
-
-2. **Get the truth about what people actually do** (Activity: Truth Interviews)  
-   You test those patterns against real behavior, not polite interest.
-
-3. **Identify who decides and pays** (Activity: Buyer Definition)  
-   You map the buyer, the user, and the decision path so you stop guessing.
-
-Each module builds on the last. If Module 1 is weak, Module 2 turns fuzzy. If
-Module 2 is vague, Module 3 becomes guesswork. Do them in order.
-
-## What to Ignore for Now
-Stage 1 is not the time for:
-
-- Feature lists or product names
-- Technical build choices
-- Pricing debates
-- Marketing channels
-- Fundraising or pitch decks
-
-Those decisions depend on evidence you do not have yet. If you jump ahead,
-you will build a solution looking for a problem.
-
-## Common Traps (Avoid Them Early)
-Most founders get stuck in one of these:
-
-- Falling in love with the first idea
-- Treating compliments as proof
-- Interviewing people who are not the buyer
-- Chasing edge cases instead of repeated pain
-- Writing a pitch instead of listening
-
-If you recognize one, stop and reset. The goal is not speed. The goal is
-accuracy.
-
-## Pace and Volume
-Speed matters here, but only if you keep the evidence clean. A good rhythm is:
-
-- One friction scan in a single sitting
-- 5 to 8 interviews over two weeks
-- One buyer map draft, revised after evidence
-
-Do not over‑polish. Your job is to surface the truth, not to perfect the
-phrasing.
-
-## Evidence Standard (What Counts)
 You do not need perfect data, but you do need real signals:
 
 - A buyer has tried to fix the problem before.
@@ -94,24 +92,44 @@ You do not need perfect data, but you do need real signals:
 
 If you do not have those signals, pause and fix the gap.
 
+## Pace
+
+Speed matters here, but only if you keep the evidence clean. A good rhythm is:
+
+- One friction scan in a single sitting
+- 5 to 8 interviews over two weeks
+- One buyer map draft, revised after evidence
+
+Do not over-polish. Your job is to surface the truth, not to perfect the phrasing.
+
+## What to Ignore for Now
+
+Stage 1 is not the time for feature lists, product names, technical build choices, pricing debates, marketing channels, or fundraising. Those decisions depend on evidence you do not have yet.
+
+## Common Traps
+
+- Falling in love with the first idea
+- Treating compliments as proof
+- Interviewing people who are not the buyer
+- Chasing edge cases instead of repeated pain
+- Writing a pitch instead of listening
+
+If you recognize one, stop and reset. The goal is not speed. The goal is accuracy.
+
 ## What Success Feels Like
-By the end of this stage, your idea should feel smaller and sharper, not
-bigger and fuzzier. You should be able to explain the pain in one sentence,
-name the buyer without hesitation, and show proof that the pain is real.
 
-If you cannot do that yet, you are not behind. You are early. Stage 1 exists
-to turn early uncertainty into earned clarity.
+By the end of this stage, your idea should feel smaller and sharper, not bigger and fuzzier. You should be able to explain the pain in one sentence, name the buyer without hesitation, and show proof that the pain is real.
 
-## If You Are Starting Without an Idea
-That is normal. You will start with observation, not invention. Use the
-friction scan to find repeated pain. The idea will emerge from the evidence,
-not the other way around.
+If you are starting without an idea, that is normal. Use the friction scan to find repeated pain. The idea will emerge from the evidence, not the other way around.
 
-This stage is your filter. It protects you from building the wrong idea with
-the right effort.
+---
 
-## Handoff to Module 1
-Start with raw friction. Avoid brainstorming solutions. Open your eyes, collect
-pain, and let the patterns speak. Module 1 begins with the Friction Scan.
+<div className="mt-8 flex flex-col items-center gap-4 text-center">
+  <p className="font-[family-name:var(--font-display)] text-lg italic text-fd-muted-foreground">Evidence first, always.</p>
+  <a href="/docs/stage-1-identify/friction-scan" className="inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold text-white no-underline transition-opacity hover:opacity-90" style={{backgroundColor: 'hsl(var(--stage-1))'}}>
+    Begin Module 1: Friction Scan
+    <span aria-hidden="true">&rarr;</span>
+  </a>
+</div>
 
-One last reminder: evidence first, always.
+</div>
