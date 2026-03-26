@@ -19,20 +19,23 @@
 - 2 extensions + 1 closing chapter = 30 content pages total
 - Sidebar order: Overview > Stage 1-5 > Extensions > Closing
 
+## Typography Rules
+- **No em dashes.** Never use `—` (em dash), `&mdash;`, or the Unicode em dash character anywhere in this project. Use double hyphens `--` instead. This applies to all code, content, and copy.
+
 ## Route Structure
-- `/` — Landing page (`app/(home)/page.tsx`)
-- `/docs` — Documentation index (Introduction)
-- `/docs/[...slug]` — All doc pages
-- `/api/search` — Orama search endpoint
+- `/` -- Landing page (`app/(home)/page.tsx`)
+- `/docs` -- Documentation index (Introduction)
+- `/docs/[...slug]` -- All doc pages
+- `/api/search` -- Orama search endpoint
 
 ## File Organization
-- `app/(home)/` — Landing page and home layout
-- `app/docs/` — Documentation layout and catch-all page
-- `app/api/` — API routes (search)
-- `content/docs/` — MDX content files + meta.json navigation
-- `lib/source.ts` — Fumadocs content loader
-- `components/mdx.tsx` — MDX component overrides
-- `scripts/` — Build and audit scripts
+- `app/(home)/` -- Landing page and home layout
+- `app/docs/` -- Documentation layout and catch-all page
+- `app/api/` -- API routes (search)
+- `content/docs/` -- MDX content files + meta.json navigation
+- `lib/source.ts` -- Fumadocs content loader
+- `components/mdx.tsx` -- MDX component overrides
+- `scripts/` -- Build and audit scripts
 
 ## Content Frontmatter
 Every MDX file requires:

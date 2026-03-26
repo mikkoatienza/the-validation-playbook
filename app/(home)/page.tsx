@@ -179,12 +179,12 @@ export default function HomePage() {
             <h1 className="font-display text-4xl leading-[1.15] md:text-[3.5rem] md:leading-[1.12]">
               Every founder starts with a story they want to be true.
               <span className="mt-2 block text-fd-muted-foreground">
-                That vision is powerful&mdash;but it is also dangerous.
+                That vision is powerful -- but it is also dangerous.
               </span>
             </h1>
             <p className="max-w-xl text-lg text-fd-muted-foreground md:text-xl">
               This playbook replaces hope with evidence, so you build the right
-              idea&mdash;not just the exciting one.
+              idea -- not just the exciting one.
             </p>
             <div className="flex flex-wrap gap-3 pt-2 max-md:justify-center">
               <Link
@@ -672,7 +672,7 @@ export default function HomePage() {
         </div>
 
         <div className="mx-auto mt-12 max-w-5xl border-t border-fd-border pt-6 text-center text-xs text-fd-muted-foreground">
-          The Validation Playbook &mdash; Find the Idea Worth Building
+          The Validation Playbook -- Find the Idea Worth Building
         </div>
       </footer>
     </main>
