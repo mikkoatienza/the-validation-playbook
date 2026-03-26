@@ -1,109 +1,131 @@
 ---
 title: "Stage 1 Review"
 description: "Checklist, readiness gate, and retrospective for Stage 1: Identify."
+full: true
 ---
 
-You started this stage with uncertainty. You end it with evidence. That shift
-is the real win. You are no longer guessing which problems matter. You have a
-shortlist of problems, buyers, and proof you can defend.
+<div className="mx-auto max-w-3xl">
 
-## The Three Artifacts That Matter
-If you completed Stage 1 as designed, you now have:
+<Callout type="success" title="You started with uncertainty. You end with evidence.">
+That shift is the real win. You are no longer guessing which problems matter. You have a shortlist of problems, buyers, and proof you can defend.
+</Callout>
 
-- A Friction Inventory with repeated patterns
-- Customer Truth Notes grounded in real behavior
-- A clear ICP (ideal customer profile) and buyer map you can reach
+## What You Built
 
-That is the minimum foundation for Stage 2.
+<div className="mt-4 grid gap-3 sm:grid-cols-3">
+  <div className="rounded-xl border-2 border-fd-border p-4" style={{borderTopWidth: '3px', borderTopColor: 'hsl(var(--stage-1))'}}>
+    <span className="flex h-8 w-8 items-center justify-center rounded-lg" style={{backgroundColor: 'hsl(var(--stage-1) / 0.12)'}}>
+      <svg className="h-4 w-4" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+    </span>
+    <p className="mt-2 text-sm font-semibold text-fd-foreground">Friction Inventory</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">Raw pain without bias. Repeated patterns across sources.</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4" style={{borderTopWidth: '3px', borderTopColor: 'hsl(var(--stage-1))'}}>
+    <span className="flex h-8 w-8 items-center justify-center rounded-lg" style={{backgroundColor: 'hsl(var(--stage-1) / 0.12)'}}>
+      <svg className="h-4 w-4" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+    </span>
+    <p className="mt-2 text-sm font-semibold text-fd-foreground">Customer Truth Notes</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">What people actually do, not what they say. Behavior, spend, workarounds.</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4" style={{borderTopWidth: '3px', borderTopColor: 'hsl(var(--stage-1))'}}>
+    <span className="flex h-8 w-8 items-center justify-center rounded-lg" style={{backgroundColor: 'hsl(var(--stage-1) / 0.12)'}}>
+      <svg className="h-4 w-4" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+    </span>
+    <p className="mt-2 text-sm font-semibold text-fd-foreground">ICP + Buyer Map</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">Decision path visible. Access route clear. Buyer thesis in one sentence.</p>
+  </div>
+</div>
 
-## Stage 1 Completion Checklist (30 Seconds)
-Use this compact gate to decide if you should move on:
+## Readiness Gate
 
-**Evidence**
-- **Friction Scan:** 20 items collected, 5 patterns that repeat across sources
-- **Truth Interviews:** 5 to 8 interviews with past actions and spend
-- **Buyer Definition:** 3 ICP‑problem pairs with a decision path and access route
-- **Evidence of cost:** at least one problem with a visible cost and a workaround
+<div className="mt-4 rounded-xl border-2 p-5" style={{borderColor: 'hsl(var(--stage-1) / 0.4)', backgroundColor: 'hsl(var(--stage-1) / 0.06)'}}>
+  <div className="flex items-center gap-2">
+    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>
+      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+    </span>
+    <span className="text-sm font-semibold text-fd-foreground">Can you pass this gate?</span>
+  </div>
+  <div className="mt-4 space-y-2">
+    <div className="flex items-start gap-2 text-xs text-fd-muted-foreground"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> 20 frictions collected, 5 patterns that repeat across sources</div>
+    <div className="flex items-start gap-2 text-xs text-fd-muted-foreground"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> 5 to 8 truth interviews with past actions and spend</div>
+    <div className="flex items-start gap-2 text-xs text-fd-muted-foreground"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> 3 ICP-problem pairs with a decision path and access route</div>
+    <div className="flex items-start gap-2 text-xs text-fd-muted-foreground"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> At least one problem with a visible cost and a workaround</div>
+    <div className="flex items-start gap-2 text-xs text-fd-muted-foreground"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Buyer thesis in one sentence: "We help [buyer] solve [pain] because [evidence]."</div>
+  </div>
+  <p className="mt-4 text-xs italic text-fd-muted-foreground">If any box is empty, or you cannot write the buyer thesis, slow down and fill it.</p>
+</div>
 
-**Artifacts**
-- Friction Inventory (top patterns + notes)
-- Customer Truth Notes (behavior, spend, workaround)
-- ICP Definition (buyer map, access path, decision context)
-- One‑sentence buyer thesis: “We help [buyer] solve [pain] because [evidence].”
+<Callout type="warn" title="If the evidence is thin">
+Do not force the next stage. Narrow the problem and repeat the scan, interview a different buyer segment, focus on one workflow and retest, or drop the weakest pattern and elevate the strongest one. The goal is not to finish fast. The goal is to finish right.
+</Callout>
 
-If any box is empty, or you cannot write the buyer thesis, slow down and fill it.
+## Retrospective
 
-## If the Evidence Is Thin
-Do not force the next stage. Use one of these fixes first:
+<div className="mt-4 rounded-xl border-2 border-fd-border p-5" style={{backgroundColor: 'hsl(var(--fd-muted) / 0.4)'}}>
+  <p className="text-[10px] font-semibold uppercase tracking-wider" style={{color: 'hsl(var(--stage-1))'}}>Two questions before you move on</p>
+  <div className="mt-4 space-y-4">
+    <div>
+      <p className="text-sm font-semibold text-fd-foreground">Which problem surprised you with real evidence?</p>
+      <div className="mt-2 h-16 rounded-lg border border-dashed border-fd-muted-foreground/20 bg-fd-background" />
+    </div>
+    <div>
+      <p className="text-sm font-semibold text-fd-foreground">Which problem looked good but collapsed under truth?</p>
+      <div className="mt-2 h-16 rounded-lg border border-dashed border-fd-muted-foreground/20 bg-fd-background" />
+    </div>
+  </div>
+</div>
 
-- Narrow the problem and repeat the scan
-- Interview a different buyer segment
-- Focus on one workflow and retest
-- Drop the weakest pattern and elevate the strongest one
+## Evidence Snapshot
 
-The goal is not to finish fast. The goal is to finish right.
+Before you move on, write a single paragraph that captures your chosen problem, buyer, and proof.
 
-## Module Recap (What Each One Gave You)
-Stage 1 worked because each module did a specific job:
+<div className="mt-4 rounded-xl border-2 border-fd-border p-5">
+  <p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Your evidence snapshot</p>
+  <div className="mt-3 space-y-1.5 text-xs text-fd-muted-foreground">
+    <p className="flex items-start gap-2"><span style={{color: 'hsl(var(--stage-1))'}}>1.</span> The problem you chose and why it repeats</p>
+    <p className="flex items-start gap-2"><span style={{color: 'hsl(var(--stage-1))'}}>2.</span> The buyer who owns it and how you reach them</p>
+    <p className="flex items-start gap-2"><span style={{color: 'hsl(var(--stage-1))'}}>3.</span> The proof that the pain costs real time, money, or risk</p>
+  </div>
+  <div className="mt-3 h-24 rounded-lg border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" />
+  <p className="mt-2 text-xs italic text-fd-muted-foreground">If you cannot write it in one paragraph, the evidence is still too fuzzy.</p>
+</div>
 
-- **Friction Scan** gave you raw pain without bias.
-- **Truth Interviews** showed what people actually do, not what they say.
-- **Buyer Definition** made the decision path visible so you can reach it.
+## Carry-Forward Signals
 
-If any module feels weak, fix that weakness before you move on. A weak
-foundation will crack under the pressure of Stage 2.
-
-## Stage 1 Retrospective (Two Questions)
-Write short answers before you move forward:
-
-- Which problem surprised you with real evidence?
-- Which problem looked good but collapsed under truth?
-
-That reflection sharpens your judgment for the next stage.
-
-## Evidence Snapshot (One Paragraph)
-Before you move on, write a single paragraph that captures:
-
-- The problem you chose and why it repeats
-- The buyer who owns it and how you reach them
-- The proof that the pain costs real time, money, or risk
-
-Keep it tight. If you cannot write it in one paragraph, the evidence is still
-too fuzzy. Tighten it now while the interviews and notes are fresh.
-
-## Carry‑Forward Signals
 Before you enter Stage 2, underline the strongest signals in your notes:
 
-- The single pain that shows up most often
-- The buyer segment that responds fastest
-- The most convincing piece of proof (behavior, spend, or workaround)
+<div className="mt-4 grid gap-3 sm:grid-cols-3">
+  <div className="rounded-xl border-2 border-fd-border p-4">
+    <span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>1</span>
+    <p className="mt-2 text-xs text-fd-muted-foreground">The single pain that shows up most often</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4">
+    <span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>2</span>
+    <p className="mt-2 text-xs text-fd-muted-foreground">The buyer segment that responds fastest</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4">
+    <span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>3</span>
+    <p className="mt-2 text-xs text-fd-muted-foreground">The most convincing proof (behavior, spend, or workaround)</p>
+  </div>
+</div>
 
-Those signals become your starting assumptions in Diagnose. Keep them visible
-all week.
+These become your starting assumptions in Stage 2: Diagnose.
 
-## If You Want to Move Faster
-Speed is good, but only if the evidence keeps up. Here is a safe way to move
-faster without skipping the truth:
+<div className="mt-4 rounded-xl border border-dashed border-fd-muted-foreground/20 p-4">
+  <p className="text-xs font-semibold text-fd-foreground">Want to move faster?</p>
+  <p className="mt-1 text-xs text-fd-muted-foreground">Collapse to one problem, go deeper not wider. Run two extra interviews with the buyer, not the user. Tighten the buyer map until the decision path is clear. Moving fast means doing less, not doing sloppy.</p>
+</div>
 
-- Collapse the list to one problem, then go deeper, not wider
-- Run two extra interviews with the buyer, not the user
-- Tighten the buyer map until the decision path is clear
+## What Comes Next
 
-Moving fast means doing less, not doing sloppy. Keep the evidence clean and
-the decision will come faster.
+You are about to move from "Is this pain real?" to "Is this pain worth it?" Stage 2 will ask a harder question. You will build a risk map, score the problem, and scan alternatives. That work only makes sense if your Stage 1 evidence is real.
 
-## After You Leave This Stage
-You will be tempted to jump to solutions the moment you feel clarity. Resist
-that urge. Stage 2 is where you stress‑test the problem itself.
+If you pass this gate, you are no longer someone exploring ideas without evidence. You are a founder with evidence.
 
-Stage 2 will ask a harder question: “Is this pain worth it?” You will build a
-risk map, score the problem, and scan alternatives. That work only makes sense
-if your Stage 1 evidence is real.
+---
 
-## The Handoff to Stage 2: Diagnose
-You are about to move from “Is this pain real?” to “Is this pain worth it?”
-If you pass this gate, you are no longer someone exploring ideas without
-evidence. You are a founder with evidence.
+<div className="mt-8 flex flex-col items-center gap-2 text-center">
+  <p className="font-[family-name:var(--font-display)] text-lg italic text-fd-muted-foreground">If you can name the buyer, the pain, and the proof, you are ready to diagnose.</p>
+</div>
 
-## Closing Line
-If you can name the buyer, the pain, and the proof, you are ready to diagnose.
+</div>
