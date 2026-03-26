@@ -1,271 +1,148 @@
 ---
 title: "Fit Signals"
 description: "Measure early product-market fit with real usage data, repeat behavior, and organic signals."
+full: true
 ---
 
-You ran a small test and got a signal. That is good. But one signal is not
-fit. Fit shows up when people return without you begging them.
+<div className="mx-auto max-w-3xl">
 
-This module helps you measure early product‑market fit (PMF) signals before
-you scale. You are not hunting vanity numbers. You are hunting repeat use.
+You ran a small test and got a signal. But one signal is not fit. Fit shows up when people return without you begging them.
 
-**Output for this module**
+<Callout type="idea" title="Output for this module">
 - A PMF Signal Checklist score
 - A simple momentum loop sketch
 - Notes on reactivation and repeat value
+</Callout>
 
-## PMF Signals (Plain Language)
-Product‑market fit means the product solves a real problem so well that people
-keep using it without persuasion. Not forever. Not perfectly. But enough that
-the habit starts to form.
+## What Fit Looks Like
 
-Early PMF signals are simple:
-- People come back.
-- People finish the core action.
-- People tell others without being asked.
-- People would be disappointed if it went away.
+Product-market fit means the product solves a real problem so well that people keep using it without persuasion. Not forever. Not perfectly. But enough that the habit starts to form.
 
-If those signals are weak, you may not have fit yet. You may only have
-curiosity.
+<div className="mt-4 grid gap-3 sm:grid-cols-2">
+  <div className="rounded-xl border-2 border-fd-border p-5" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--stage-4))'}}>
+    <p className="text-sm font-semibold text-fd-foreground">Early fit signals</p>
+    <div className="mt-2 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-4))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> People come back on their own</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-4))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> People finish the core action</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-4))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> People tell others without being asked</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-4))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> People would be disappointed if it went away</p>
+    </div>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-5" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--fd-muted-foreground))'}}>
+    <p className="text-sm font-semibold text-fd-foreground">Not fit (just curiosity)</p>
+    <div className="mt-2 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg> Only return after reminders</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg> Stop halfway through the core action</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg> Sign up but never engage</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg> One-time spike with no returns</p>
+    </div>
+  </div>
+</div>
 
-**Activation vs retention**
-Activation is the first use. Retention is the second use. Many products look
-good at activation and still fail because people do not return. You can fix
-activation with copy and onboarding. You fix retention with real value.
-
-**What “come back” means**
-Repeat use depends on the natural cycle of the problem. The cycle tells you
-how soon a return should show up:
-- Daily problems: you should see returns within a day or two.
-- Weekly problems: you should see returns within a week.
-- Monthly problems: you should see returns within a month.
-
-If your product solves a weekly problem, a daily return is not required. But a
-monthly return is too slow. Match your expectations to the pain cycle.
-
-**What counts as repeat use**
-- They run the core action again without a prompt.
-- They save it and return on their own.
-- They pull a teammate in because it helps them repeat the workflow.
-
-If you only see repeat use after reminders, the loop is still weak.
-
-**Time‑to‑value (plain language)**
-If the core win takes ten steps, people leak before they feel the payoff.
-Shorter time‑to‑value usually means more returns.
-
-**Completion (plain language)**
-Completion is whether they finish the action that creates the result.
-If they stop halfway, the value often never lands.
-
-**Reactivation (plain language)**
-Reactivation is what happens after someone drops. A good product can bring
-some of them back with one clear reminder or nudge.
-
-**Where to get early evidence**
-- Use the last 10 users who touched the MVP test.
-- If you only have 5, use those 5 and note the small sample.
-- Write down what actually happened, not what you hoped.
-
-Small samples are normal. Just be honest about them.
+Activation is the first use. Retention is the second use. You can fix activation with copy and onboarding. You fix retention with real value. Match your expectations to the pain cycle -- daily problems need daily returns, weekly problems need weekly returns.
 
 ## The PMF Signal Checklist
-Use this checklist to score your early fit signals. This is not a metric
-dashboard. It is a field test.
 
-**PMF Signal Checklist (score 1–5)**
-1. **Repeat use**: Do people return on their own within the expected cycle?
-2. **Time‑to‑value**: Do they reach the “aha” moment fast?
-3. **Completion**: Do they finish the core action?
-4. **Reactivation**: If they drop off, can they be pulled back?
-5. **Referrals**: Do they recommend or invite others without a prompt?
-6. **Willingness to pay again**: Would they renew or extend the trial?
+Score each signal 1-5 based on evidence, not hope.
 
-Score each 1–5 based on evidence, not hope. A “3” is not a failure. It is a
-signal to adjust.
+<div className="mt-4 rounded-xl border-2 p-5" style={{borderColor: 'hsl(var(--stage-4) / 0.4)', backgroundColor: 'hsl(var(--stage-4) / 0.06)'}}>
+  <div className="flex items-center gap-2">
+    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-white" style={{backgroundColor: 'hsl(var(--stage-4))'}}>
+      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+    </span>
+    <span className="text-sm font-semibold text-fd-foreground">Score each signal 1-5</span>
+  </div>
+  <div className="mt-4 space-y-3">
+    <div className="rounded-lg border-2 border-fd-border bg-fd-background p-3 flex items-center justify-between"><div><p className="text-xs font-semibold text-fd-foreground">Repeat use</p><p className="text-[10px] text-fd-muted-foreground">Do they return on their own within the expected cycle?</p></div><div className="flex gap-1">{[1,2,3,4,5].map(n => <span key={n} className="flex h-7 w-7 items-center justify-center rounded-md border border-fd-border text-[10px] text-fd-muted-foreground">{n}</span>)}</div></div>
+    <div className="rounded-lg border-2 border-fd-border bg-fd-background p-3 flex items-center justify-between"><div><p className="text-xs font-semibold text-fd-foreground">Time-to-value</p><p className="text-[10px] text-fd-muted-foreground">Do they reach the "aha" moment fast?</p></div><div className="flex gap-1">{[1,2,3,4,5].map(n => <span key={n} className="flex h-7 w-7 items-center justify-center rounded-md border border-fd-border text-[10px] text-fd-muted-foreground">{n}</span>)}</div></div>
+    <div className="rounded-lg border-2 border-fd-border bg-fd-background p-3 flex items-center justify-between"><div><p className="text-xs font-semibold text-fd-foreground">Completion</p><p className="text-[10px] text-fd-muted-foreground">Do they finish the core action?</p></div><div className="flex gap-1">{[1,2,3,4,5].map(n => <span key={n} className="flex h-7 w-7 items-center justify-center rounded-md border border-fd-border text-[10px] text-fd-muted-foreground">{n}</span>)}</div></div>
+    <div className="rounded-lg border-2 border-fd-border bg-fd-background p-3 flex items-center justify-between"><div><p className="text-xs font-semibold text-fd-foreground">Reactivation</p><p className="text-[10px] text-fd-muted-foreground">If they drop, can they be pulled back?</p></div><div className="flex gap-1">{[1,2,3,4,5].map(n => <span key={n} className="flex h-7 w-7 items-center justify-center rounded-md border border-fd-border text-[10px] text-fd-muted-foreground">{n}</span>)}</div></div>
+    <div className="rounded-lg border-2 border-fd-border bg-fd-background p-3 flex items-center justify-between"><div><p className="text-xs font-semibold text-fd-foreground">Referrals</p><p className="text-[10px] text-fd-muted-foreground">Do they recommend others without a prompt?</p></div><div className="flex gap-1">{[1,2,3,4,5].map(n => <span key={n} className="flex h-7 w-7 items-center justify-center rounded-md border border-fd-border text-[10px] text-fd-muted-foreground">{n}</span>)}</div></div>
+    <div className="rounded-lg border-2 border-fd-border bg-fd-background p-3 flex items-center justify-between"><div><p className="text-xs font-semibold text-fd-foreground">Pay again</p><p className="text-[10px] text-fd-muted-foreground">Would they renew or extend the trial?</p></div><div className="flex gap-1">{[1,2,3,4,5].map(n => <span key={n} className="flex h-7 w-7 items-center justify-center rounded-md border border-fd-border text-[10px] text-fd-muted-foreground">{n}</span>)}</div></div>
+  </div>
+</div>
 
-**How to score 1–5 (quick anchors)**
-- 1 = almost never
-- 3 = sometimes, inconsistent
-- 5 = often, predictable
+<div className="mt-4 grid gap-3 sm:grid-cols-3">
+  <div className="rounded-xl border-2 border-fd-border p-4">
+    <p className="text-2xl font-bold text-fd-muted-foreground/50">1-2</p>
+    <p className="mt-1 text-sm font-semibold text-fd-foreground">No fit yet</p>
+    <p className="mt-0.5 text-xs text-fd-muted-foreground">Loop needs fundamental work</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4">
+    <p className="text-2xl font-bold text-fd-muted-foreground">3</p>
+    <p className="mt-1 text-sm font-semibold text-fd-foreground">Partial fit</p>
+    <p className="mt-0.5 text-xs text-fd-muted-foreground">Loop needs tightening</p>
+  </div>
+  <div className="rounded-xl border-2 p-4" style={{borderColor: 'hsl(var(--stage-4) / 0.4)', backgroundColor: 'hsl(var(--stage-4) / 0.06)'}}>
+    <p className="text-2xl font-bold" style={{color: 'hsl(var(--stage-4))'}}>4-5</p>
+    <p className="mt-1 text-sm font-semibold text-fd-foreground">Close to fit</p>
+    <p className="mt-0.5 text-xs text-fd-muted-foreground">Tighten the weakest signal</p>
+  </div>
+</div>
 
-Think of these as rough anchors, not math. Your goal is direction, not
-precision.
+Duolingo does not make the first lesson better with streaks -- it makes the second lesson happen. Your product needs a reason to return that fits the problem cycle.
 
-**Evidence examples by signal**
-- Repeat use: 3 out of 10 return in the expected cycle.
-- Time‑to‑value: most users reach the core result in one session.
-- Completion: people finish the task you designed for them.
-- Reactivation: a short follow‑up brings some back to the core action.
-- Referrals: users mention it or invite a teammate without incentives.
-- Pay again: buyers ask to continue or extend the pilot.
+## The Momentum Loop
 
-If you cannot name evidence, score it a 1 for now.
+A momentum loop is a simple cycle that turns one use into the next. You should be able to explain it in one sentence.
 
-**Score interpretation (early)**
-- Mostly 1–2: you do not have fit yet.
-- Mostly 3: you have partial fit; the loop needs work.
-- Several 4–5: you are close; tighten the weak signal.
+<div className="mt-4 rounded-xl border-2 border-fd-border p-5" style={{backgroundColor: 'hsl(var(--fd-muted) / 0.4)'}}>
+  <p className="text-[10px] font-semibold uppercase tracking-wider" style={{color: 'hsl(var(--stage-4))'}}>Loop template</p>
+  <div className="mt-4 flex flex-col gap-2">
+    <div className="flex items-center gap-4 rounded-lg border border-fd-border bg-fd-background p-3"><span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-4))'}}>T</span><div><p className="text-xs font-semibold text-fd-foreground">Trigger</p><p className="text-[10px] text-fd-muted-foreground">What moment makes them act? (calendar, risk, threshold)</p></div></div>
+    <div className="flex items-center gap-4 rounded-lg border border-fd-border bg-fd-background p-3"><span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-4))'}}>A</span><div><p className="text-xs font-semibold text-fd-foreground">Action</p><p className="text-[10px] text-fd-muted-foreground">What do they do? (run the report, check the list)</p></div></div>
+    <div className="flex items-center gap-4 rounded-lg border border-fd-border bg-fd-background p-3"><span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-4))'}}>R</span><div><p className="text-xs font-semibold text-fd-foreground">Result</p><p className="text-[10px] text-fd-muted-foreground">What win do they feel? (risk avoided, time saved)</p></div></div>
+    <div className="flex items-center gap-4 rounded-lg border border-fd-border bg-fd-background p-3"><span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-4))'}}>L</span><div><p className="text-xs font-semibold text-fd-foreground">Loop back</p><p className="text-[10px] text-fd-muted-foreground">Why do they return? (new trigger, saved state, habit)</p></div></div>
+  </div>
+  <p className="mt-3 text-xs italic text-fd-muted-foreground">If the loop depends on reminders only, it is fragile. If you cannot name a trigger, you do not have a loop.</p>
+</div>
 
-Do not chase a perfect score. Chase a consistent signal.
+## Exercise: Score and Sketch
 
-**Optional sanity check**
-Ask: “How disappointed would you be if this disappeared?”
-- Very disappointed
-- Somewhat disappointed
-- Not disappointed
+<div className="mt-4 rounded-xl border-2 p-5" style={{borderColor: 'hsl(var(--stage-4) / 0.4)', backgroundColor: 'hsl(var(--stage-4) / 0.06)'}}>
+  <div className="flex items-center gap-2">
+    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-white" style={{backgroundColor: 'hsl(var(--stage-4))'}}>
+      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+    </span>
+    <span className="text-sm font-semibold text-fd-foreground">Complete in 30 minutes while evidence is fresh.</span>
+  </div>
+  <div className="mt-4 rounded-lg border-2 border-fd-border bg-fd-background p-4">
+    <div className="space-y-3 text-sm">
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider" style={{color: 'hsl(var(--stage-4))'}}>Strongest signal</p><p className="mt-1 text-xs text-fd-muted-foreground">"Our strongest signal is ___ because ___."</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-red-500">Weakest signal</p><p className="mt-1 text-xs text-fd-muted-foreground">"Our weakest signal is ___ because ___."</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Biggest blocker to repeat use</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+      <div className="border-t border-fd-border pt-3">
+        <p className="text-[10px] font-semibold uppercase tracking-wider" style={{color: 'hsl(var(--stage-4))'}}>Loop sketch</p>
+        <div className="mt-2 grid grid-cols-2 gap-2">
+          <div><p className="text-xs text-fd-muted-foreground">Trigger:</p><div className="mt-1 h-7 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+          <div><p className="text-xs text-fd-muted-foreground">Action:</p><div className="mt-1 h-7 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+          <div><p className="text-xs text-fd-muted-foreground">Result:</p><div className="mt-1 h-7 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+          <div><p className="text-xs text-fd-muted-foreground">Return:</p><div className="mt-1 h-7 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p className="mt-3 text-xs italic text-fd-muted-foreground">If your loop feels vague, the product is vague. Tighten the loop first. Write the number of users behind each score.</p>
+</div>
 
-If “very disappointed” is rare, retention needs work.
+<div className="mt-4 rounded-xl border border-dashed border-fd-muted-foreground/20 p-4">
+  <p className="text-xs font-semibold text-fd-foreground">If you do not have data yet</p>
+  <p className="mt-1 text-xs text-fd-muted-foreground">Run five short follow-ups: "Did you use it again? Why or why not?" "What stopped you?" "What would make you return next week?" Those answers are your loop clues.</p>
+</div>
 
-## A Real Example (Duolingo Streaks)
-Many language apps see a spike in sign‑ups, then a drop in daily practice.
-People like the idea but stop returning. Duolingo is known for building habits
-through streaks, reminders, and small daily goals. Those features do not make
-the first lesson better. They make the second lesson happen.
-
-The insight is simple: repeat use is not automatic. It is designed.
-
-Your product may not need streaks. But it does need a reason to return that
-fits the problem cycle. If the pain is weekly, your loop should be weekly.
-
-If the product only works when you push it, it is not yet a product. It is a
-project you are managing by hand.
-
-The lesson is not “add streaks.” The lesson is “build a reason to return.”
-If the reason is missing, you will keep spending energy on reminders that do
-not stick.
-
-Diagram cue: a simple retention curve or loop sketch (first use -> return -> habit).
-
-## The Momentum Loop (Sketch It)
-A momentum loop is a simple cycle that turns one use into the next use. It is
-not a complex funnel. It is a small loop you can explain in one sentence.
-
-**Loop template**
-Trigger → Action → Result → Reason to return
-
-Example (generic):
-- Trigger: weekly compliance checklist
-- Action: run the report
-- Result: missed items found
-- Reason to return: risk avoided and report saved
-
-If you cannot describe this loop, you do not yet know why people should return.
-
-**Loop strength questions**
-- Does the result create a new reason to act again?
-- Can the user feel the win without you explaining it?
-- Is the reason to return tied to the problem, not your product?
-
-If the loop depends on reminders only, it is fragile.
-
-**Common return triggers**
-- A calendar moment (end of week, end of month)
-- A risk event (deadline, audit, renewal)
-- A threshold (inventory low, lead quality drop)
-
-If you cannot name a trigger, you do not have a loop. You have a hope.
-
-**Retention curve (plain language)**
-Imagine a simple curve: day one is high, then it drops. If the line keeps
-dropping to zero, there is no habit. If it flattens, even at a lower level,
-you have a base of repeat use. That flat line is early fit.
-
-Example (generic):
-If 10 users try the product and 3 return the next week, that is not a win
-yet, but it is a base you can grow. If 0 return, the loop is broken.
-
-## Exercise: Score the Signals + Sketch the Loop
-Complete this right after your MVP test while the evidence is fresh.
-
-**PMF Signal Scorecard**
-| Signal | Score (1–5) | Evidence |
-| --- | --- | --- |
-| Repeat use | | |
-| Time‑to‑value | | |
-| Completion | | |
-| Reactivation | | |
-| Referrals | | |
-| Pay again | | |
-
-**Loop sketch**
-- Trigger:
-- Core action:
-- Result:
-- Reason to return:
-
-If your loop feels vague, the product is vague. Tighten the loop first.
-
-**Timebox**
-Spend 30 minutes. If it takes longer, you are guessing instead of measuring.
-
-**Sample size note**
-Write the number of users behind each score. “Repeat use = 3” is only useful
-if you know whether it came from 3 out of 5 or 3 out of 50.
-
-**If you do not have data yet**
-Run five short follow‑ups:
-- “Did you use it again? Why or why not?”
-- “What stopped you?”
-- “What would make you return next week?”
-
-Those answers are your loop clues.
-
-## Evidence Artifact (PMF Score + Loop Notes)
-Capture your evidence in one place:
-
-- PMF checklist scores
-- Notes for each score
-- Loop sketch
-- One sentence: “Our strongest signal is ___ because ___.”
-- One sentence: “Our weakest signal is ___ because ___.”
-
-**PMF Evidence Sheet (simple)**
-| Item | Notes |
-| --- | --- |
-| Repeat use evidence | |
-| Time‑to‑value evidence | |
-| Completion evidence | |
-| Reactivation evidence | |
-| Referral evidence | |
-| Pay‑again evidence | |
-| Loop sketch | |
-
-This becomes your fit memory. Without it, every spike feels like progress.
-
-**PMF signal score (simple)**
-Average your six scores, then write one sentence:
-- “Our PMF signal score is ___ and the weakest signal is ___.”
-
-The number is not the goal. The weak signal is.
-
-**Reactivation note**
-Write one line about the last three people who dropped:
-- What did they say?
-- What would have brought them back?
-
-If you cannot answer, you are flying blind.
-
-**Blocker note**
-Write one sentence: “The biggest blocker to repeat use is ___.”
-You will fix that blocker in the next module.
-
-## Common Traps
-- Celebrating sign‑ups instead of repeat use
-- Confusing a one‑time spike with a habit
+<Callout type="error" title="Common traps">
+- Celebrating sign-ups instead of repeat use
+- Confusing a one-time spike with a habit
 - Ignoring churn because a few users are loud
 - Measuring engagement but not completion
 - Forcing referrals before the loop works
-- Treating reactivation as retention
 - Shipping new features to avoid fixing the loop
+</Callout>
 
-Chasing growth before repeat use is like pouring water into a bucket with a
-hole. Fix the leak first.
+---
 
-If you are tempted to celebrate a spike, compare it to return rates. A spike
-without returns is noise, not momentum.
+<div className="mt-8 flex flex-col items-center gap-2 text-center">
+  <p className="font-[family-name:var(--font-display)] text-lg italic text-fd-muted-foreground">No repeat use, no fit.</p>
+</div>
 
-## Closing Line
-No repeat use, no fit.
-
-Next, you will decide what to change to reach fit without thrashing.
+</div>
