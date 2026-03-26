@@ -1,366 +1,217 @@
 ---
 title: "Price Check"
 description: "Find a price people will actually pay by testing willingness to pay in the simplest way possible."
+full: true
 ---
 
-If your offer earns commitment but no one will pay the price, the offer is
-still fiction. Price is not a number. It is proof.
+<div className="mx-auto max-w-3xl">
 
-This module helps you find a workable price range by testing willingness to
-pay in the simplest way possible.
+If your offer earns commitment but no one will pay the price, the offer is still fiction. Price is not a number. It is proof.
 
-**Output for this module**
+<Callout type="idea" title="Output for this module">
 - A tested price range
 - Buyer reactions and objections
 - A clear next price test
+</Callout>
 
-## Price Is a Range, Not a Point
-Early pricing is not precision. It is a range you can live with.
+## The Price Ladder
 
-Think in three bands:
-- **Low**: easiest to say yes to
-- **Mid**: fair value for the outcome
-- **High**: tests true willingness to pay
+Early pricing is not precision. It is a range. Think in three bands and see where people say yes.
 
-Your job is to find the band that earns commitment without killing demand.
+<div className="mt-4 flex flex-col gap-2">
+  <div className="flex items-center gap-3"><div className="flex h-9 items-center rounded-md px-3 text-xs font-medium text-white/90" style={{width: '100%', backgroundColor: 'hsl(var(--stage-3))'}}> High -- tests true willingness to pay</div></div>
+  <div className="flex items-center gap-3"><div className="flex h-9 items-center rounded-md px-3 text-xs font-medium text-white/90" style={{width: '70%', backgroundColor: 'hsl(var(--stage-3) / 0.7)'}}> Mid -- fair value for the outcome</div></div>
+  <div className="flex items-center gap-3"><div className="flex h-9 items-center rounded-md px-3 text-xs font-medium text-white/90" style={{width: '45%', backgroundColor: 'hsl(var(--stage-3) / 0.45)'}}> Low -- easiest to say yes to</div></div>
+</div>
 
-## Price Anchors (What Buyers Compare To)
+<p className="mt-3 text-xs text-fd-muted-foreground">Netflix learned this in 2011 -- pricing that feels wrong can kill demand even when the product is loved. Pricing is not just math. It is perception.</p>
+
+## Price Anchors
+
 Buyers never evaluate price in a vacuum. They compare it to something.
 
-Common anchors:
-- What they pay today (tools, staff time, agencies)
-- The cost of doing nothing (lost revenue, delays)
-- A replacement cost (new hire, consultant, overtime)
+<div className="mt-4 grid gap-3 sm:grid-cols-3">
+  <div className="rounded-xl border-2 border-fd-border p-4 transition-all hover:border-[hsl(var(--stage-3)/0.3)]">
+    <div className="flex items-center gap-2"><span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-3))'}}>$</span><span className="text-sm font-semibold text-fd-foreground">Current spend</span></div>
+    <p className="mt-1.5 text-xs text-fd-muted-foreground">What they pay today for tools, staff time, or agencies</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4 transition-all hover:border-[hsl(var(--stage-3)/0.3)]">
+    <div className="flex items-center gap-2"><span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-3))'}}>0</span><span className="text-sm font-semibold text-fd-foreground">Cost of nothing</span></div>
+    <p className="mt-1.5 text-xs text-fd-muted-foreground">Lost revenue, delays, or risk from doing nothing</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4 transition-all hover:border-[hsl(var(--stage-3)/0.3)]">
+    <div className="flex items-center gap-2"><span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-3))'}}>R</span><span className="text-sm font-semibold text-fd-foreground">Replacement cost</span></div>
+    <p className="mt-1.5 text-xs text-fd-muted-foreground">New hire, consultant, or overtime to solve it</p>
+  </div>
+</div>
 
-If you do not know the anchor, your price will feel random.
+If your price is higher than every anchor, you need a stronger outcome. If lower, you may be underpricing. Your job is to make value obvious in one sentence.
 
-## Price vs Value (Quick Frame)
-Price is what they pay. Value is what they believe they get.
+## Design the Test
 
-If value is unclear, price feels high.
-If value is obvious, price feels fair.
+<div className="mt-4 grid gap-4 sm:grid-cols-2">
+  <div className="rounded-xl border-2 border-fd-border p-5">
+    <div className="flex items-center gap-2">
+      <span className="flex h-6 w-6 items-center justify-center rounded-md" style={{backgroundColor: 'hsl(var(--stage-3) / 0.12)'}}>
+        <svg className="h-3.5 w-3.5" style={{color: 'hsl(var(--stage-3))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      </span>
+      <span className="text-sm font-semibold text-fd-foreground">Choose a metric</span>
+    </div>
+    <div className="mt-3 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p><strong>Per month</strong> -- simple and common</p>
+      <p><strong>Per seat</strong> -- if value scales with users</p>
+      <p><strong>Per outcome</strong> -- if results are measurable</p>
+      <p><strong>Per project</strong> -- if work is one-off</p>
+    </div>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-5">
+    <div className="flex items-center gap-2">
+      <span className="flex h-6 w-6 items-center justify-center rounded-md" style={{backgroundColor: 'hsl(var(--stage-3) / 0.12)'}}>
+        <svg className="h-3.5 w-3.5" style={{color: 'hsl(var(--stage-3))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>
+      </span>
+      <span className="text-sm font-semibold text-fd-foreground">Keep packaging simple</span>
+    </div>
+    <div className="mt-3 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p>One plan with a clear outcome</p>
+      <p>Two plans only if you must</p>
+      <p>Too many tiers hide signal</p>
+      <p>You are testing willingness, not optimizing revenue</p>
+    </div>
+  </div>
+</div>
 
-Your job is to make value obvious in one sentence.
-
-## Anchor Check (Fast)
-Before you set your ladder, ask:
-- "What does the alternative cost per month?"
-- "What does a manual fix cost in hours?"
-- "What would a new hire cost to solve this?"
-
-If your price is higher than every anchor, you need a stronger outcome.
-If it is lower than every anchor, you may be underpricing the value.
-
-## The Price Ladder Test
-Use a simple ladder to test willingness to pay:
-
-1) Low price  
-2) Mid price  
-3) High price
-
-Pick numbers you can defend. Then see where people say yes.
-
-Diagram cue: a price ladder with pass/fail markers.
-
-## Ladder Example (Generic)
-Problem: "Reduce no-shows for small clinics."
-
-- Low: $49/month
-- Mid: $149/month
-- High: $299/month
-
-The goal is not the number. The goal is which rung gets real yeses.
-
-## How to Choose Your Three Prices
-Use this to build your ladder:
-
-- **Low** = "I can say yes quickly"
-- **Mid** = "This feels fair for the outcome"
-- **High** = "This would be a stretch"
-
-If your ladder is too tight, you learn nothing. If it is too wide, you
-break trust. Keep it realistic.
-
-## Price Framing Rules
-How you present the price changes the reaction.
-
-Use:
-- "This saves you [outcome], so the price is [X]."
-- "This replaces [cost], so it pays for itself in [time]."
-
-Avoid:
-- Apologizing for the price
-- Leading with discounts
-- Changing the price mid-conversation
-
-## A Real Example (Netflix Pricing Backlash)
-In 2011, Netflix raised prices and split its DVD and streaming plans. The
-change triggered backlash and subscriber losses, and the company reversed
-course. The lesson was simple: pricing that feels wrong can kill demand
-even when the product is loved.
-
-Pricing is not just math. It is perception.
-
-## Choose a Price Metric
-Price is not just "how much." It is "how much for what."
-
-Pick one:
-- **Per month** (simple and common)
-- **Per seat** (if value scales with users)
-- **Per outcome** (if results are clear and measurable)
-- **Per project** (if work is one-off)
-
-If the metric does not match how value is created, pricing will feel unfair.
-
-## Packaging (Keep It Simple)
-Early on, keep packages minimal:
-- One plan with a clear outcome
-- Two plans if you must (basic and premium)
-
-Too many tiers hide signal. You are not optimizing revenue yet. You are
-testing willingness to pay.
-
-## Quick Willingness Range (No Jargon)
-Ask two questions to bracket a range:
-- "At what price does this feel too expensive to try?"
-- "At what price does this feel too cheap to trust?"
-
-The answers give you a band, not a verdict. Use them to set your ladder.
-
-## Price Reaction Signals
-Listen to how they respond:
-- "That seems fair." (good signal)
-- "That's high, but maybe." (test)
-- "No way." (price is off or value unclear)
-
-Tone matters as much as words. Capture both.
-
-## What a "Yes" Actually Means
-A real yes is a commitment, not a compliment.
-
-Strong signal:
-- They accept a price and take the next step
-
-Weak signal:
-- "Maybe later"
-- "Let me think about it"
-- "If you were cheaper, I would"
-
-## Price Split Test (Simple)
-If you can run two versions, test two prices with the same offer.
-
-- Version A: mid price
-- Version B: high price
-
-If the conversion drops hard, your ceiling is too high. If it holds,
-you have room.
-
-## Pricing Questions That Work
-Ask about real behavior, not feelings.
-
-Use:
-- "Have you paid for anything like this?"
-- "What do you pay today to reduce this pain?"
-- "If this saved you [outcome], what would be fair?"
-
-Avoid:
-- "What would you like to pay?"
-- "Would you pay $X?" without context
-
-Context creates truth. Guessing creates noise.
-
-## The Price Floor
-Never test below the cost of delivering the result. If you do, you get
-false positives and a broken business.
-
-If you cannot name a floor, you are not ready to test price yet.
-
-## The Price Ceiling
-The ceiling is the highest price that still gets a "yes" without heavy
-negotiation.
-
-If every "yes" requires a discount, your ceiling is too high.
+<div className="mt-4 rounded-xl border-2 border-fd-border p-5" style={{backgroundColor: 'hsl(var(--fd-muted) / 0.4)'}}>
+  <p className="text-[10px] font-semibold uppercase tracking-wider" style={{color: 'hsl(var(--stage-3))'}}>Quick willingness range</p>
+  <div className="mt-3 space-y-2">
+    <p className="font-[family-name:var(--font-display)] text-lg text-fd-foreground">"At what price does this feel too expensive to try?"</p>
+    <p className="font-[family-name:var(--font-display)] text-lg text-fd-foreground">"At what price does this feel too cheap to trust?"</p>
+  </div>
+  <p className="mt-3 text-xs italic text-fd-muted-foreground">The answers give you a band. Use them to set your ladder.</p>
+</div>
 
 ## Exercise: Run a Price Ladder Test
-Use one of these formats:
 
-- Add three price options to your offer test
-- Ask buyers to choose a plan on a pricing page
-- Present three prices in a direct call and ask which feels fair
+<div className="mt-4 rounded-xl border-2 p-5" style={{borderColor: 'hsl(var(--stage-3) / 0.4)', backgroundColor: 'hsl(var(--stage-3) / 0.06)'}}>
+  <div className="flex items-center gap-2">
+    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-white" style={{backgroundColor: 'hsl(var(--stage-3))'}}>
+      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+    </span>
+    <span className="text-sm font-semibold text-fd-foreground">Test 3 price points with real buyers.</span>
+  </div>
+  <div className="mt-4 rounded-lg border-2 border-fd-border bg-fd-background p-4">
+    <div className="grid gap-3 sm:grid-cols-3">
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Low</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /><p className="mt-1 text-[10px] text-fd-muted-foreground">Easy yes</p></div>
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Mid</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /><p className="mt-1 text-[10px] text-fd-muted-foreground">Fair value</p></div>
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">High</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /><p className="mt-1 text-[10px] text-fd-muted-foreground">Stretch</p></div>
+    </div>
+    <div className="mt-4 border-t border-fd-border pt-3 text-xs">
+      <p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">For each response, capture:</p>
+      <div className="mt-2 space-y-1 text-fd-muted-foreground">
+        <p>Which price they chose and why</p>
+        <p>What made them hesitate</p>
+        <p>What they compared it to</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-Then capture:
-- Which price they choose
-- What made them hesitate
-- What they compare it to
+<div className="mt-4 rounded-xl border border-fd-border bg-fd-background p-4">
+  <p className="text-[10px] font-semibold uppercase tracking-wider" style={{color: 'hsl(var(--stage-3))'}}>Pricing questions that work</p>
+  <div className="mt-2 flex flex-wrap gap-1.5">
+    <span className="rounded-full border border-fd-border bg-fd-muted/30 px-2.5 py-1 text-[11px] text-fd-muted-foreground">"Have you paid for anything like this?"</span>
+    <span className="rounded-full border border-fd-border bg-fd-muted/30 px-2.5 py-1 text-[11px] text-fd-muted-foreground">"What do you pay today to reduce this pain?"</span>
+    <span className="rounded-full border border-fd-border bg-fd-muted/30 px-2.5 py-1 text-[11px] text-fd-muted-foreground">"If this saved you [outcome], what would be fair?"</span>
+  </div>
+  <p className="mt-2 text-xs italic text-fd-muted-foreground">Context creates truth. Guessing creates noise. Never ask "What would you like to pay?"</p>
+</div>
 
-## Price Test Menu (By Commitment)
-- **Paid waitlist** (low commitment)
-- **Deposit or pre-order** (stronger)
-- **Paid pilot** (strongest signal)
+## Price Reaction Signals
 
-If you can test a paid pilot, do it. It tells you more than a survey.
-
-## Price Ladder Worksheet (Simple)
-Write the ladder and test notes in one place:
-
-| Low | Mid | High | Notes |
-| --- | --- | --- | --- |
-| | | | |
-
-Add who said yes, who said no, and why. This makes patterns obvious.
-
-## Pre-Sell Script (If You Need One)
-Keep it simple and honest:
-
-"I am testing a small offer for [role]. It helps [outcome] without [pain].
-If this is valuable, I can run a paid pilot this month. Would you commit
-to [price/step] if it worked?"
-
-The script is not the test. The commitment is.
-
-## When to Re-Test
-Re-test pricing if:
-- You changed the offer outcome
-- You changed the buyer
-- Your commitment rate dropped
-
-Price only means something in a stable context.
-
-## Price Evidence Notes
-For each response, capture:
-- Price chosen
-- Reason given
-- Objection raised
-- Comparison tool or budget anchor
-
-If you only record the number, you miss the reason.
-
-## Price Confidence Score (Optional)
-Rate your confidence in the price range:
-
-- 1: guess
-- 3: mixed evidence
-- 5: repeatable commitments
-
-If you are below 3, keep testing.
-
-## Objection Follow-Up Questions
-When you hear a price objection, ask one follow-up:
-
-- "What would make this a clear yes?"
-- "Is it the price or the outcome that feels off?"
-- "Who else would need to approve this?"
-
-These answers tell you whether the price is wrong or the value is unclear.
-
-## Objection Patterns to Track
-If you hear these, your price or offer is off:
-- "We already pay for something similar."
-- "This is a nice-to-have."
-- "We do not have budget for this."
-
-Do not argue. Capture the pattern.
-
-## Evidence Artifact
-Your evidence artifact is a tested range with notes:
-- Low, mid, high price points
-- # of buyers at each point
-- Common objections
-
-This is the input for your final pricing decision.
-
-**Price test summary (simple)**
-| Price | # Interested | # Committed | Notes |
-| --- | --- | --- | --- |
-| | | | |
-
-## Payment Signals (What Counts)
-Stronger signals:
-- Paid pilot or deposit
-- Signed LOI
-- Budget approval in writing
-
-Weaker signals:
-- Verbal interest with no next step
-- "Let's revisit in Q3"
-
-If all you have is weak signals, you do not have a price yet.
+<div className="mt-4 grid gap-3 sm:grid-cols-3">
+  <div className="rounded-xl border-2 p-4" style={{borderColor: 'hsl(var(--stage-3) / 0.4)', backgroundColor: 'hsl(var(--stage-3) / 0.06)'}}>
+    <p className="text-sm font-bold" style={{color: 'hsl(var(--stage-3))'}}>Good signal</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">"That seems fair."</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">They accept and take the next step.</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4">
+    <p className="text-sm font-bold text-fd-muted-foreground">Test signal</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">"That's high, but maybe."</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">Detailed objection, not a flat no.</p>
+  </div>
+  <div className="rounded-xl border-2 border-red-200 bg-red-50 p-4 dark:border-red-900/30 dark:bg-red-950/20">
+    <p className="text-sm font-bold text-red-500">Weak signal</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">"Maybe later" or "Let me think."</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">No next step, no commitment.</p>
+  </div>
+</div>
 
 ## Price Range Rules
-- If only the low price works, your offer is too weak.
-- If the high price works with no resistance, your problem is strong.
-- If the mid price works, you have a usable starting point.
 
-Cheap does not equal paid. Paid equals paid.
+<div className="mt-4 rounded-xl border-2 border-fd-border p-5" style={{backgroundColor: 'hsl(var(--fd-muted) / 0.4)'}}>
+  <div className="space-y-3 text-xs text-fd-muted-foreground">
+    <p className="flex items-start gap-2"><span className="font-semibold text-fd-foreground">Only the low price works?</span> Your offer is too weak.</p>
+    <p className="flex items-start gap-2"><span className="font-semibold text-fd-foreground">High price works with no resistance?</span> Your problem is very strong.</p>
+    <p className="flex items-start gap-2"><span className="font-semibold text-fd-foreground">Mid price works?</span> You have a usable starting point.</p>
+    <p className="flex items-start gap-2"><span className="font-semibold text-fd-foreground">Price is the only objection?</span> Shrink the offer or shorten the timeline. Do not rush to discounts.</p>
+  </div>
+  <p className="mt-3 text-xs italic" style={{color: 'hsl(var(--stage-3))'}}>Cheap does not equal paid. Paid equals paid.</p>
+</div>
 
-## Monthly vs Annual (Quick Choice)
-Annual pricing can create larger commitment, but it is harder to test.
+## Quick Reference
 
-Use:
-- Monthly for early tests (easier yes)
-- Annual once value is proven (stronger signal)
+<div className="mt-4 grid gap-4 sm:grid-cols-2">
+  <div className="rounded-xl border-2 border-fd-border p-5" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--stage-3))'}}>
+    <p className="text-sm font-semibold text-fd-foreground">Stronger payment signals</p>
+    <div className="mt-2 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-3))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Paid pilot or deposit</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-3))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Signed LOI</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-3))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Budget approval in writing</p>
+    </div>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-5" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--fd-muted-foreground))'}}>
+    <p className="text-sm font-semibold text-fd-foreground">Weaker signals</p>
+    <div className="mt-2 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg> Verbal interest with no next step</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg> "Let's revisit in Q3"</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg> "If you were cheaper, I would"</p>
+    </div>
+  </div>
+</div>
 
-Do not jump to annual pricing if you cannot earn a monthly yes first.
+<div className="mt-4 grid gap-3 sm:grid-cols-2">
+  <div className="rounded-xl border border-dashed border-fd-muted-foreground/20 p-4">
+    <p className="text-xs font-semibold text-fd-foreground">Price framing rules</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">Frame around value: "This saves you [X], so the price is [Y]." Never apologize for the price. Never lead with discounts.</p>
+  </div>
+  <div className="rounded-xl border border-dashed border-fd-muted-foreground/20 p-4">
+    <p className="text-xs font-semibold text-fd-foreground">When to re-test</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">Re-test if you changed the offer outcome, changed the buyer, or commitment rate dropped. Price only means something in a stable context.</p>
+  </div>
+</div>
 
-## If Price Is the Only Objection
-If buyers want the outcome but stall on price, try one change:
-- Shrink the offer
-- Shorten the timeline
-- Narrow the segment
-
-Do not rush to discounts. Fix the value first.
-
-## Discount Rule (Use Sparingly)
-Discounts are for learning, not for hiding weak value.
-
-If you discount, record:
-- Why you did it
-- Whether commitment increased
-- What that says about the true price
-
-## Common Traps
+<Callout type="error" title="Common traps">
 - Pricing to be liked instead of to be paid
 - Hiding the price until later
 - Ignoring what buyers already pay
 - Calling it "premium" without proof
-
-If nobody pays, the price is fiction.
-
-## When Price and Value Align
-You will feel it when price and value click:
-- Buyers stop negotiating and start asking how to start
-- The price feels fair, not surprising
-- You can repeat the commitment with similar buyers
-
-That is the signal to move forward.
-
-## Reality Check (30 Seconds)
-Ask yourself:
-- "Would I pay this price if I were them?"
-- "Do I have evidence, or just confidence?"
-- "Is the value obvious in one sentence?"
-
-If the answers are weak, the price is not ready.
+</Callout>
 
 ## When You Can Move On
-You are ready for Module 3 when:
-- One price band earns real commitment
-- Objections are about timing, not value
-- You can explain why people said yes or no
 
-If none of those are true, run another ladder test.
+<div className="mt-4 rounded-xl border-2 border-fd-border p-5" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--stage-3))'}}>
+  <p className="text-sm text-fd-foreground">You are ready for Module 3 when:</p>
+  <div className="mt-3 space-y-2 text-xs text-fd-muted-foreground">
+    <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-3))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> One price band earns real commitment</p>
+    <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-3))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Objections are about timing, not value</p>
+    <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-3))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> You can explain why people said yes or no</p>
+  </div>
+  <p className="mt-3 text-xs italic text-fd-muted-foreground">Once you have a working price range, the next question is how to reach buyers efficiently.</p>
+</div>
 
-## Price Review (Weekly)
-Revisit pricing weekly for the first month:
-- What price got real commitment?
-- What objections showed up repeatedly?
-- What changed in the buyer context?
+---
 
-Pricing is not a one-time decision. It is a learning loop.
+<div className="mt-8 flex flex-col items-center gap-2 text-center">
+  <p className="font-[family-name:var(--font-display)] text-lg italic text-fd-muted-foreground">If nobody pays, the price is fiction.</p>
+</div>
 
-## The Bridge to Module 3
-Once you have a working price range, the next question is how to reach
-buyers efficiently.
-
-**Closing line**
-If nobody pays, the price is fiction.
+</div>
