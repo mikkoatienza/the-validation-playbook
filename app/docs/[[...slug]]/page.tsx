@@ -1,5 +1,6 @@
 import { source } from "@/lib/source";
 import { getStageInfo } from "@/lib/page-utils";
+import { readingOrder } from "@/lib/reading-order";
 import { getEnhancedMDXComponents } from "@/components/mdx-enhanced";
 import { ScrollProgress, PageMeta } from "@/components/docs-components";
 import {
@@ -13,14 +14,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 function getNeighbours(slug?: string[]) {
-  const pages = source.getPages();
   const currentPath = slug ? `/docs/${slug.join("/")}` : "/docs";
-  const idx = pages.findIndex((p) => p.url === currentPath);
+  const idx = readingOrder.indexOf(currentPath);
+  if (idx === -1) return { prev: null, next: null };
 
-  return {
-    prev: idx > 0 ? pages[idx - 1] : null,
-    next: idx < pages.length - 1 ? pages[idx + 1] : null,
-  };
+  const prevUrl = idx > 0 ? readingOrder[idx - 1] : null;
+  const nextUrl = idx < readingOrder.length - 1 ? readingOrder[idx + 1] : null;
+
+  const prevPage = prevUrl ? source.getPages().find((p) => p.url === prevUrl) : null;
+  const nextPage = nextUrl ? source.getPages().find((p) => p.url === nextUrl) : null;
+
+  return { prev: prevPage || null, next: nextPage || null };
 }
 
 export default async function Page(props: {
