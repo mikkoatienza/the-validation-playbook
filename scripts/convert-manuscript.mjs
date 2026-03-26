@@ -178,17 +178,17 @@ const mapping = [
   },
   {
     src: "chapters/chapter-13.md",
-    dest: "stage-5-lock/founder-fit.mdx",
-    title: "Founder Fit",
-    description:
-      "Assess whether you are the right founder for this problem. Fit is earned, not assumed.",
-  },
-  {
-    src: "chapters/chapter-14.md",
     dest: "stage-5-lock/decision-gate.mdx",
     title: "Decision Gate",
     description:
       "Make the final go/no-go decision based on evidence. Commit, pivot, or walk away with clarity.",
+  },
+  {
+    src: "chapters/chapter-14.md",
+    dest: "stage-5-lock/founder-fit.mdx",
+    title: "Founder Fit",
+    description:
+      "Assess whether you are the right founder for this problem. Fit is earned, not assumed.",
   },
   {
     src: "chapters/chapter-15.md",
