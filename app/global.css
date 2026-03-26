@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import "fumadocs-ui/css/neutral.css";
+@import "fumadocs-ui/css/preset.css";
+
+@layer base {
+  :root {
+    --fd-primary: 222.2 47.4% 11.2%;
+    --fd-primary-foreground: 210 40% 98%;
+    --fd-muted: 210 40% 96.1%;
+    --fd-muted-foreground: 215.4 16.3% 46.9%;
+    --fd-accent: 210 40% 96.1%;
+    --fd-accent-foreground: 222.2 47.4% 11.2%;
+  }
+
+  .dark {
+    --fd-primary: 210 40% 98%;
+    --fd-primary-foreground: 222.2 47.4% 11.2%;
+    --fd-muted: 217.2 32.6% 17.5%;
+    --fd-muted-foreground: 215 20.2% 65.1%;
+    --fd-accent: 217.2 32.6% 17.5%;
+    --fd-accent-foreground: 210 40% 98%;
+  }
+}
