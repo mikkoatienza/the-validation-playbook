@@ -122,6 +122,21 @@ Stage openings (`stage-N-xxx/index.mdx`) follow this structure. Use Stage 1 as t
 
 Use `full: true` frontmatter and wrap content in `<div className="mx-auto max-w-3xl">`. Module numbered circles use `style={{backgroundColor: 'hsl(var(--stage-N))'}}` for the stage color.
 
+### Module Page Template (15 Pages)
+Module pages (`friction-scan.mdx`, `truth-signals.mdx`, etc.) follow this pattern. Use Friction Scan as the reference:
+1. **Opening story/hook** -- manuscript opening (Juicero example, etc.), plain text, establishes the module's lesson
+2. **Output Callout** -- `idea` Callout titled "Output for this module" listing the 2-3 deliverables
+3. **Concept definition** -- side-by-side cards contrasting the concept (e.g. Friction vs Not-Friction) with amber vs muted left borders
+4. **Source/method cards** -- numbered cards with amber badges for the key methods or sources
+5. **Exercise blocks** -- amber-tinted containers (`borderColor: stage color / 0.3`, `backgroundColor: stage color / 0.03`) with pencil icon, numbered rules, and embedded capture format card
+6. **Framework/filter cards** -- 2x2 grids with amber letter badges for scoring frameworks (e.g. F/I/S/W for the 4-Factor Filter)
+7. **Worksheet exercises** -- amber-tinted container with clipboard icon and fill-in template
+8. **Sanity check** -- amber left-border card with checkmark items before the decision
+9. **Common Traps** -- `error` Callout
+10. **Closing line** -- italic serif centered, horizontal rule above
+
+Use `full: true` frontmatter and wrap in `<div className="mx-auto max-w-3xl">`. Consolidate minor H2 sections into parent sections to reduce ToC clutter. Target ~9 ToC entries per module page.
+
 ### Linking Rules (Gating-Compatible)
 - **Never link forward** to pages the reader hasn't unlocked yet. Pages are gated sequentially -- a link to Stage 3 from a Stage 1 page creates a dead-end redirect.
 - **Only link to**: the immediate next page (via bottom nav or CTA), pages within the current stage's modules (from the stage opening), or already-completed previous pages.
