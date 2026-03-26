@@ -1,315 +1,271 @@
 ---
 title: "Risk Map"
 description: "Name your riskiest assumptions and test them before they become expensive mistakes."
+full: true
 ---
 
-Founders do not usually fail because they missed a feature. They fail because
-they built on a belief that was never tested.
+<div className="mx-auto max-w-3xl">
 
-This module helps you surface that belief before it eats months of time.
-You will map your assumption stack, identify the riskiest one, and choose
-the first test you must run.
+Founders do not usually fail because they missed a feature. They fail because they built on a belief that was never tested. This module helps you surface that belief before it eats months of time.
 
-**Output for this module**
+<Callout type="idea" title="Output for this module">
 - 8 to 12 "we believe" statements
 - A ranked risk map (importance vs evidence)
 - The single assumption you must test next
+</Callout>
 
 ## The Assumption Stack
-An assumption is a belief about the world that must be true for your idea
-to work. When you stack ten assumptions together, your idea becomes a
-tower. The question is which block, if pulled, collapses the whole thing.
 
-Most ideas rely on the same layers:
-1. **Problem**: The pain is real and frequent.
-2. **Person**: The right buyer cares and can pay.
-3. **Willingness**: They will commit time or money.
-4. **Reach**: You can find them reliably.
-5. **Delivery**: You can solve it at a reasonable cost.
+An assumption is a belief about the world that must be true for your idea to work. When you stack ten assumptions together, your idea becomes a tower. The question is which block, if pulled, collapses the whole thing.
 
-If any layer is wrong, the idea fails. That is why you test the weakest
-layer first.
+<div className="mt-4 flex flex-col gap-2">
+  <div className="flex items-center gap-4 rounded-xl border-2 border-fd-border p-4">
+    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-2))'}}>1</span>
+    <div><p className="text-sm font-semibold text-fd-foreground">Problem</p><p className="text-xs text-fd-muted-foreground">The pain is real and frequent</p></div>
+  </div>
+  <div className="flex items-center gap-4 rounded-xl border-2 border-fd-border p-4">
+    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-2))'}}>2</span>
+    <div><p className="text-sm font-semibold text-fd-foreground">Person</p><p className="text-xs text-fd-muted-foreground">The right buyer cares and can pay</p></div>
+  </div>
+  <div className="flex items-center gap-4 rounded-xl border-2 border-fd-border p-4">
+    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-2))'}}>3</span>
+    <div><p className="text-sm font-semibold text-fd-foreground">Willingness</p><p className="text-xs text-fd-muted-foreground">They will commit time or money</p></div>
+  </div>
+  <div className="flex items-center gap-4 rounded-xl border-2 border-fd-border p-4">
+    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-2))'}}>4</span>
+    <div><p className="text-sm font-semibold text-fd-foreground">Reach</p><p className="text-xs text-fd-muted-foreground">You can find them reliably</p></div>
+  </div>
+  <div className="flex items-center gap-4 rounded-xl border-2 border-fd-border p-4">
+    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-2))'}}>5</span>
+    <div><p className="text-sm font-semibold text-fd-foreground">Delivery</p><p className="text-xs text-fd-muted-foreground">You can solve it at a reasonable cost</p></div>
+  </div>
+</div>
+
+If any layer is wrong, the idea fails. That is why you test the weakest layer first.
 
 ## The Risk Map
-The Risk Map is a simple 2x2:
-- **Importance**: If this is wrong, does the idea die?
-- **Evidence**: How much proof do you have right now?
 
-The danger zone is **high importance + low evidence**. That is your first
-test.
+<div className="mt-4 rounded-xl border-2 border-fd-border p-5" style={{backgroundColor: 'hsl(var(--fd-muted) / 0.4)'}}>
+  <p className="text-[10px] font-semibold uppercase tracking-wider" style={{color: 'hsl(var(--stage-2))'}}>The 2x2</p>
+  <div className="mt-3 grid gap-3 sm:grid-cols-2">
+    <div className="rounded-lg border-2 border-fd-border p-3">
+      <p className="text-xs font-semibold text-fd-foreground">Importance</p>
+      <p className="mt-1 text-xs text-fd-muted-foreground">If this is wrong, does the idea die?</p>
+    </div>
+    <div className="rounded-lg border-2 border-fd-border p-3">
+      <p className="text-xs font-semibold text-fd-foreground">Evidence</p>
+      <p className="mt-1 text-xs text-fd-muted-foreground">How much proof do you have right now?</p>
+    </div>
+  </div>
+  <div className="mt-3 rounded-lg border-2 p-3" style={{borderColor: 'hsl(var(--stage-2) / 0.4)', backgroundColor: 'hsl(var(--stage-2) / 0.06)'}}>
+    <p className="text-xs font-bold" style={{color: 'hsl(var(--stage-2))'}}>Danger zone: high importance + low evidence</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">That is your first test.</p>
+  </div>
+</div>
 
-**Example (generic)**
-- Assumption: "HR managers will pay $49/month for onboarding checklists."
-  - Importance: 5
-  - Evidence: 1
-- Assumption: "They already use spreadsheets for onboarding."
-  - Importance: 3
-  - Evidence: 4
-- Assumption: "We can reach them through LinkedIn messages."
-  - Importance: 4
-  - Evidence: 2
+<Callout type="warn" title="The core rule">
+One wrong assumption can erase months of work. Test the riskiest one first. If you test the easy assumption, you only feel progress. If you test the riskiest one, you get truth.
+</Callout>
 
-The top risk here is the first one: price willingness with low evidence.
+Webvan built massive delivery infrastructure on the assumption that enough people would switch to online grocery at scale. Demand did not match the cost structure. The hidden assumption was not "people want groceries delivered" -- it was "enough people will change habits fast enough to make this model work." Wrong assumption, wrong order, real collapse.
 
-Importance matters because it tells you what can kill the idea. Evidence
-matters because it tells you what you already know. Your job is to find
-the gap between the two and close it fast.
+## Assumption Types
 
-## A Real Example (Webvan)
-Webvan built massive delivery infrastructure on the assumption that enough
-people would switch to online grocery at scale. Demand did not match the
-cost structure, and the company shut down in 2001. The hidden assumption
-was not just "people want groceries delivered." It was "enough people will
-change habits fast enough to make this model work."
+Use these to force specificity when writing your assumptions:
 
-Wrong assumption, wrong order, real collapse.
+<div className="mt-4 grid gap-3 sm:grid-cols-2">
+  <div className="rounded-xl border-2 border-fd-border p-4 transition-all hover:border-[hsl(var(--stage-2)/0.3)]">
+    <div className="flex items-center gap-2"><span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-2))'}}>F</span><span className="text-sm font-semibold text-fd-foreground">Frequency</span></div>
+    <p className="mt-1.5 text-xs text-fd-muted-foreground">"This happens weekly, not yearly."</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4 transition-all hover:border-[hsl(var(--stage-2)/0.3)]">
+    <div className="flex items-center gap-2"><span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-2))'}}>B</span><span className="text-sm font-semibold text-fd-foreground">Buyer</span></div>
+    <p className="mt-1.5 text-xs text-fd-muted-foreground">"The manager can approve $200 without procurement."</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4 transition-all hover:border-[hsl(var(--stage-2)/0.3)]">
+    <div className="flex items-center gap-2"><span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-2))'}}>P</span><span className="text-sm font-semibold text-fd-foreground">Price</span></div>
+    <p className="mt-1.5 text-xs text-fd-muted-foreground">"They will pay $99/month for the outcome."</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4 transition-all hover:border-[hsl(var(--stage-2)/0.3)]">
+    <div className="flex items-center gap-2"><span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-2))'}}>R</span><span className="text-sm font-semibold text-fd-foreground">Reach</span></div>
+    <p className="mt-1.5 text-xs text-fd-muted-foreground">"We can get 20 qualified interviews in 2 weeks."</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4 transition-all hover:border-[hsl(var(--stage-2)/0.3)]">
+    <div className="flex items-center gap-2"><span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-2))'}}>S</span><span className="text-sm font-semibold text-fd-foreground">Switching</span></div>
+    <p className="mt-1.5 text-xs text-fd-muted-foreground">"They can change tools without risk or disruption."</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4 transition-all hover:border-[hsl(var(--stage-2)/0.3)]">
+    <div className="flex items-center gap-2"><span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-2))'}}>O</span><span className="text-sm font-semibold text-fd-foreground">Outcome</span></div>
+    <p className="mt-1.5 text-xs text-fd-muted-foreground">"This will reduce time by at least 30%."</p>
+  </div>
+</div>
 
-Diagram cue: a 2x2 grid with the top-right quadrant highlighted.
-
-## The Core Rule
-One wrong assumption can erase months of work. Test the riskiest one first.
-
-If you test the easy assumption, you only feel progress. If you test the
-riskiest one, you get truth.
-
-Most founders avoid the riskiest test because it threatens the dream. That
-is exactly why you should run it. Evidence does not care how attached you
-are. It only cares if the assumption survives contact with reality.
-
-## Common Assumption Types
-Use these to force specificity:
-- **Frequency**: "This happens weekly, not yearly."
-- **Buyer**: "The manager can approve $200 without procurement."
-- **Price**: "They will pay $99/month for the outcome."
-- **Reach**: "We can get 20 qualified interviews in 2 weeks."
-- **Switching**: "They can change tools without risk or disruption."
-- **Outcome**: "This will reduce time by at least 30%."
-
-If you cannot write an assumption in one sentence, it is too vague to test.
-
-## Assumption Writing Rules
-- One assumption per line.
-- No "and" or "or" statements.
-- Use a number when possible (price, time, frequency).
-
-Bad: "They will pay and refer their friends."  
-Better: "They will pay $99/month within 30 days."
-
-## Assumption Stack Example (Generic)
-Idea: "A tool that helps small clinics reduce no-shows."
-
-Assumption stack:
-- Clinics have no-show rates above 10%.
-- The office manager feels the pain weekly.
-- They already use workarounds (calls, reminders, deposits).
-- They can approve $150/month without procurement.
-- We can reach them through local clinic groups.
-- We can reduce no-shows by at least 25%.
-
-You do not need to be right yet. You need to be explicit.
-
-## What Counts as Evidence
-Evidence is behavior you can point to, not hope.
-
-Stronger evidence:
-- Past spend on similar tools
-- Repeated workarounds in real workflows
-- Clear time or money cost tied to the pain
-
-Weaker evidence:
-- "That sounds cool"
-- "I would use it"
-- Likes, follows, and polite praise
-
-If your evidence is weak, mark it as weak. Honesty beats confidence here.
-
-**Evidence sources (practical)**
-- Interview notes with concrete examples
-- Screenshots of workarounds (spreadsheets, templates)
-- Payment proof or budget line references
-- Signed LOIs or paid pilots
+<div className="mt-4 rounded-xl border-2 border-fd-border p-5" style={{backgroundColor: 'hsl(var(--fd-muted) / 0.4)'}}>
+  <p className="text-[10px] font-semibold uppercase tracking-wider" style={{color: 'hsl(var(--stage-2))'}}>Writing rules</p>
+  <div className="mt-3 flex gap-6 text-xs">
+    <div className="flex items-center gap-1.5"><span className="flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold" style={{backgroundColor: 'hsl(var(--stage-2) / 0.15)', color: 'hsl(var(--stage-2))'}}>1</span> <span className="text-fd-muted-foreground">One assumption per line</span></div>
+    <div className="flex items-center gap-1.5"><span className="flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold" style={{backgroundColor: 'hsl(var(--stage-2) / 0.15)', color: 'hsl(var(--stage-2))'}}>2</span> <span className="text-fd-muted-foreground">No "and" or "or"</span></div>
+    <div className="flex items-center gap-1.5"><span className="flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold" style={{backgroundColor: 'hsl(var(--stage-2) / 0.15)', color: 'hsl(var(--stage-2))'}}>3</span> <span className="text-fd-muted-foreground">Use a number</span></div>
+  </div>
+  <div className="mt-4 grid gap-3 sm:grid-cols-2">
+    <div className="rounded-lg border-2 border-red-200 bg-red-50 p-3 dark:border-red-900/30 dark:bg-red-950/20"><p className="text-[10px] font-bold uppercase tracking-wider text-red-500">Bad</p><p className="mt-1 text-xs text-fd-muted-foreground">"They will pay and refer their friends."</p></div>
+    <div className="rounded-lg border-2 p-3" style={{borderColor: 'hsl(var(--stage-2) / 0.4)', backgroundColor: 'hsl(var(--stage-2) / 0.06)'}}><p className="text-[10px] font-bold uppercase tracking-wider" style={{color: 'hsl(var(--stage-2))'}}>Better</p><p className="mt-1 text-xs text-fd-foreground">"They will pay $99/month within 30 days."</p></div>
+  </div>
+</div>
 
 ## Exercise: Build Your Assumption List
-Write 8 to 12 "we believe" statements for your top ICP-problem pair.
 
-Use these prompts:
-- We believe the pain shows up at least [frequency].
-- We believe the buyer can approve [price] without delays.
-- We believe they already pay for [tool/workaround].
-- We believe we can reach them through [channel].
-- We believe switching does not create major risk.
+<div className="mt-4 rounded-xl border-2 p-5" style={{borderColor: 'hsl(var(--stage-2) / 0.4)', backgroundColor: 'hsl(var(--stage-2) / 0.06)'}}>
+  <div className="flex items-center gap-2">
+    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-white" style={{backgroundColor: 'hsl(var(--stage-2))'}}>
+      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+    </span>
+    <span className="text-sm font-semibold text-fd-foreground">Write 8-12 "we believe" statements for your top ICP-problem pair.</span>
+  </div>
+  <div className="mt-4 rounded-lg border-2 border-fd-border bg-fd-background p-4">
+    <p className="text-[10px] font-semibold uppercase tracking-wider" style={{color: 'hsl(var(--stage-2))'}}>Assumption template</p>
+    <div className="mt-2 space-y-2 text-xs text-fd-muted-foreground">
+      <p className="font-[family-name:var(--font-display)] text-lg italic text-fd-foreground">"We believe [role] feels [pain] [frequency]."</p>
+      <div className="mt-3 space-y-1.5">
+        <p>We believe they will pay [price] for [outcome].</p>
+        <p>We believe they currently use [workaround].</p>
+        <p>We believe we can reach them via [channel].</p>
+        <p>We believe switching costs are [low/high] because [reason].</p>
+      </div>
+    </div>
+  </div>
+  <p className="mt-3 text-xs italic text-fd-muted-foreground">If it cannot be tested, it does not count. You do not need to be right yet. You need to be explicit.</p>
+</div>
 
-Do not make them vague. If it cannot be tested, it does not count.
+## Exercise: Score and Rank
 
-**Assumption dump template**
-- We believe [role] feels [pain] [frequency].
-- We believe they will pay [price] for [outcome].
-- We believe they currently use [workaround].
-- We believe we can reach them via [channel].
-- We believe switching costs are [low/high] because [reason].
+<div className="mt-4 rounded-xl border-2 p-5" style={{borderColor: 'hsl(var(--stage-2) / 0.4)', backgroundColor: 'hsl(var(--stage-2) / 0.06)'}}>
+  <div className="flex items-center gap-2">
+    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-white" style={{backgroundColor: 'hsl(var(--stage-2))'}}>
+      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+    </span>
+    <span className="text-sm font-semibold text-fd-foreground">Score each assumption on importance and evidence (1-5).</span>
+  </div>
+  <div className="mt-4 rounded-lg border-2 border-fd-border bg-fd-background p-4">
+    <div className="space-y-3 text-sm">
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Assumption</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+      <div className="grid grid-cols-2 gap-3">
+        <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Importance (1-5)</p><div className="mt-1 flex gap-1">{[1,2,3,4,5].map(n => <span key={n} className="flex h-7 w-7 items-center justify-center rounded-md border border-fd-border text-[10px] text-fd-muted-foreground">{n}</span>)}</div></div>
+        <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Evidence (1-5)</p><div className="mt-1 flex gap-1">{[1,2,3,4,5].map(n => <span key={n} className="flex h-7 w-7 items-center justify-center rounded-md border border-fd-border text-[10px] text-fd-muted-foreground">{n}</span>)}</div></div>
+      </div>
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Test idea</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+    </div>
+  </div>
+  <div className="mt-3 grid gap-2 text-xs text-fd-muted-foreground">
+    <p><span className="font-semibold">Importance 5</span> = the idea dies if wrong. <span className="font-semibold">Evidence 1</span> = only a guess.</p>
+    <p><span className="font-semibold">Evidence 5</span> = paid commitment or behavior you can verify.</p>
+  </div>
+</div>
 
-## Exercise: Score Importance and Evidence
-For each assumption, score:
-- **Importance (1-5):** If wrong, does the idea break?
-- **Evidence (1-5):** How much proof do you already have?
+Circle the three assumptions with the highest importance and lowest evidence. Then choose the number one risk you will test first. If stuck, pick the assumption that would make the rest irrelevant if it is false.
 
-Guidance:
-- Importance 5 = the idea dies if wrong
-- Evidence 1 = only a guess
-- Evidence 5 = observed behavior or real spend
+## Design the Test
 
-If you are unsure, score lower. Overconfidence hides risk.
+Before you run the test, define what "pass" looks like and pick a format.
 
-**Evidence scoring guide (quick)**
-- 1: Pure opinion or founder belief
-- 2: A few anecdotes, no proof
-- 3: Multiple interviews with repeatable behavior
-- 4: Clear workaround or spend in multiple cases
-- 5: Paid commitment or behavior you can verify
+<div className="mt-4 grid gap-4 sm:grid-cols-2">
+  <div className="rounded-xl border-2 border-fd-border p-5">
+    <div className="flex items-center gap-2">
+      <span className="flex h-6 w-6 items-center justify-center rounded-md" style={{backgroundColor: 'hsl(var(--stage-2) / 0.12)'}}>
+        <svg className="h-3.5 w-3.5" style={{color: 'hsl(var(--stage-2))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      </span>
+      <span className="text-sm font-semibold text-fd-foreground">Pass line examples</span>
+    </div>
+    <div className="mt-3 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p>"3 buyers agree to a paid pilot."</p>
+      <p>"5 people show a real workaround in interviews."</p>
+      <p>"2 teams approve a paid trial."</p>
+    </div>
+    <p className="mt-3 text-[10px] italic" style={{color: 'hsl(var(--stage-2))'}}>No pass line, no decision.</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-5">
+    <div className="flex items-center gap-2">
+      <span className="flex h-6 w-6 items-center justify-center rounded-md" style={{backgroundColor: 'hsl(var(--stage-2) / 0.12)'}}>
+        <svg className="h-3.5 w-3.5" style={{color: 'hsl(var(--stage-2))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+      </span>
+      <span className="text-sm font-semibold text-fd-foreground">Fast test formats</span>
+    </div>
+    <div className="mt-3 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p><strong>Interview proof:</strong> 5 real stories with spend</p>
+      <p><strong>Paid pilot:</strong> small trial or LOI</p>
+      <p><strong>Landing page:</strong> waitlist with clear action</p>
+      <p><strong>Concierge:</strong> deliver the outcome manually</p>
+    </div>
+    <p className="mt-3 text-[10px] italic" style={{color: 'hsl(var(--stage-2))'}}>7-10 days. No signal? Change the test.</p>
+  </div>
+</div>
 
-## Define a Pass Line
-Before you test the top risk, define what "pass" looks like.
+<div className="mt-4 rounded-xl border-2 border-fd-border p-5" style={{backgroundColor: 'hsl(var(--fd-muted) / 0.4)'}}>
+  <p className="text-[10px] font-semibold uppercase tracking-wider" style={{color: 'hsl(var(--stage-2))'}}>Test Card</p>
+  <div className="mt-3 space-y-2 font-[family-name:var(--font-display)] text-lg text-fd-foreground">
+    <p>"We believe <strong>[assumption]</strong>."</p>
+    <p>"To test this, we will <strong>[smallest action]</strong>."</p>
+    <p>"We are right if <strong>[pass line]</strong>."</p>
+    <p>"Next step if right: <strong>[move forward]</strong>."</p>
+    <p>"Next step if wrong: <strong>[change/stop]</strong>."</p>
+  </div>
+</div>
 
-Examples:
-- "3 buyers agree to a paid pilot."
-- "5 people show a real workaround in live interviews."
-- "2 teams approve a paid trial."
+## Quick Reference
 
-No pass line, no decision. A test without a pass line is just activity.
+<div className="mt-4 grid gap-4 sm:grid-cols-2">
+  <div className="rounded-xl border-2 border-fd-border p-5" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--stage-2))'}}>
+    <p className="text-sm font-semibold text-fd-foreground">What counts as evidence</p>
+    <div className="mt-2 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-2))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Past spend on similar tools</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-2))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Repeated workarounds in real workflows</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-2))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Clear time or money cost tied to the pain</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-2))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Signed LOIs or paid pilots</p>
+    </div>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-5" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--fd-muted-foreground))'}}>
+    <p className="text-sm font-semibold text-fd-foreground">What does not count</p>
+    <div className="mt-2 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg> "That sounds cool"</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg> "I would use it"</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg> Likes, follows, and polite praise</p>
+    </div>
+  </div>
+</div>
 
-## Fast Test Formats (Pick One)
-You do not need a full product to test a risk. Choose the smallest test
-that produces real behavior.
+<div className="mt-4 grid gap-3 sm:grid-cols-2">
+  <div className="rounded-xl border border-dashed border-fd-muted-foreground/20 p-4">
+    <p className="text-xs font-semibold text-fd-foreground">Pre-mortem (2 min)</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">Imagine your idea failed in 6 months. Write three reasons. Convert each into a testable assumption.</p>
+  </div>
+  <div className="rounded-xl border border-dashed border-fd-muted-foreground/20 p-4">
+    <p className="text-xs font-semibold text-fd-foreground">How many signals?</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">3-5 consistent examples = move forward. 0-1 = change the assumption. Mixed = refine the audience.</p>
+  </div>
+</div>
 
-Common options:
-- **Interview proof:** get 5 real stories with spend/workarounds.
-- **Paid pilot:** ask for a small paid trial or LOI.
-- **Landing page:** run a waitlist with a clear action.
-- **Concierge test:** deliver the outcome manually.
-
-The goal is not a perfect experiment. The goal is a fast signal.
-
-## Test Card (One Assumption)
-Write this before you run any test:
-- We believe [assumption].
-- To test this, we will [smallest action].
-- We will measure [signal].
-- We are right if [pass line].
-- Next step if right: [move forward].
-- Next step if wrong: [change/stop].
-
-One card per test keeps you focused.
-
-## Timebox the Test
-Give yourself a short window so you do not drift.
-
-Simple rule:
-- 7 to 10 days for the first test
-- If no signal, change the assumption or the test
-
-Speed keeps you honest. Long tests hide weak ideas.
-
-## Circle the Top Three Risks
-Pick the three assumptions with the highest importance and lowest evidence.
-
-Then choose the #1 risk you will test first. That is your critical path.
-
-If you are stuck, pick the assumption that would make the rest irrelevant
-if it is false. That is usually the one to test first.
-
-## Risk Map Worksheet (Simple)
-Use this to keep the map clean and visible.
-
-| Assumption | Importance (1-5) | Evidence (1-5) | Test idea |
-| --- | --- | --- | --- |
-| | | | |
-
-This becomes a one-page plan you can revisit every week.
-
-## What to Ignore for Now
-Low-importance assumptions can wait. Do not spend energy proving things
-that do not decide the outcome.
-
-Ignore for now:
-- Nice-to-have features
-- Long-term expansion ideas
-- Secondary channels you will not use this month
-
-The goal is not to answer everything. The goal is to remove the single
-assumption that could kill the idea.
-
-## Evidence Artifact
-Capture this as a simple list:
-- Assumption
-- Importance score
-- Evidence score
-- Why it matters
-
-This is your map for Stage 2. It keeps you from testing the wrong thing.
-
-## Pre-Mortem (2 Minutes)
-Imagine your idea failed six months from now. Why?
-
-Write three reasons. Then convert each into an assumption you can test.
-This simple step reveals blind spots you would otherwise protect.
-
-## Assumption Sanity Check
-Before you move on, ask:
-- Is this assumption about behavior, not opinions?
-- Is it testable within two weeks?
-- Would a "fail" actually change my decision?
-
-If the answer is no, rewrite the assumption.
-
-## Weekly Risk Review
-Keep the map alive. Every week, ask:
-- Which assumption now has evidence?
-- Which new risk appeared after our last test?
-- What is the next most dangerous assumption?
-
-This turns risk mapping into a habit, not a one-time exercise.
-
-## If Evidence Is Mixed
-Mixed evidence happens. Do not force a decision.
-
-If two interviews show pain and three do not, tighten the ICP and test
-again. If the numbers stay split, your problem or buyer is still unclear.
-
-## How Many Signals Are Enough?
-You do not need dozens of data points. You need a repeatable pattern.
-
-As a rough guide:
-- 3 to 5 consistent examples can justify moving forward.
-- 0 to 1 examples usually means you should change the assumption.
-- Mixed signals mean refine the audience and test again.
-
-Do not chase perfect certainty. Chase clear evidence.
+<Callout type="error" title="Common traps">
+- Testing what is easy instead of what is deadly
+- Confusing opinions with evidence
+- Writing assumptions so broad they cannot be tested
+- Mixing five assumptions into one test
+</Callout>
 
 ## When You Can Move On
-You are ready for Module 2 when:
-- You have one top risk and a clear pass line.
-- You know exactly what evidence would change your decision.
 
-If you cannot name those, you are not done yet.
+<div className="mt-4 rounded-xl border-2 border-fd-border p-5" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--stage-2))'}}>
+  <p className="text-sm text-fd-foreground">You are ready for Module 2 when you can say:</p>
+  <div className="mt-3 space-y-2 text-xs text-fd-muted-foreground">
+    <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-2))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> "I have one top risk and a clear pass line."</p>
+    <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-2))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> "I know exactly what evidence would change my decision."</p>
+  </div>
+  <p className="mt-3 text-xs italic text-fd-muted-foreground">If you cannot name those, you are not done yet.</p>
+</div>
 
-## Final Check (30 Seconds)
-Ask yourself:
-- "If this assumption fails, would I still build?"
-- "Do I know how to test it in the next two weeks?"
+---
 
-If the answer is no, pause. The map is telling you where to focus.
+<div className="mt-8 flex flex-col items-center gap-2 text-center">
+  <p className="font-[family-name:var(--font-display)] text-lg italic text-fd-muted-foreground">If the top risk is wrong, the idea is dead.</p>
+</div>
 
-## Common Traps
-- Testing what is easy instead of what is deadly.
-- Confusing opinions with evidence.
-- Writing assumptions so broad they cannot be tested.
-- Mixing five assumptions into one test.
-
-One test. One risk. One clear pass line.
-
-## The Handoff to Module 2
-Now you will prove the problem is frequent and costly using the scorecard.
-You are not validating the whole business. You are validating the pain.
-
-**Closing line**
-If the top risk is wrong, the idea is dead.
+</div>
