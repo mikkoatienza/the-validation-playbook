@@ -114,6 +114,13 @@ Stage openings (`stage-N-xxx/index.mdx`) follow this structure. Use Stage 1 as t
 
 Use `full: true` frontmatter and wrap content in `<div className="mx-auto max-w-3xl">`. Module numbered circles use `style={{backgroundColor: 'hsl(var(--stage-N))'}}` for the stage color.
 
+### Linking Rules (Gating-Compatible)
+- **Never link forward** to pages the reader hasn't unlocked yet. Pages are gated sequentially -- a link to Stage 3 from a Stage 1 page creates a dead-end redirect.
+- **Only link to**: the immediate next page (via bottom nav or CTA), pages within the current stage's modules (from the stage opening), or already-completed previous pages.
+- **Display-only cards** are fine for showing what's ahead (IDEAL stage overview, learning outcomes) -- use `<div>` instead of `<a>` to keep the visual without the broken link.
+- **Stage openings** may link to their own 3 modules since those are the next pages in sequence.
+- **Prose handoffs** ("The next module begins with the Friction Scan") are preferred over hyperlinks in manuscript content.
+
 ### Checklist for Editing Content Pages
 - [ ] No duplicate H1 (frontmatter title handles it)
 - [ ] No publisher/internal metadata (back cover, pitches, author notes)
