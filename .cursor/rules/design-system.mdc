@@ -104,7 +104,12 @@ Stage openings (`stage-N-xxx/index.mdx`) follow this structure. Use Stage 1 as t
 3. **"What You Will Build"** -- 3 artifact cards with amber icons (clipboard, chat, people) showing the stage outputs
 4. **"The Three Modules"** -- 3 numbered clickable cards with amber circles, module name, activity description, and hover "Start" arrow. Links to actual module pages.
 5. **"Stage Rules"** -- `warn` Callout titled "Keep it honest" with the stage's rules as bullet list
-6. **Reference sections** -- Evidence Standard, Pace, What to Ignore, Common Traps, What Success Feels Like (condensed, plain text)
+6. **"Quick Reference"** -- two side-by-side cards:
+   - Evidence Standard card: amber check icon, numbered items with amber numbers, italic closing note
+   - Pace card: amber clock icon, numbered items, italic closing note
+7. **Common Traps** -- `error` Callout (red icon) with the trap list
+8. **What to Ignore** -- dashed border box (`border-dashed border-fd-muted-foreground/20`) as a compact side note
+9. **What Success Feels Like** -- amber left-border card with bold outcome statement and three checkmark items
 7. **Closing** -- horizontal rule, italic serif mantra centered, prominent amber CTA button "Begin Module 1: [Name]"
 
 Use `full: true` frontmatter and wrap content in `<div className="mx-auto max-w-3xl">`. Module numbered circles use `style={{backgroundColor: 'hsl(var(--stage-N))'}}` for the stage color.
