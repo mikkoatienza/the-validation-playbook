@@ -1,5 +1,6 @@
 import { source } from "@/lib/source";
 import { DocsLayout } from "fumadocs-ui/layouts/docs";
+import { SidebarSeparator } from "./sidebar-components";
 import type { ReactNode } from "react";
 
 export default function Layout({ children }: { children: ReactNode }) {
@@ -12,6 +13,12 @@ export default function Layout({ children }: { children: ReactNode }) {
             The Validation Playbook
           </span>
         ),
+      }}
+      sidebar={{
+        defaultOpenLevel: 1,
+        components: {
+          Separator: SidebarSeparator,
+        },
       }}
     >
       {children}
