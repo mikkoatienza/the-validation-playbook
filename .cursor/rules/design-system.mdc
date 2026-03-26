@@ -2,18 +2,43 @@
 
 This project has a comprehensive design system documented in `DESIGN-SYSTEM.md` at the repo root. Read it before making any visual or structural changes.
 
+## Standing Rule: Document Every Design Decision
+
+After implementing any visual, structural, or UX change, you MUST update this rule file and `DESIGN-SYSTEM.md` with the new patterns, conventions, or components introduced. This ensures all future pages stay cohesive and aligned. Never skip this step.
+
 ## Quick Reference
 
 ### Colors
 - **Warm accent** (`--accent-warm`): Amber `#D97706` in light, brighter in dark. Used for primary CTAs, section labels, icons, focus rings, hover borders.
-- **Stage colors** (`--stage-1` through `--stage-5`): Warm-to-cool gradient (amber > orange > red-orange > rose > purple). Used ONLY in the IDEAL stepper component.
+- **Stage colors** (`--stage-1` through `--stage-5`): Warm-to-cool gradient (amber > orange > red-orange > rose > purple). Used in the IDEAL stepper (landing page) AND as page header accents in the docs.
 - **Fumadocs tokens**: `fd-primary`, `fd-muted`, `fd-muted-foreground`, `fd-accent`, `fd-card`, `fd-border`, `fd-background`. Use these for all neutral/structural UI.
 - **Rule**: No one-off hex values. All colors come from CSS custom properties in `app/global.css`.
 
 ### Typography
-- **Display font**: Instrument Serif (class: `font-display`). Use for hero headings, section titles, pull quotes, stat callouts on marketing/landing pages.
-- **Body font**: Inter (default, no class needed). Use for all body text, UI labels, nav, and all documentation content.
-- **Rule**: Instrument Serif is NEVER used inside docs pages. Docs use Inter exclusively.
+- **Display font**: Instrument Serif (class: `font-display`). Use for hero headings, section titles, pull quotes, stat callouts on marketing/landing pages, AND for the H1 page title on docs pages (via `docs-title` class).
+- **Body font**: Inter (default, no class needed). Use for all body text, UI labels, nav, H2+ headings in docs, and all documentation body content.
+- **No em dashes.** Never use `---` (em dash), `&mdash;`, or the Unicode em dash character. Use `--` instead.
+
+### Docs Page Template (All 30 Content Pages)
+Every docs page automatically gets these via the page template (`app/docs/[[...slug]]/page.tsx`):
+- **Stage-colored left border** on the header (amber for Stage 1, orange for Stage 2, etc.)
+- **Instrument Serif H1 title** via `docs-title` class
+- **Progress badge**: "Module X of 15" or "Stage N of 5" in stage color
+- **Reading time estimate**: "X min read" computed from ToC section count
+- **Progress bar**: thin colored bar showing position in the 15-module journey
+- **Scroll progress**: fixed bar at viewport top showing reading position
+- **Enhanced bottom navigation**: prev/next cards with title, description, and stage accent color
+- **Progress gating**: pages are locked until the previous page is completed (85% scroll)
+
+### Docs Content Patterns (MDX)
+When editing content pages, use these Fumadocs components for visual richness:
+- **`<Callout type="idea" title="...">`** -- for key concepts, core messages, framing statements
+- **`<Callout type="info" title="...">`** -- for process explanations, cadences, rules
+- **`<Cards>` + `<Card title="..." description="..." href="...">`** -- for linked navigation grids (personas, stage overviews, learning outcomes)
+- **Bold labels** (`**Output for this module**`, `**Exercise:**`, `**Template**`) are auto-detected by the enhanced MDX `strong` component and rendered with icons and color highlights
+- **Do not duplicate the H1 title** in the body. Fumadocs renders the frontmatter `title` as H1. Starting the body with `## Same Title` creates a redundant double heading.
+- **Remove publisher metadata** from reader-facing pages (back cover copy, one-page pitches, stage maps for authors). If it's not useful to the reader, it doesn't belong.
+- **Use `full: true`** in frontmatter when a page uses Cards or wide content that benefits from removing the max-width constraint on the docs body.
 
 ### Section Structure (Landing/Marketing Pages)
 Every section follows this pattern:
@@ -25,13 +50,14 @@ Every section follows this pattern:
 - Alternate backgrounds between sections (`bg-fd-card` vs transparent)
 
 ### Buttons
-- **Primary**: `bg-accent-warm` with dark foreground text. Rounded-lg, font-semibold.
+- **Primary**: `bg-accent-warm` with dark foreground text. Rounded-lg, font-semibold. Subtle `hover:scale-[1.02]`.
 - **Secondary**: `border border-fd-border` outlined. Rounded-lg, font-medium.
 - **Rule**: Never place two amber buttons side by side.
 
 ### Cards
 - Standard: `rounded-xl border border-fd-border bg-fd-background p-5`
-- Interactive: Add `group hover:border-accent-warm hover:shadow-sm` and arrow with `group-hover:translate-x-1`
+- Interactive: Add `group hover:border-accent-warm hover:shadow-sm hover:-translate-y-0.5`
+- In docs content: use Fumadocs `<Card>` and `<Cards>` components for consistent styling
 
 ### Icons
 - Heroicons outline style, 24x24 viewBox, `h-8 w-8 text-accent-warm`, `strokeWidth={1.5}`
@@ -46,20 +72,35 @@ Every section follows this pattern:
 - Amber is brighter in dark mode. Stage colors boosted 5-10% lightness.
 - Always test changes in both modes.
 
-### Boundary: Landing vs Docs
-- Landing page: warm, editorial, Instrument Serif headings, amber accents, grain textures.
-- Docs pages: clean, neutral, Inter only, Fumadocs default theme. No landing page styles leak into docs.
+### Sidebar
+- Stage section headings get colored dots matching their IDEAL stage color (via `SidebarSeparator` component)
+- Sidebar items show progress state: green checkmark (completed), lock icon (locked), dot (unlocked/unread)
+- Locked items are dimmed and non-clickable
+- `defaultOpenLevel: 1` keeps stage folders expanded by default
 
-### Copy Source
-- All user-facing marketing copy is derived from the manuscript (`front-matter/intro.md` and `front-matter/Foundation.md`). Do not invent new language.
+### Progress Gating
+- Sequential reading enforced: page N+1 unlocks only when page N is completed
+- Completion trigger: scrolling to 85% of page depth
+- Storage: localStorage (`tvp-progress`) + cookie (`tvp-progress`)
+- First page (`/docs`) is always unlocked
+- Locked pages show a lock icon, message, and "Continue where you left off" CTA before redirecting
+- Progress state managed via `ProgressProvider` context in `lib/progress.tsx`
 
-### Checklist for New Sections
-- [ ] Uses `max-w-5xl` content width
-- [ ] Has `px-6` horizontal padding and `py-24 md:py-28` minimum vertical padding
-- [ ] Uses label + title pattern
-- [ ] Alternates background with adjacent sections
-- [ ] Uses only defined color tokens
-- [ ] Display text uses `font-display`, body uses Inter
-- [ ] CTAs follow primary/secondary pattern
-- [ ] Tested in light and dark mode
-- [ ] Copy derived from manuscript
+### Bottom Navigation
+- Custom prev/next cards replace the Fumadocs default footer (`footer: { enabled: false }`)
+- Each card shows title + description (from frontmatter)
+- "Next" card uses stage accent color on border and title
+- Cards have hover lift effect (`hover:-translate-y-0.5`)
+- Order follows `lib/reading-order.ts` canonical sequence, not filesystem order
+
+### Checklist for Editing Content Pages
+- [ ] No duplicate H1 (frontmatter title handles it)
+- [ ] No publisher/internal metadata (back cover, pitches, author notes)
+- [ ] Uses `<Callout>` for key concepts and rules
+- [ ] Uses `<Cards>` + `<Card>` for navigation grids and overviews
+- [ ] Bold labels follow manuscript patterns for auto-detection
+- [ ] Links to other pages use relative paths (`/docs/stage-1-identify/friction-scan`)
+- [ ] `full: true` in frontmatter if using Cards or wide layouts
+- [ ] No em dashes
+- [ ] Tested visually in browser after changes
+- [ ] Design decisions documented in this file and DESIGN-SYSTEM.md

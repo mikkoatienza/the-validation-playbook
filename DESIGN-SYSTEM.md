@@ -310,15 +310,87 @@ All custom colors have explicit dark mode overrides in `global.css` under `.dark
 
 ---
 
-## Docs Layout (Separate from Landing)
+## Docs Layout and Page Template
 
-The documentation pages use Fumadocs' built-in `DocsLayout` with minimal customization:
-- Nav title: "The Validation Playbook" in `font-semibold tracking-tight`
-- Sidebar: auto-generated from `meta.json` page trees
-- Content: rendered via `DocsPage` with `DocsTitle`, `DocsDescription`, `DocsBody`
-- No custom theme overrides on docs pages -- Fumadocs neutral theme handles it
+The documentation pages use Fumadocs' `DocsLayout` with significant custom enhancements.
 
-**Rule**: Do not apply landing page styles (grain, gradient, amber accents) to documentation content pages. The docs should feel clean and readable. The visual personality lives on the landing page and marketing surfaces.
+### Page Header
+- **Stage-colored left border**: `docs-page-header` class with `borderLeftColor` set dynamically from stage color
+- **Instrument Serif H1**: page title rendered via `docs-title` class (the only use of Instrument Serif in docs)
+- **Progress badge**: "Module X of 15" or "Stage N of 5" rendered by `PageMeta` component in stage color
+- **Reading time**: estimated from ToC section count, shown as "X min read"
+- **Progress bar**: thin colored line showing position in the 15-module journey
+
+### Stage Color Mapping
+Computed by `lib/page-utils.ts` based on the URL slug:
+- `stage-1-identify/*` -- Stage 1 color (amber)
+- `stage-2-diagnose/*` -- Stage 2 color (orange)
+- `stage-3-earn/*` -- Stage 3 color (red-orange)
+- `stage-4-assess/*` -- Stage 4 color (rose)
+- `stage-5-lock/*` -- Stage 5 color (purple)
+- `extensions/*` -- accent-warm (amber)
+- Other pages -- no stage accent
+
+### Scroll Progress
+Fixed 2px bar at the very top of the viewport, colored with the stage accent. Only appears on stage/module pages.
+
+### Enhanced MDX Components
+The `components/mdx-enhanced.tsx` file overrides the default `strong` element to auto-detect manuscript patterns:
+- **Callout patterns** (e.g. "Output for this module", "Stage Rules", "Closing line"): rendered with amber highlight background
+- **Exercise patterns** (e.g. "Exercise: 20 Frictions"): rendered with pencil icon in amber
+- **Template patterns** (e.g. "Friction log template", "Scorecard template"): rendered with clipboard icon
+
+Detection is regex-based -- do not change the bold label text in the manuscript content without updating the patterns in `mdx-enhanced.tsx`.
+
+### Bottom Navigation
+Custom prev/next cards replace Fumadocs default (`footer: { enabled: false }`):
+- Previous: left-aligned, standard border, shows title + description
+- Next: right-aligned, stage-colored border and title, shows title + description
+- Both have `hover:-translate-y-0.5` lift effect
+- Order follows `lib/reading-order.ts`, NOT `source.getPages()` filesystem order
+
+### Sidebar Customization
+- `SidebarSeparator`: stage section headings get colored dots matching IDEAL stage colors
+- `SidebarItem`: shows progress state icons (green checkmark, lock, dot)
+- `defaultOpenLevel: 1`: stage folders expanded by default
+- Locked items are visually dimmed (`opacity-40`) and non-clickable
+
+### Progress Gating System
+Sequential reading enforced via `ProgressProvider` context:
+- **Storage**: localStorage key `tvp-progress` + cookie `tvp-progress` (1-year max-age)
+- **Unlock rule**: completing page N (85% scroll) unlocks page N+1
+- **Gate behavior**: `ProgressGate` component shows lock icon + message, then redirects via `router.replace()`
+- **Tracking**: `ReadingTracker` component monitors `window.scrollY / docHeight >= 0.85`
+- **First page**: `/docs` (Introduction) is always unlocked
+- **Reset**: `resetProgress()` available from `useProgress()` hook
+
+### Content Page Editing Patterns
+When editing or creating MDX content pages:
+
+**Use Fumadocs components for visual richness:**
+```mdx
+<Callout type="idea" title="Key concept">
+  Content that deserves visual emphasis.
+</Callout>
+
+<Cards>
+  <Card title="Card title" description="Card description" href="/docs/..." />
+</Cards>
+```
+
+**Callout types available**: `idea` (lightbulb), `info` (blue circle), `warn` (yellow), `error` (red), `success` (green)
+
+**Do not:**
+- Duplicate the frontmatter title as an H1 or H2 in the body
+- Include publisher metadata (back cover copy, pitches, author structural notes)
+- Use em dashes
+- Start list items with `# ` (interpreted as heading)
+
+**Do:**
+- Use `full: true` in frontmatter when using Cards or wide layouts
+- Wrap wide content in `<div className="mx-auto max-w-3xl">` for optimal reading width in full mode
+- Link to other pages with relative paths: `[Stage 1](/docs/stage-1-identify)`
+- Keep bold labels matching the patterns in `mdx-enhanced.tsx` for auto-styling
 
 ---
 
@@ -326,12 +398,21 @@ The documentation pages use Fumadocs' built-in `DocsLayout` with minimal customi
 
 | File | Purpose |
 |------|---------|
-| `app/global.css` | CSS custom properties, utility classes, grain/gradient effects |
+| `app/global.css` | CSS custom properties, utility classes, grain/gradient effects, docs styles |
 | `app/layout.tsx` | Root layout: fonts (Inter + Instrument Serif), metadata, RootProvider |
 | `app/(home)/layout.tsx` | Home layout wrapper (Fumadocs HomeLayout with nav title) |
-| `app/(home)/page.tsx` | Landing page: all 7 sections + footer |
-| `app/docs/layout.tsx` | Docs layout: DocsLayout with sidebar tree |
-| `app/docs/[[...slug]]/page.tsx` | Docs page renderer: title, description, body, ToC |
+| `app/(home)/page.tsx` | Landing page: all sections + footer |
+| `app/docs/layout.tsx` | Docs layout: DocsLayout with ProgressProvider, sidebar config |
+| `app/docs/[[...slug]]/page.tsx` | Docs page renderer: stage accent, progress, gate, nav |
+| `app/docs/sidebar-components.tsx` | Client components: SidebarSeparator, SidebarItem with progress |
+| `lib/source.ts` | Fumadocs content loader |
+| `lib/reading-order.ts` | Canonical 30-page reading sequence |
+| `lib/page-utils.ts` | Stage color mapping, module index, reading time |
+| `lib/progress.tsx` | ProgressProvider context, localStorage + cookie persistence |
+| `components/mdx.tsx` | Base MDX component overrides |
+| `components/mdx-enhanced.tsx` | Pattern-detecting enhanced strong component |
+| `components/docs-components.tsx` | ScrollProgress bar, PageMeta badge (client) |
+| `components/progress-gate.tsx` | ProgressGate (redirects) + ReadingTracker (scroll) |
 
 ---
 
@@ -366,13 +447,22 @@ Sourced from the manuscript. Current selections:
 - "If there is no action, it is not proof yet."
 - "Decisions are the unit of progress."
 
-Styled as `font-display text-2xl italic text-fd-muted-foreground md:text-3xl` with `border-t border-fd-border pt-10` as visual separator.
+Styled as `font-display text-3xl italic text-fd-muted-foreground md:text-4xl` with `border-t border-fd-border pt-10` as visual separator.
 
 ---
 
-## Checklist for New Sections
+## Standing Rule: Continuous Documentation
 
-When adding a new section to the landing page or a new marketing surface:
+After implementing any visual, structural, or UX change, ALWAYS update:
+1. This file (`DESIGN-SYSTEM.md`) with comprehensive details
+2. `.cursor/rules/design-system.mdc` with the quick reference
+3. `.cursor/rules/project-conventions.mdc` with any new structural/technical patterns
+
+This ensures all future work stays cohesive and aligned. Never skip this step.
+
+---
+
+## Checklist for New Landing Page Sections
 
 - [ ] Uses `max-w-5xl` content width
 - [ ] Has `px-6` horizontal padding
@@ -387,3 +477,16 @@ When adding a new section to the landing page or a new marketing surface:
 - [ ] Icons are Heroicons outline, 32px, amber
 - [ ] Tested in both light and dark mode
 - [ ] Copy is derived from manuscript, not invented
+
+## Checklist for Editing Content Pages
+
+- [ ] No duplicate H1 (frontmatter title handles it)
+- [ ] No publisher/internal metadata (back cover, pitches, author notes)
+- [ ] Uses `<Callout>` for key concepts and rules
+- [ ] Uses `<Cards>` + `<Card>` for navigation grids and overviews
+- [ ] Bold labels follow manuscript patterns for auto-detection
+- [ ] Links to other pages use relative paths (`/docs/stage-1-identify/friction-scan`)
+- [ ] `full: true` in frontmatter if using Cards or wide layouts
+- [ ] No em dashes
+- [ ] Tested visually in browser after changes
+- [ ] Design decisions documented in this file and `.cursor/rules/`

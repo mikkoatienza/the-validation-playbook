@@ -1,5 +1,14 @@
 # Project Conventions
 
+## Standing Rule: Continuous Documentation
+
+After every implementation session, you MUST update:
+1. `.cursor/rules/design-system.mdc` with any new visual/UX patterns
+2. `.cursor/rules/project-conventions.mdc` with any new structural/technical patterns
+3. `DESIGN-SYSTEM.md` with comprehensive details for new components or patterns
+
+This is not optional. Skipping documentation creates drift between pages. Every design decision must be recorded so the next page stays aligned.
+
 ## Tech Stack
 - **Framework**: Next.js 16 (App Router) with React 19
 - **Content**: Fumadocs MDX (fumadocs-mdx v14, fumadocs-core v16, fumadocs-ui v16)
@@ -11,6 +20,7 @@
 - Content lives in `content/docs/` as `.mdx` files with YAML frontmatter (`title`, `description`)
 - Navigation is controlled by `meta.json` files in each content folder
 - Content source configured in `source.config.ts`, loaded via `lib/source.ts`
+- Reading order defined in `lib/reading-order.ts` (30-page canonical sequence)
 - The manuscript source of truth lives in a separate repo (`trilogy-project/manuscript/`)
 
 ## IDEAL Framework (Content Organization)
@@ -20,7 +30,7 @@
 - Sidebar order: Overview > Stage 1-5 > Extensions > Closing
 
 ## Typography Rules
-- **No em dashes.** Never use `—` (em dash), `&mdash;`, or the Unicode em dash character anywhere in this project. Use double hyphens `--` instead. This applies to all code, content, and copy.
+- **No em dashes.** Never use `---` (em dash), `&mdash;`, or the Unicode em dash character anywhere in this project. Use double hyphens `--` instead. This applies to all code, content, and copy.
 
 ## Route Structure
 - `/` -- Landing page (`app/(home)/page.tsx`)
@@ -31,10 +41,17 @@
 ## File Organization
 - `app/(home)/` -- Landing page and home layout
 - `app/docs/` -- Documentation layout and catch-all page
+- `app/docs/sidebar-components.tsx` -- Client components for sidebar (stage dots, progress icons)
 - `app/api/` -- API routes (search)
 - `content/docs/` -- MDX content files + meta.json navigation
 - `lib/source.ts` -- Fumadocs content loader
-- `components/mdx.tsx` -- MDX component overrides
+- `lib/reading-order.ts` -- Canonical 30-page reading sequence
+- `lib/page-utils.ts` -- Stage color mapping, module index computation
+- `lib/progress.tsx` -- ProgressProvider context (localStorage + cookie)
+- `components/mdx.tsx` -- Base MDX component overrides
+- `components/mdx-enhanced.tsx` -- Pattern-detecting enhanced strong component
+- `components/docs-components.tsx` -- ScrollProgress, PageMeta (client)
+- `components/progress-gate.tsx` -- ProgressGate + ReadingTracker (client)
 - `scripts/` -- Build and audit scripts
 
 ## Content Frontmatter
@@ -46,7 +63,28 @@ description: "One-line description for SEO and page header."
 ---
 ```
 
+Optional frontmatter:
+- `full: true` -- removes max-width constraint on docs body (use when page has Cards or wide content)
+
+## Content Editing Rules
+- Do NOT duplicate the frontmatter title as an H1 or H2 in the body
+- Remove publisher/internal metadata (back cover copy, one-page pitches, author structural notes)
+- Use `<Callout>` components for key concepts, rules, and framing statements
+- Use `<Cards>` + `<Card>` for navigation grids, persona routing, and stage overviews
+- Bold labels (`**Exercise:**`, `**Output for this module**`, `**Template**`) are auto-detected and styled by the enhanced MDX component -- do not change their text patterns
+- Link to other pages with relative paths: `[Stage 1](/docs/stage-1-identify)`
+- All content copy must come from the manuscript source of truth -- do not invent new language
+
 ## Known MDX Caveats
 - `# ` at the start of a list item is parsed as a heading. Escape as `\#` or rewrite as "Number of".
 - The `compiled/Chapters.md` legacy file from the manuscript is excluded from the doc site.
 - Fumadocs renders the frontmatter `title` as the page H1. Do not include an H1 in the MDX body.
+- JSX components in MDX (`<Card>`, `<Callout>`, etc.) must be registered in the MDX component map or be default Fumadocs components.
+
+## Progress System
+- Sequential gating: page N+1 unlocks when page N is scrolled to 85%
+- Storage: `tvp-progress` key in localStorage + cookie
+- Context: `ProgressProvider` wraps the docs layout
+- Gate: `ProgressGate` component wraps page content, redirects if locked
+- Tracker: `ReadingTracker` component monitors scroll depth
+- Reset: `resetProgress()` function available from `useProgress()` hook
