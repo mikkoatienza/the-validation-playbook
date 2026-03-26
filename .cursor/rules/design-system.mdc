@@ -128,7 +128,7 @@ Module pages (`friction-scan.mdx`, `truth-signals.mdx`, etc.) follow this patter
 2. **Output Callout** -- `idea` Callout titled "Output for this module" listing the 2-3 deliverables
 3. **Concept definition** -- side-by-side cards contrasting the concept (e.g. Friction vs Not-Friction) with amber vs muted left borders
 4. **Source/method cards** -- numbered cards with amber badges for the key methods or sources
-5. **Exercise blocks** -- amber-tinted containers (`borderColor: stage color / 0.3`, `backgroundColor: stage color / 0.03`) with pencil icon, numbered rules, and embedded capture format card
+5. **Exercise blocks** -- amber-tinted containers with `border-2`, `borderColor: stage color / 0.4`, `backgroundColor: stage color / 0.06`. Solid amber icon badge (white icon on amber bg). Numbered rules as inline amber circle badges. Embedded capture format card with amber label and serif italic text.
 6. **Framework/filter cards** -- 2x2 grids with amber letter badges for scoring frameworks (e.g. F/I/S/W for the 4-Factor Filter)
 7. **Worksheet exercises** -- amber-tinted container with clipboard icon and fill-in template
 8. **Sanity check** -- amber left-border card with checkmark items before the decision
