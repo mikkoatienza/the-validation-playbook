@@ -123,6 +123,19 @@ Stage openings (`stage-N-xxx/index.mdx`) follow this structure. Use Stage 1 as t
 
 Use `full: true` frontmatter and wrap content in `<div className="mx-auto max-w-3xl">`. Module numbered circles use `style={{backgroundColor: 'hsl(var(--stage-N))'}}` for the stage color.
 
+### Stage Review Template (5 Pages)
+Stage reviews (`stage-review.mdx`) follow this structure. Use Stage 1 Review as the reference:
+1. **Success Callout** -- `success` type: celebrates the shift from uncertainty to evidence
+2. **"What You Built"** -- 3 artifact cards with amber top borders and icons (mirrors the stage opening)
+3. **Readiness Gate** -- amber exercise container with shield icon and checkmark criteria, including the buyer thesis
+4. **Thin Evidence** -- `warn` Callout with recovery steps
+5. **Retrospective** -- styled card with two dashed write-in areas for reflection questions
+6. **Evidence Snapshot** -- numbered prompts with a paragraph-size dashed input area
+7. **Carry-Forward Signals** -- 3 numbered amber cards for the strongest signals to take forward
+8. **Move Faster** -- compact dashed-border tip card
+9. **What Comes Next** -- prose transition to the next stage
+10. **Closing line** -- italic serif centered
+
 ### Module Page Template (15 Pages)
 Module pages (`friction-scan.mdx`, `truth-signals.mdx`, etc.) follow this pattern. Use Friction Scan as the reference:
 1. **Opening story/hook** -- manuscript opening (Juicero example, etc.), plain text, establishes the module's lesson
