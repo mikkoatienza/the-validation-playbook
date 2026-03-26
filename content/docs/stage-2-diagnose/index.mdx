@@ -1,119 +1,162 @@
 ---
 title: "Stage 2: Diagnose"
 description: "Prove the problem is urgent and not already owned. Score the pain with evidence, not enthusiasm."
+full: true
 ---
 
-Stage 1 gave you candidates. Stage 2 chooses the one worth the build.  
-This is where evidence gets sharp.  
-You will test the riskiest assumption, score the pain, and scan alternatives.
+<div className="mx-auto max-w-3xl">
 
-## Stage Promise
-By the end of Stage 2, you will have one prioritized problem with a clear
-risk map, a strong problem score, and a documented alternatives scan.
+<Callout type="idea" title="The promise of this stage">
+By the end of Stage 2, you will have **one prioritized problem** with a clear risk map, a strong problem score, and a documented alternatives scan. You are not proving the idea is possible. You are proving it is worth the cost of building.
+</Callout>
 
-If you cannot name the riskiest assumption, you may not be ready for the offer.
+Stage 1 gave you candidates. Stage 2 chooses the one worth the build. This is where evidence gets sharp. Your goal is to be right enough to bet the next 90 days on this problem.
 
-This is a decision stage. You are not proving that your idea is possible. You
-are proving that it is worth the cost of building.
+## What You Will Build
 
-## What This Stage Produces
-Stage 2 turns a shortlist into a single, defensible problem. You will build
-three artifacts that make the choice clear:
-
-- **Risk Map** (top assumptions ranked by evidence)
-- **Problem Scorecard** (pain frequency, intensity, spend, workarounds)
-- **Alternatives Grid** (competitors, substitutes, DIY)
+<div className="mt-4 grid gap-3 sm:grid-cols-3">
+  <div className="rounded-xl border border-fd-border p-4">
+    <span className="flex h-8 w-8 items-center justify-center rounded-lg" style={{backgroundColor: 'hsl(var(--stage-2) / 0.12)'}}>
+      <svg className="h-4 w-4" style={{color: 'hsl(var(--stage-2))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+    </span>
+    <p className="mt-2 text-sm font-semibold text-fd-foreground">Risk Map</p>
+    <p className="mt-0.5 text-xs text-fd-muted-foreground">Top assumptions ranked by evidence</p>
+  </div>
+  <div className="rounded-xl border border-fd-border p-4">
+    <span className="flex h-8 w-8 items-center justify-center rounded-lg" style={{backgroundColor: 'hsl(var(--stage-2) / 0.12)'}}>
+      <svg className="h-4 w-4" style={{color: 'hsl(var(--stage-2))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+    </span>
+    <p className="mt-2 text-sm font-semibold text-fd-foreground">Problem Scorecard</p>
+    <p className="mt-0.5 text-xs text-fd-muted-foreground">Pain scored on frequency, intensity, spend, workarounds</p>
+  </div>
+  <div className="rounded-xl border border-fd-border p-4">
+    <span className="flex h-8 w-8 items-center justify-center rounded-lg" style={{backgroundColor: 'hsl(var(--stage-2) / 0.12)'}}>
+      <svg className="h-4 w-4" style={{color: 'hsl(var(--stage-2))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>
+    </span>
+    <p className="mt-2 text-sm font-semibold text-fd-foreground">Alternatives Grid</p>
+    <p className="mt-0.5 text-xs text-fd-muted-foreground">Competitors, substitutes, and DIY mapped</p>
+  </div>
+</div>
 
 These are the proof points that justify moving into Stage 3.
 
-Your goal is not to be right once. Your goal is to be right enough to bet
-the next 90 days on this problem.
+## The Three Modules
 
-## Stage Rules (Keep It Honest)
-This stage works only if you follow a few rules:
+Each module narrows the problem. If Module 1 is weak, the score becomes shaky. If Module 2 is soft, the scan loses value. Do them in order.
 
+<div className="mt-4 flex flex-col gap-3">
+  <a href="/docs/stage-2-diagnose/risk-map" className="group flex items-center gap-4 rounded-xl border border-fd-border p-4 no-underline transition-all hover:-translate-y-0.5 hover:border-[hsl(var(--stage-2)/0.5)] hover:shadow-sm">
+    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-2))'}}>1</span>
+    <span className="flex-1">
+      <span className="text-sm font-semibold text-fd-foreground">Risk Map</span>
+      <span className="mt-0.5 block text-xs text-fd-muted-foreground">Find the one assumption that could kill the idea. Surface the risk that can erase months of work.</span>
+    </span>
+    <span className="text-xs text-fd-muted-foreground opacity-0 transition-opacity group-hover:opacity-100">Start &rarr;</span>
+  </a>
+  <a href="/docs/stage-2-diagnose/problem-proof" className="group flex items-center gap-4 rounded-xl border border-fd-border p-4 no-underline transition-all hover:-translate-y-0.5 hover:border-[hsl(var(--stage-2)/0.5)] hover:shadow-sm">
+    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-2))'}}>2</span>
+    <span className="flex-1">
+      <span className="text-sm font-semibold text-fd-foreground">Problem Proof</span>
+      <span className="mt-0.5 block text-xs text-fd-muted-foreground">Prove the pain is frequent and costly. Score it so you stop solving mild annoyances.</span>
+    </span>
+    <span className="text-xs text-fd-muted-foreground opacity-0 transition-opacity group-hover:opacity-100">Start &rarr;</span>
+  </a>
+  <a href="/docs/stage-2-diagnose/alternatives-scan" className="group flex items-center gap-4 rounded-xl border border-fd-border p-4 no-underline transition-all hover:-translate-y-0.5 hover:border-[hsl(var(--stage-2)/0.5)] hover:shadow-sm">
+    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-2))'}}>3</span>
+    <span className="flex-1">
+      <span className="text-sm font-semibold text-fd-foreground">Alternatives Scan</span>
+      <span className="mt-0.5 block text-xs text-fd-muted-foreground">See what people use instead. Map competitors, substitutes, and DIY workarounds.</span>
+    </span>
+    <span className="text-xs text-fd-muted-foreground opacity-0 transition-opacity group-hover:opacity-100">Start &rarr;</span>
+  </a>
+</div>
+
+## Stage Rules
+
+<Callout type="warn" title="Keep it honest">
 - Test the riskiest assumption first, not the easiest.
 - Evidence beats optimism. A weak signal is still a signal.
 - Avoid ignoring DIY workarounds. They are your real competition.
 - If the score is low, narrow the problem or walk away.
+</Callout>
 
 Depth beats breadth here. One strong problem beats three vague ones.
 
-## How the Modules Fit
-This stage has three modules, each with a specific activity:
+## Quick Reference
 
-1. **Find the one assumption that could kill the idea** (Activity: Risk Map)  
-   You surface the risk that can erase months of work.
+<div className="mt-4 grid gap-4 sm:grid-cols-2">
+  <div className="rounded-xl border border-fd-border p-5">
+    <div className="flex items-center gap-2">
+      <span className="flex h-6 w-6 items-center justify-center rounded-md" style={{backgroundColor: 'hsl(var(--stage-2) / 0.12)'}}>
+        <svg className="h-3.5 w-3.5" style={{color: 'hsl(var(--stage-2))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      </span>
+      <span className="text-sm font-semibold text-fd-foreground">Evidence Standard</span>
+    </div>
+    <div className="mt-3 space-y-2 text-xs text-fd-muted-foreground">
+      <p className="flex items-start gap-2"><span style={{color: 'hsl(var(--stage-2))'}}>1.</span> The riskiest assumption can be tested this month</p>
+      <p className="flex items-start gap-2"><span style={{color: 'hsl(var(--stage-2))'}}>2.</span> The problem score is high with evidence</p>
+      <p className="flex items-start gap-2"><span style={{color: 'hsl(var(--stage-2))'}}>3.</span> Alternatives leave a clear gap or underserved segment</p>
+    </div>
+    <p className="mt-3 text-xs italic text-fd-muted-foreground">No signals? Pause and fix the gap.</p>
+  </div>
+  <div className="rounded-xl border border-fd-border p-5">
+    <div className="flex items-center gap-2">
+      <span className="flex h-6 w-6 items-center justify-center rounded-md" style={{backgroundColor: 'hsl(var(--stage-2) / 0.12)'}}>
+        <svg className="h-3.5 w-3.5" style={{color: 'hsl(var(--stage-2))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      </span>
+      <span className="text-sm font-semibold text-fd-foreground">Pace</span>
+    </div>
+    <div className="mt-3 space-y-2 text-xs text-fd-muted-foreground">
+      <p className="flex items-start gap-2"><span style={{color: 'hsl(var(--stage-2))'}}>1.</span> One risk test in the next two weeks</p>
+      <p className="flex items-start gap-2"><span style={{color: 'hsl(var(--stage-2))'}}>2.</span> One full scorecard on your top problem</p>
+      <p className="flex items-start gap-2"><span style={{color: 'hsl(var(--stage-2))'}}>3.</span> One alternatives scan with 3 direct + 3 substitute</p>
+    </div>
+    <p className="mt-3 text-xs italic text-fd-muted-foreground">Surface the risk, not the story.</p>
+  </div>
+</div>
 
-2. **Prove the pain is frequent and costly** (Activity: Problem Proof)  
-   You score the pain so you stop solving mild annoyances.
-
-3. **See what people use instead** (Activity: Alternatives Scan)  
-   You map the battlefield, including competitors and DIY.
-
-Each module narrows the problem. If Module 1 is weak, the score becomes shaky.
-If Module 2 is soft, the scan loses value. Do them in order.
-
-## What to Ignore for Now
-Stage 2 is not the time for:
-
-- Polishing the product or branding
-- Perfecting the pitch deck
-- Scaling acquisition channels
-- Hiring or fundraising plans
-
-Those moves depend on proof you do not yet have.
-
-## Common Traps (Avoid Them Early)
-Most founders get stuck in one of these:
-
+<Callout type="error" title="Common traps">
 - Testing what is easy instead of what is risky
 - Mistaking enthusiasm for evidence
 - Ignoring substitutes because they look informal
-- Believing “no competitors” means safety
+- Believing "no competitors" means safety
 - Falling in love with a clever solution
+</Callout>
 
-If you recognize one, stop and reset. The goal is not speed. The goal is
-accuracy.
-
-## Pace and Volume
-Speed matters here, but only if you keep the evidence clean. A good rhythm is:
-
-- One risk test in the next two weeks
-- One full scorecard on your top problem
-- One alternatives scan with at least 3 direct and 3 substitute options
-
-Avoid over‑polishing. Your job is to surface the risk, not to perfect the story.
-
-## Evidence Standard (What Counts)
-You do not need a perfect dataset, but you do need real signals:
-
-- The riskiest assumption can be tested this month
-- The problem score is high with evidence
-- Alternatives leave a clear gap or underserved segment
-
-If you do not yet have those signals, pause and fix the gap.
-
-## Evidence Depth (Strong vs. Weak)
-Not all evidence is equal. Use this simple lens:
-
-- **Weak**: opinions, likes, polite interest
-- **Medium**: past actions, real workarounds, specific costs
-- **Strong**: buyers spending time or money to fix the pain
-
-Stage 2 is about moving from weak to strong. If you are stuck in weak signals,
-avoid moving on.
+<div className="mt-4 rounded-xl border border-dashed border-fd-muted-foreground/20 p-4">
+  <p className="text-xs font-semibold text-fd-foreground">What to ignore for now</p>
+  <p className="mt-1 text-xs text-fd-muted-foreground">Product polish, branding, pitch decks, acquisition channels, hiring, fundraising. Those moves depend on proof you do not yet have.</p>
+</div>
 
 ## What Success Feels Like
-By the end of this stage, the problem should feel narrower and more urgent.
-You should be able to say, “This is the risk, this is the score, and this is
-the gap.” If you cannot, the problem is not ready.
 
-Stage 2 is your filter. It protects you from building something the market
-already has or does not need.
+<div className="mt-4 rounded-xl border border-fd-border p-5" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--stage-2))'}}>
+  <p className="text-sm text-fd-foreground">By the end of this stage, the problem should feel <strong>narrower and more urgent</strong>. You should be able to say:</p>
+  <div className="mt-3 grid gap-2 sm:grid-cols-3">
+    <div className="flex items-start gap-2 text-xs text-fd-muted-foreground">
+      <svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-2))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+      "This is the risk"
+    </div>
+    <div className="flex items-start gap-2 text-xs text-fd-muted-foreground">
+      <svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-2))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+      "This is the score"
+    </div>
+    <div className="flex items-start gap-2 text-xs text-fd-muted-foreground">
+      <svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-2))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+      "This is the gap"
+    </div>
+  </div>
+  <p className="mt-3 text-xs text-fd-muted-foreground">Stage 2 is your filter. It protects you from building something the market already has or does not need.</p>
+</div>
 
-## Handoff to Module 1
-Start with the risk. Find the assumption that can erase months of work and
-put it on paper. Module 1 begins with the Risk Map.
+---
 
-One last reminder: depth first, always.
+<div className="mt-8 flex flex-col items-center gap-4 text-center">
+  <p className="font-[family-name:var(--font-display)] text-lg italic text-fd-muted-foreground">Depth first, always.</p>
+  <a href="/docs/stage-2-diagnose/risk-map" className="inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold text-white no-underline transition-opacity hover:opacity-90" style={{backgroundColor: 'hsl(var(--stage-2))'}}>
+    Begin Module 1: Risk Map
+    <span aria-hidden="true">&rarr;</span>
+  </a>
+</div>
+
+</div>
