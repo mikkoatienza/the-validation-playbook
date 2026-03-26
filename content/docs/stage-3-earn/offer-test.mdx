@@ -1,353 +1,222 @@
 ---
 title: "Offer Test"
 description: "Turn your validated problem into a testable offer and ask for real commitment before you build."
+full: true
 ---
 
-Your offer is the first real proof that your idea deserves to exist. A
-feature list can get compliments. An offer asks for commitment. Only one
-of those predicts demand.
+<div className="mx-auto max-w-3xl">
 
-This module turns your validated problem into a testable offer and asks
-for a real yes before you build anything heavy.
+Your offer is the first real proof that your idea deserves to exist. A feature list can get compliments. An offer asks for commitment. Only one of those predicts demand.
 
-**Output for this module**
+<Callout type="idea" title="Output for this module">
 - An offer thesis
 - A commitment test and pass line
 - A commitment result with notes
+</Callout>
 
-## What an Offer Is (Plain Language)
-An offer is a clear promise to a specific person. It is not a list of
-features. It is a commitment exchange:
+## What an Offer Is
 
-"If you give me [time/money/access], I will give you [outcome] without
-[pain]."
+An offer is a clear promise to a specific person. It is not a list of features. It is a commitment exchange.
 
-If the offer is fuzzy, the commitment will be too.
+<div className="mt-4 grid gap-4 sm:grid-cols-2">
+  <div className="rounded-xl border-2 border-fd-border p-5" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--fd-muted-foreground))'}}>
+    <p className="text-sm font-semibold text-fd-foreground">Feature</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">"Automated reminders"</p>
+    <p className="mt-2 text-[10px] italic text-fd-muted-foreground">Describes what the product does</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-5" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--stage-3))'}}>
+    <p className="text-sm font-semibold text-fd-foreground">Offer</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">"Reduce no-shows without manual follow-ups"</p>
+    <p className="mt-2 text-[10px] italic" style={{color: 'hsl(var(--stage-3))'}}>Describes what the customer gets</p>
+  </div>
+</div>
 
-## Offer vs Feature (Quick Check)
-Features describe what the product does. Offers describe what the customer
-gets.
-
-- Feature: "Automated reminders"
-- Offer: "Reduce no-shows without manual follow-ups"
-
-If you cannot say the outcome in one line, you are not ready to ask for
-commitment.
+If you cannot say the outcome in one line, you are not ready to ask for commitment.
 
 ## The Offer Thesis
-Use this formula:
 
-**Offer Thesis**
-"We help [person] achieve [outcome] without [pain], by [approach]."
+<div className="mt-4 rounded-xl border-2 border-fd-border p-5" style={{backgroundColor: 'hsl(var(--fd-muted) / 0.4)'}}>
+  <p className="text-[10px] font-semibold uppercase tracking-wider" style={{color: 'hsl(var(--stage-3))'}}>Offer Thesis Formula</p>
+  <p className="mt-3 font-[family-name:var(--font-display)] text-xl text-fd-foreground">"We help <strong>[person]</strong> achieve <strong>[outcome]</strong> without <strong>[pain]</strong>, by <strong>[approach]</strong>."</p>
+  <div className="mt-4 rounded-lg border-2 p-4" style={{borderColor: 'hsl(var(--stage-3) / 0.4)', backgroundColor: 'hsl(var(--stage-3) / 0.06)'}}>
+    <p className="text-[10px] font-bold uppercase tracking-wider" style={{color: 'hsl(var(--stage-3))'}}>Example</p>
+    <p className="mt-2 text-xs text-fd-foreground">"We help small clinic admins reduce no-shows without manual follow-ups, by automating deposits and reminders."</p>
+  </div>
+  <div className="mt-4 space-y-1.5 text-xs text-fd-muted-foreground">
+    <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-3))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Person is specific (role + context)</p>
+    <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-3))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Outcome is clear and measurable</p>
+    <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-3))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Pain is real and present</p>
+    <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-3))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Approach is believable in one sentence</p>
+  </div>
+</div>
 
-Example (generic):
-"We help small clinic admins reduce no-shows without manual follow-ups,
-by automating deposits and reminders."
-
-If you cannot finish this sentence, you are not ready to test yet.
-
-## Offer Clarity Checklist
-Before you test, confirm:
-- The person is specific (role + context).
-- The outcome is clear and measurable.
-- The pain is real and present.
-- The approach is believable in one sentence.
-
-If any part is vague, rewrite the offer before you test.
-
-## Offer Language Rules
-Keep the offer readable by a first-time founder:
-- Use plain language, not buzzwords.
-- Lead with the outcome, not the tech.
-- Remove words like "platform," "ecosystem," or "AI-powered" unless they
-  are required to understand the result.
-
-If a buyer has to decode your sentence, they will not commit to it.
+Use plain language, not buzzwords. Lead with the outcome, not the tech. If a buyer has to decode your sentence, they will not commit to it.
 
 ## The Commitment Ladder
-Commitment is a spectrum. You are aiming for the highest commitment you
-can reasonably ask for right now.
 
-From weakest to strongest:
-1. "This sounds interesting."
-2. Email signup
-3. Calendar booking
-4. Paid pilot or deposit
-5. Letter of intent
+Commitment is a spectrum. Aim for the highest you can reasonably ask for right now.
 
-Diagram cue: a simple ladder that climbs from interest to commitment.
+<div className="mt-4 flex flex-col gap-2">
+  <div className="flex items-center gap-3"><div className="flex h-9 items-center rounded-md px-3 text-xs font-medium text-white/90" style={{width: '100%', backgroundColor: 'hsl(var(--stage-3))'}}> 5. Letter of Intent (strongest)</div></div>
+  <div className="flex items-center gap-3"><div className="flex h-9 items-center rounded-md px-3 text-xs font-medium text-white/90" style={{width: '85%', backgroundColor: 'hsl(var(--stage-3) / 0.85)'}}> 4. Paid pilot or deposit</div></div>
+  <div className="flex items-center gap-3"><div className="flex h-9 items-center rounded-md px-3 text-xs font-medium text-white/90" style={{width: '65%', backgroundColor: 'hsl(var(--stage-3) / 0.65)'}}> 3. Calendar booking</div></div>
+  <div className="flex items-center gap-3"><div className="flex h-9 items-center rounded-md px-3 text-xs font-medium text-white/90" style={{width: '45%', backgroundColor: 'hsl(var(--stage-3) / 0.45)'}}> 2. Email signup</div></div>
+  <div className="flex items-center gap-3"><div className="flex h-9 items-center rounded-md px-3 text-xs font-medium text-white/90" style={{width: '30%', backgroundColor: 'hsl(var(--stage-3) / 0.3)'}}> 1. "Sounds interesting"</div></div>
+</div>
 
-## Which Rung Should You Use?
-Choose the highest commitment that is realistic for your stage.
+<p className="mt-3 text-xs text-fd-muted-foreground">If you are always stuck on email signups, you are avoiding the truth. Buffer tested this by adding a pricing step before signup -- the pricing step separated real intent from polite interest.</p>
 
-- Early and uncertain: calendar booking or deposit
-- Strong evidence: paid pilot or LOI
-- High urgency + clear pain: pre-order
+<div className="mt-4 grid gap-3 sm:grid-cols-3">
+  <div className="rounded-xl border-2 border-fd-border p-4 transition-all hover:border-[hsl(var(--stage-3)/0.3)]">
+    <div className="flex items-center gap-2"><span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-3))'}}>T</span><span className="text-sm font-semibold text-fd-foreground">Time</span></div>
+    <p className="mt-1.5 text-xs text-fd-muted-foreground">Calendar booking, pilot participation</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4 transition-all hover:border-[hsl(var(--stage-3)/0.3)]">
+    <div className="flex items-center gap-2"><span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-3))'}}>$</span><span className="text-sm font-semibold text-fd-foreground">Money</span></div>
+    <p className="mt-1.5 text-xs text-fd-muted-foreground">Deposit, pre-order, paid trial</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4 transition-all hover:border-[hsl(var(--stage-3)/0.3)]">
+    <div className="flex items-center gap-2"><span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-3))'}}>A</span><span className="text-sm font-semibold text-fd-foreground">Access</span></div>
+    <p className="mt-1.5 text-xs text-fd-muted-foreground">Data, workflow access, internal approval</p>
+  </div>
+</div>
 
-If you are always stuck on email signups, you are avoiding the truth.
+## Exercise: Write Your Offer and Test It
 
-## Commitment Types (Three Signals)
-Commitment shows up in three forms:
+<div className="mt-4 rounded-xl border-2 p-5" style={{borderColor: 'hsl(var(--stage-3) / 0.4)', backgroundColor: 'hsl(var(--stage-3) / 0.06)'}}>
+  <div className="flex items-center gap-2">
+    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-white" style={{backgroundColor: 'hsl(var(--stage-3))'}}>
+      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+    </span>
+    <span className="text-sm font-semibold text-fd-foreground">7-day offer test sprint</span>
+  </div>
+  <div className="mt-4 space-y-2 text-xs text-fd-muted-foreground">
+    <p className="flex items-center gap-2"><span className="flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold" style={{backgroundColor: 'hsl(var(--stage-3) / 0.15)', color: 'hsl(var(--stage-3))'}}>1</span> Write the offer thesis and pass line</p>
+    <p className="flex items-center gap-2"><span className="flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold" style={{backgroundColor: 'hsl(var(--stage-3) / 0.15)', color: 'hsl(var(--stage-3))'}}>2</span> Build the test page or pitch</p>
+    <p className="flex items-center gap-2"><span className="flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold" style={{backgroundColor: 'hsl(var(--stage-3) / 0.15)', color: 'hsl(var(--stage-3))'}}>3</span> Reach 10-20 qualified people</p>
+    <p className="flex items-center gap-2"><span className="flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold" style={{backgroundColor: 'hsl(var(--stage-3) / 0.15)', color: 'hsl(var(--stage-3))'}}>4</span> Run the test and track responses</p>
+    <p className="flex items-center gap-2"><span className="flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold" style={{backgroundColor: 'hsl(var(--stage-3) / 0.15)', color: 'hsl(var(--stage-3))'}}>5</span> Review commitment results</p>
+    <p className="flex items-center gap-2"><span className="flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold" style={{backgroundColor: 'hsl(var(--stage-3) / 0.15)', color: 'hsl(var(--stage-3))'}}>6</span> Decide the next test</p>
+  </div>
+</div>
 
-- **Time**: calendar booking, pilot participation
-- **Money**: deposit, pre-order, paid trial
-- **Access**: data, workflow access, internal approval
-
-Time is a signal. Money is a stronger signal. Access is often the strongest
-signal in B2B because it is hard to fake.
-
-If you can get access, you are closer to truth than a hundred compliments.
-
-## A Real Example (Buffer)
-Buffer did not start with a full product. Founder Joel Gascoigne built a
-simple landing page and added a pricing step before signup. If people chose
-a paid plan, that was commitment. If they only left an email, that was
-interest. The pricing step exposed the gap between real intent and polite
-interest, so he did not mistake clicks for demand.
-
-The pricing step separated real intent from polite interest. That is the
-difference between a yes and a maybe.
-
-What matters is the structure: ask for commitment before you build, and
-let behavior decide whether the idea deserves the next step.
-
-## What Fake Interest Looks Like
-These are easy to get and easy to misread:
-- "Cool idea, keep me posted."
-- "I would use it" with no next step.
-- "Maybe later" with no urgency.
-
-If that is all you get, the offer is still a guess.
-
-## Exercise: Write Your Offer and Choose a Test
-You need two things: the offer and the test.
-
-**Step 1: Write the offer**
-- Who is it for?
-- What outcome are they buying?
-- What pain does it remove?
-
-**Step 2: Choose one commitment test**
-Pick the smallest test that still asks for a real yes.
-
-Options:
-- Paid waitlist
-- Paid pilot
-- Pre-order
-- Calendar booking with a clear price
-- Letter of intent
-
-The goal is not to scale. The goal is to prove demand.
-
-## Offer Test Menu (By Rung)
-Choose the smallest test that still asks for a real yes:
-
-- **Email signup** (weak): only if the market is totally unknown
-- **Calendar booking** (medium): shows time commitment
-- **Deposit** (strong): shows willingness to pay
-- **Paid pilot** (stronger): shows budget + urgency
-- **LOI** (strongest): shows executive intent
-
-If you can do a paid pilot, skip the email list.
-
-## Who to Test With
-Your offer test is only as good as your audience.
-
-Test with:
-- People who feel the pain today
-- People who can decide or influence spend
-- People who match your ICP from Stage 1
-
-Avoid:
-- Friends who want to be supportive
-- People outside the problem context
-- Curious observers who will never buy
-
-## Offer Test Card
-Write this before you run any test:
-- We believe [buyer] will commit to [offer].
-- To test this, we will [smallest action].
-- We will measure [signal].
-- We are right if [pass line].
-- Next step if right: [move forward].
-- Next step if wrong: [change/stop].
-
-One test card per offer keeps you focused.
-
-**Test card example (generic)**
-- We believe clinic admins will pay $150/month to reduce no-shows.
-- To test this, we will offer a paid pilot to 10 clinics.
-- We will measure pilot commitments.
-- We are right if 3 clinics pay within 14 days.
-- Next step if right: expand to 10 more clinics.
-- Next step if wrong: change the offer or the buyer.
-
-## Simple 7-Day Offer Test
-Day 1: Write the offer and pass line  
-Day 2: Build the test page or pitch  
-Day 3: Reach 10 to 20 qualified people  
-Day 4-5: Run the test and track responses  
-Day 6: Review commitment results  
-Day 7: Decide the next test
-
-Speed beats perfection. You are buying evidence, not building a brand.
+<div className="mt-4 rounded-xl border-2 border-fd-border p-5" style={{backgroundColor: 'hsl(var(--fd-muted) / 0.4)'}}>
+  <p className="text-[10px] font-semibold uppercase tracking-wider" style={{color: 'hsl(var(--stage-3))'}}>Offer Test Card</p>
+  <div className="mt-3 space-y-2 font-[family-name:var(--font-display)] text-lg text-fd-foreground">
+    <p>"We believe <strong>[buyer]</strong> will commit to <strong>[offer]</strong>."</p>
+    <p>"To test this, we will <strong>[smallest action]</strong>."</p>
+    <p>"We are right if <strong>[pass line]</strong>."</p>
+    <p>"Next if right: <strong>[move forward]</strong>."</p>
+    <p>"Next if wrong: <strong>[change/stop]</strong>."</p>
+  </div>
+</div>
 
 ## Define the Pass Line
-Before you run the test, define what "pass" looks like.
 
-Examples:
-- "3 out of 15 people commit to a paid pilot in two weeks."
-- "5 qualified buyers book and show up to a paid discovery call."
-- "2 teams pay a deposit within 10 days."
+<div className="mt-4 grid gap-4 sm:grid-cols-2">
+  <div className="rounded-xl border-2 border-fd-border p-5">
+    <div className="flex items-center gap-2">
+      <span className="flex h-6 w-6 items-center justify-center rounded-md" style={{backgroundColor: 'hsl(var(--stage-3) / 0.12)'}}>
+        <svg className="h-3.5 w-3.5" style={{color: 'hsl(var(--stage-3))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      </span>
+      <span className="text-sm font-semibold text-fd-foreground">Pass line examples</span>
+    </div>
+    <div className="mt-3 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p>"3 of 15 commit to a paid pilot in 2 weeks"</p>
+      <p>"5 buyers book and show up to a paid call"</p>
+      <p>"2 teams pay a deposit within 10 days"</p>
+    </div>
+    <p className="mt-3 text-[10px] italic" style={{color: 'hsl(var(--stage-3))'}}>No pass line, no decision.</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-5">
+    <div className="flex items-center gap-2">
+      <span className="flex h-6 w-6 items-center justify-center rounded-md" style={{backgroundColor: 'hsl(var(--stage-3) / 0.12)'}}>
+        <svg className="h-3.5 w-3.5" style={{color: 'hsl(var(--stage-3))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+      </span>
+      <span className="text-sm font-semibold text-fd-foreground">Shrink the offer if needed</span>
+    </div>
+    <div className="mt-3 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p>Shorten to 7 days instead of 90</p>
+      <p>Narrow to one role, one workflow</p>
+      <p>Limit to one report, one setup, one outcome</p>
+    </div>
+    <p className="mt-3 text-[10px] italic" style={{color: 'hsl(var(--stage-3))'}}>Small offers create fast answers.</p>
+  </div>
+</div>
 
-No pass line, no decision. A test without a pass line is just activity.
+<div className="mt-4 rounded-xl border border-fd-border bg-fd-background p-4">
+  <p className="text-[10px] font-semibold uppercase tracking-wider" style={{color: 'hsl(var(--stage-3))'}}>Pre-sell script</p>
+  <p className="mt-2 font-[family-name:var(--font-display)] text-lg italic text-fd-foreground">"I am testing a small offer for [role]. It helps [outcome] without [pain]. If this is valuable, I can run a paid pilot this month. Would you commit to [price/step] if it worked?"</p>
+</div>
 
-## Pass Line Guardrails
-- Make the pass line hard enough to matter.
-- Make it small enough to hit in two weeks.
-- Tie it to commitment, not clicks.
+## Capture Results
 
-If you can move the line after the test, it was never a pass line.
+<div className="mt-4 rounded-xl border-2 p-5" style={{borderColor: 'hsl(var(--stage-3) / 0.4)', backgroundColor: 'hsl(var(--stage-3) / 0.06)'}}>
+  <div className="flex items-center gap-2">
+    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-white" style={{backgroundColor: 'hsl(var(--stage-3))'}}>
+      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+    </span>
+    <span className="text-sm font-semibold text-fd-foreground">Commitment log</span>
+  </div>
+  <div className="mt-4 rounded-lg border-2 border-fd-border bg-fd-background p-4">
+    <div className="space-y-3 text-sm">
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Who committed</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">What they agreed to</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Why they said yes</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Objections</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+      <div className="border-t border-fd-border pt-3">
+        <p className="text-[10px] font-semibold uppercase tracking-wider" style={{color: 'hsl(var(--stage-3))'}}>Result summary</p>
+        <p className="mt-1 text-xs italic text-fd-muted-foreground">"We asked for [commitment]. We got [result]. This means [offer is strong / weak]."</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-## Pass Line Math (Simple)
-Your pass line should feel slightly uncomfortable, not impossible.
+## Quick Reference
 
-Use a simple ratio:
-- 20% commitment for a warm list
-- 10% commitment for a cold list
+<div className="mt-4 grid gap-4 sm:grid-cols-2">
+  <div className="rounded-xl border-2 border-fd-border p-5" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--stage-3))'}}>
+    <p className="text-sm font-semibold text-fd-foreground">Strong commitment</p>
+    <div className="mt-2 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-3))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Buyer agrees quickly without heavy persuasion</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-3))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Objection is about timing, not value</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-3))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> You can repeat the result with another buyer</p>
+    </div>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-5" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--fd-muted-foreground))'}}>
+    <p className="text-sm font-semibold text-fd-foreground">Weak commitment means</p>
+    <div className="mt-2 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg> Problem is not painful enough</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg> Buyer is wrong</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg> Offer is unclear or too big</p>
+    </div>
+    <p className="mt-2 text-[10px] italic text-fd-muted-foreground">Do not add features. Tighten the offer or change the buyer.</p>
+  </div>
+</div>
 
-If your list is tiny, focus on absolute numbers (e.g., 3 paid pilots).
-
-## The Minimum Viable Offer
-Your first offer should feel small enough to say yes to quickly.
-
-Ask:
-- Can they try it without a long contract?
-- Can they decide in under a week?
-- Is the outcome clear enough to judge?
-
-If the offer feels heavy, shrink it until it is testable.
-
-## How to Shrink the Offer
-Reduce scope without losing the outcome:
-- Shorten the time window (7 days instead of 90)
-- Narrow the segment (one role, one workflow)
-- Limit the deliverable (one report, one setup, one outcome)
-
-Small offers create fast answers. Fast answers beat perfect offers.
-
-## Offer Test Page (Simple Structure)
-If you are using a landing page, keep it short and focused.
-
-1) Headline with the outcome  
-2) One short paragraph on the pain  
-3) The offer in one sentence  
-4) The commitment ask (price or next step)
-
-If you need three pages to explain it, the offer is not clear.
-
-## No Landing Page? Use Direct Outreach
-You can test an offer without a site.
-
-Options:
-- A one-page PDF with the offer and price
-- A short email with a calendar link
-- A simple message with a clear ask
-
-The format does not matter. The commitment does.
-
-## Offer Page Checklist
-- Outcome is in the headline
-- Pain is in the first paragraph
-- Commitment ask is visible without scrolling
-- Price is shown if you can show it
-
-If any of these are missing, you will collect interest, not commitment.
-
-## Pre-Sell Script (If You Need One)
-Keep it simple and honest:
-
-"I am testing a small offer for [role]. It helps [outcome] without [pain].
-If this is valuable, I can run a paid pilot this month. Would you commit
-to [price/step] if it worked?"
-
-The script is not the test. The commitment is.
-
-## Evidence Artifact
-Capture the results with notes:
-- Who committed
-- What they agreed to
-- Why they said yes
-- What objections showed up
-
-This is your proof that the offer earns commitment or it does not.
-
-**Commitment log (simple)**
-| Person | Commitment | Result | Notes |
-| --- | --- | --- | --- |
-| | | | |
-
-## Commitment Result Summary
-Write two lines:
-- "We asked for [commitment]. We got [result]."
-- "This means [offer is strong / offer is weak]."
-
-Short summaries keep you honest.
-
-## When Commitment Is Strong
-Strong commitment means:
-- The buyer agrees quickly without heavy persuasion
-- The objection is about timing, not value
-- You can repeat the result with another buyer
-
-If it is not repeatable, it is not proof yet.
-
-## Quick Follow-Up (After a Yes)
-Do not disappear after a commitment. Capture what made it easy.
-
-Ask:
-- "What made this a clear yes?"
-- "What would have made you say no?"
-
-These answers sharpen the offer before you scale it.
-
-## Objection Pattern Log
-If you hear the same objection twice, write it down. Common objections
-tell you what to fix:
-- "Too early"
-- "Not urgent"
-- "We already have something"
-- "Budget is frozen"
-
-Do not argue. Treat objections as data.
-
-## If Commitment Is Weak
-Weak commitment usually means one of three things:
-1) The problem is not painful enough.
-2) The buyer is wrong.
-3) The offer is unclear or too big.
-
-Do not add features. Tighten the offer or change the buyer.
-
-## Common Traps
-- Soft calls to action (CTAs) that only collect compliments
+<Callout type="error" title="Common traps">
+- Soft CTAs that only collect compliments
 - Vague outcomes ("better", "easier", "faster")
-- Testing the offer with fans instead of buyers
+- Testing with fans instead of buyers
 - Hiding the price to avoid rejection
-
-Compliments are noise. Commitments are proof.
+</Callout>
 
 ## When You Can Move On
-You are ready for Module 2 when:
-- You have a clear commitment signal
-- You can explain why people said yes or no
-- You have a pass line result to act on
 
-If you cannot name those, run the test again or change the offer.
+<div className="mt-4 rounded-xl border-2 border-fd-border p-5" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--stage-3))'}}>
+  <p className="text-sm text-fd-foreground">You are ready for Module 2 when:</p>
+  <div className="mt-3 space-y-2 text-xs text-fd-muted-foreground">
+    <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-3))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> You have a clear commitment signal</p>
+    <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-3))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> You can explain why people said yes or no</p>
+    <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-3))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> You have a pass line result to act on</p>
+  </div>
+  <p className="mt-3 text-xs italic text-fd-muted-foreground">If you get commitment, the next question is price. If you do not, the offer is still fiction.</p>
+</div>
 
-## The Bridge to Module 2
-If you get commitment, the next question is price. If you do not, the offer
-is still fiction.
+---
 
-**Closing line**
-No commitment, no offer.
+<div className="mt-8 flex flex-col items-center gap-2 text-center">
+  <p className="font-[family-name:var(--font-display)] text-lg italic text-fd-muted-foreground">No commitment, no offer.</p>
+</div>
+
+</div>
