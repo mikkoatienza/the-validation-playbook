@@ -1,276 +1,290 @@
 ---
 title: "Buyer Definition"
 description: "Identify who decides and pays. Define your Ideal Customer Profile and map the buyer path."
+full: true
 ---
 
-You can have a real pain and a clear solution and still fail if the wrong
-person controls the budget. Users can love you, but buyers usually decide.
+<div className="mx-auto max-w-3xl">
 
-This module makes the decision path explicit. You will define the Ideal
-Customer Profile (ICP), separate user from buyer, and map who triggers,
-approves, and pays.
+You can have a real pain and a clear solution and still fail if the wrong person controls the budget. Users can love you, but buyers usually decide.
 
-**Output for this module**
+This module makes the decision path explicit. You will define the Ideal Customer Profile (ICP), separate user from buyer, and map who triggers, approves, and pays.
+
+<Callout type="idea" title="Output for this module">
 - 1 to 2 ICP profiles
 - Buyer/user split with decision context
 - A clear access path to the buyer
+</Callout>
 
-## Buyer vs User (Plain Language)
-Users feel the pain. Buyers fund the fix.
+## Buyer vs User
 
-Sometimes they are the same person. Often they are not. In B2B, users
-press the buttons, but budget holders sign the contract.
+<div className="mt-4 grid gap-4 sm:grid-cols-2">
+  <div className="rounded-xl border-2 border-fd-border p-5" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--stage-1))'}}>
+    <p className="text-sm font-semibold text-fd-foreground">User</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">Feels the pain. Presses the buttons. Wants ease.</p>
+    <div className="mt-3 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p>Support agent needs a faster ticket tool</p>
+      <p>Designer wants a better asset library</p>
+      <p>Teacher wants a better classroom tool</p>
+    </div>
+    <p className="mt-3 text-[10px] italic text-fd-muted-foreground">Can be loud. Cannot write checks.</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-5" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--stage-1))'}}>
+    <p className="text-sm font-semibold text-fd-foreground">Buyer</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">Funds the fix. Controls the budget. Cares about outcomes and risk.</p>
+    <div className="mt-3 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p>Support manager who owns the budget</p>
+      <p>Head of marketing who approves software</p>
+      <p>School or district that controls purchasing</p>
+    </div>
+    <p className="mt-3 text-[10px] italic" style={{color: 'hsl(var(--stage-1))'}}>Writes checks. Makes decisions.</p>
+  </div>
+</div>
 
-If you cannot name the buyer, you are still guessing.
+Sometimes they are the same person. Often they are not. If you cannot name the buyer, you are still guessing. Teachmint learned this when they built for teachers but discovered budgets lived with schools and districts. Wrong audience, weak sales, then a buyer shift.
 
-**Quick examples (generic)**
-- A support agent needs a faster ticket tool. The buyer is the support
-  manager who owns the budget.
-- A designer wants a better asset library. The buyer is the head of
-  marketing who approves software.
-- A teacher wants a better classroom tool. The buyer is the school or
-  district that controls purchasing.
+## What Makes a Good ICP
 
-Users can be loud. Buyers write checks. Learn the difference early.
+<div className="mt-4 rounded-xl border-2 border-fd-border p-5" style={{backgroundColor: 'hsl(var(--fd-muted) / 0.4)'}}>
+  <p className="text-[10px] font-semibold uppercase tracking-wider" style={{color: 'hsl(var(--stage-1))'}}>Ideal Customer Profile</p>
+  <p className="mt-2 text-xs text-fd-muted-foreground">You are not describing "everyone." You are describing the person you can reach this month.</p>
+  <div className="mt-4 grid gap-3 sm:grid-cols-2">
+    <div className="flex items-start gap-2 text-xs text-fd-muted-foreground">
+      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[10px] font-bold" style={{backgroundColor: 'hsl(var(--stage-1) / 0.15)', color: 'hsl(var(--stage-1))'}}>R</span>
+      Role or title
+    </div>
+    <div className="flex items-start gap-2 text-xs text-fd-muted-foreground">
+      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[10px] font-bold" style={{backgroundColor: 'hsl(var(--stage-1) / 0.15)', color: 'hsl(var(--stage-1))'}}>E</span>
+      Environment (team, industry, workflow)
+    </div>
+    <div className="flex items-start gap-2 text-xs text-fd-muted-foreground">
+      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[10px] font-bold" style={{backgroundColor: 'hsl(var(--stage-1) / 0.15)', color: 'hsl(var(--stage-1))'}}>U</span>
+      Urgency or trigger
+    </div>
+    <div className="flex items-start gap-2 text-xs text-fd-muted-foreground">
+      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[10px] font-bold" style={{backgroundColor: 'hsl(var(--stage-1) / 0.15)', color: 'hsl(var(--stage-1))'}}>B</span>
+      Budget access or influence
+    </div>
+  </div>
+  <p className="mt-3 text-xs italic text-fd-muted-foreground">If you cannot picture where they sit and what they touch every week, the profile is too broad.</p>
+</div>
 
-## What "ICP" Means
-ICP stands for Ideal Customer Profile. It is a simple description of who has
-the problem, where it lives, and how urgent it is.
+## Buyer Signals
 
-Think role, context, urgency, and access to budget. You are not describing
-"everyone." You are describing the person you can reach this month.
+You are not looking for enthusiasm. You are looking for evidence of decision power.
 
-**A good ICP includes**
-- Role or title
-- Environment (team size, industry, workflow)
-- Urgency or trigger
-- Budget access or influence
+<div className="mt-4 grid gap-3 sm:grid-cols-2">
+  <div className="rounded-xl border-2 border-fd-border p-4 transition-all hover:border-[hsl(var(--stage-1)/0.3)]">
+    <div className="flex items-center gap-2">
+      <span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>$</span>
+      <span className="text-sm font-semibold text-fd-foreground">Budget control</span>
+    </div>
+    <p className="mt-1.5 text-xs text-fd-muted-foreground">They own a line item, expense tools without approval, or can approve a pilot.</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4 transition-all hover:border-[hsl(var(--stage-1)/0.3)]">
+    <div className="flex items-center gap-2">
+      <span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>K</span>
+      <span className="text-sm font-semibold text-fd-foreground">KPI ownership</span>
+    </div>
+    <p className="mt-1.5 text-xs text-fd-muted-foreground">They have a metric tied to the pain -- retention, revenue, compliance, speed.</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4 transition-all hover:border-[hsl(var(--stage-1)/0.3)]">
+    <div className="flex items-center gap-2">
+      <span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>P</span>
+      <span className="text-sm font-semibold text-fd-foreground">Prior purchase</span>
+    </div>
+    <p className="mt-1.5 text-xs text-fd-muted-foreground">They have bought similar tools in the last 12 months.</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4 transition-all hover:border-[hsl(var(--stage-1)/0.3)]">
+    <div className="flex items-center gap-2">
+      <span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>A</span>
+      <span className="text-sm font-semibold text-fd-foreground">Approval authority</span>
+    </div>
+    <p className="mt-1.5 text-xs text-fd-muted-foreground">They can say yes without checking with someone else.</p>
+  </div>
+</div>
 
-**ICP clarity test**
-If you cannot picture where they sit and what they touch every week, the
-profile is too broad.
-
-## Buyer Signals to Look For
-You are not looking for enthusiasm. You are looking for evidence of
-decision power.
-
-Signs you have a real buyer:
-- They control a budget line.
-- They can approve spend without permission.
-- They have a metric or key performance indicator (KPI) tied to the pain.
-- They have purchased tools like this before.
-
-If none of those are true, you are still talking to a user.
-
-**Budget signals (common)**
-- They own a line item on a team budget
-- They can expense tools without extra approval
-- They have bought similar tools in the last 12 months
-- They can approve a pilot or paid trial
-
-If you cannot find any signal, treat the buyer as unknown.
-Unknown is better than wrong. This is where many founders lose months.
-
-## A Real Example (Teachmint)
-Teachmint started with software for teachers running online classes during
-the pandemic. When schools reopened, demand dropped and the teacher-led
-model stalled. They shifted toward selling smart classroom hardware and
-infrastructure to schools and districts where budgets actually lived. The
-users were teachers. The buyers were institutions.
-
-Wrong audience, weak sales, then a buyer shift. That is the lesson.
-
-That shift is what this module is about. The person with the problem is not
-always the person who can fund the solution.
+If none of those are true, you are still talking to a user. Unknown is better than wrong -- this is where many founders lose months.
 
 ## Map the Buyer Path
-Most purchases follow a path, even in tiny organizations. Your job is to map
-it early.
 
-Ask:
-- Who feels the pain first?
-- Who approves a fix?
-- Who pays?
+Most purchases follow a path. Your job is to map it early.
 
-**Buyer roles (simple map)**
-- **Trigger:** notices the pain and asks for help
-- **Approver:** can say yes or no
-- **Payer:** controls the budget
+<div className="mt-4 flex flex-col gap-2">
+  <div className="flex items-center gap-4 rounded-xl border-2 border-fd-border p-4">
+    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>T</span>
+    <div>
+      <p className="text-sm font-semibold text-fd-foreground">Trigger</p>
+      <p className="mt-0.5 text-xs text-fd-muted-foreground">Who notices the pain first and asks for help?</p>
+    </div>
+  </div>
+  <div className="flex items-center gap-4 rounded-xl border-2 border-fd-border p-4">
+    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>A</span>
+    <div>
+      <p className="text-sm font-semibold text-fd-foreground">Approver</p>
+      <p className="mt-0.5 text-xs text-fd-muted-foreground">Who can say yes or no?</p>
+    </div>
+  </div>
+  <div className="flex items-center gap-4 rounded-xl border-2 border-fd-border p-4">
+    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>P</span>
+    <div>
+      <p className="text-sm font-semibold text-fd-foreground">Payer</p>
+      <p className="mt-0.5 text-xs text-fd-muted-foreground">Who controls the budget?</p>
+    </div>
+  </div>
+</div>
 
-Sometimes one person fills all three. Often, they do not.
+Sometimes one person fills all three. Often, they do not. The champion who feels the pain can open doors, but the buyer approves spend.
 
-Diagram cue: simple buyer-user decision map.
-
-## Buyer Discovery Questions
-Use these in your next interviews to clarify who pays.
-
-- "Who signs off on this today?"
-- "If you needed a new tool, who would approve it?"
-- "Where does the budget come from?"
-- "Has your team bought something like this recently?"
-
-If answers are vague, you do not have a buyer yet.
-
-## Decision Context (Why Timing Matters)
-Buyers do not decide in a vacuum. They decide inside a budget cycle, a
-deadline, or a fire.
-
-Look for:
-- A trigger event (new hire, audit, growth spike, regulation change)
-- A deadline (quarterly review, launch date, renewal window)
-- A metric they own (retention, revenue, compliance, speed)
-
-No context, no urgency. No urgency, no buyer.
-
-## The Champion vs The Buyer
-Often the person who feels the pain becomes your champion, not your buyer.
-Champions can open doors. Buyers approve spend.
-
-Do not ignore champions. Use them to reach the buyer.
-
-Ask champions:
-- "Who else needs to say yes?"
-- "What would make this an easy yes for them?"
-
-## Budget Ladder (Simple)
-Not all spending works the same way. Map where your offer fits.
-
-- **Personal spend:** the buyer uses a credit card, no approval needed.
-- **Team spend:** manager approval, small budget line.
-- **Department spend:** procurement or finance involved.
-
-The higher you go, the longer decisions take. Start low when you can.
+<div className="mt-4 rounded-xl border border-fd-border bg-fd-background p-4">
+  <p className="text-[10px] font-semibold uppercase tracking-wider" style={{color: 'hsl(var(--stage-1))'}}>Discovery questions</p>
+  <div className="mt-2 flex flex-wrap gap-1.5">
+    <span className="rounded-full border border-fd-border bg-fd-muted/30 px-2.5 py-1 text-[11px] text-fd-muted-foreground">"Who signs off on this today?"</span>
+    <span className="rounded-full border border-fd-border bg-fd-muted/30 px-2.5 py-1 text-[11px] text-fd-muted-foreground">"If you needed a new tool, who would approve it?"</span>
+    <span className="rounded-full border border-fd-border bg-fd-muted/30 px-2.5 py-1 text-[11px] text-fd-muted-foreground">"Where does the budget come from?"</span>
+    <span className="rounded-full border border-fd-border bg-fd-muted/30 px-2.5 py-1 text-[11px] text-fd-muted-foreground">"Has your team bought something like this recently?"</span>
+  </div>
+</div>
 
 ## Exercise: ICP Worksheet
-Fill this out for your top 1 to 2 candidates.
 
-**ICP template**
-- Role/title:
-- Industry or niche:
-- Team size or environment:
-- Trigger (when the pain shows up):
-- Current workaround:
-- Budget access (yes/no/partial):
-- How you can reach them:
-
-If "budget access" is unclear, mark it as unknown and fix it in the next
-interview round.
-
-Keep it tight. One paragraph is enough.
+<div className="mt-4 rounded-xl border-2 p-5" style={{borderColor: 'hsl(var(--stage-1) / 0.4)', backgroundColor: 'hsl(var(--stage-1) / 0.06)'}}>
+  <div className="flex items-center gap-2">
+    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>
+      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+    </span>
+    <span className="text-sm font-semibold text-fd-foreground">Fill this out for your top 1 to 2 candidates.</span>
+  </div>
+  <div className="mt-4 rounded-lg border-2 border-fd-border bg-fd-background p-4">
+    <div className="space-y-3 text-sm">
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Role / title</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Industry or niche</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Trigger (when the pain shows up)</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Current workaround</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Budget access (yes / no / partial / unknown)</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">How you can reach them</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+    </div>
+  </div>
+</div>
 
 ## Exercise: Buyer Map
-For each ICP, fill in the buyer path.
 
-**Buyer map template**
-- Trigger (who notices):
-- Approver (who decides):
-- Payer (who pays):
-- Proof of budget (evidence):
+<div className="mt-4 rounded-xl border-2 p-5" style={{borderColor: 'hsl(var(--stage-1) / 0.4)', backgroundColor: 'hsl(var(--stage-1) / 0.06)'}}>
+  <div className="flex items-center gap-2">
+    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>
+      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+    </span>
+    <span className="text-sm font-semibold text-fd-foreground">For each ICP, map the buyer path.</span>
+  </div>
+  <div className="mt-4 rounded-lg border-2 border-fd-border bg-fd-background p-4">
+    <div className="space-y-3 text-sm">
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Trigger (who notices)</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Approver (who decides)</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Payer (who pays)</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Proof of budget (evidence)</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+    </div>
+  </div>
+  <p className="mt-3 text-xs italic text-fd-muted-foreground">If you cannot fill this in, you are not done.</p>
+</div>
 
-If you cannot fill this in, you are not done.
+## Buyer Thesis
 
-## Example Buyer Map (Generic)
-Problem: "Sales reps lose time updating CRM notes."
-
-- Trigger: Sales manager notices forecast accuracy dropping
-- Approver: Head of Sales
-- Payer: Revenue Operations or Finance
-- Proof of budget: team already pays for two sales tools
-
-This is not a story. It is a template for how specific your map should be.
-
-## Access Path (How You Reach the Buyer)
-Knowing the buyer is not enough. You need a path to reach them.
-
-Common access paths:
-- Direct outreach (email, LinkedIn)
-- Warm intros from users or advisors
-- Communities where buyers already gather
-- Existing vendor lists inside the company
-
-Pick one path you can test this week. Speed matters more than scale here.
-
-## Budget Proof Tests (Lightweight)
-You do not need a full sales process yet, but you do need a signal.
-
-Try:
-- Ask for a paid pilot or letter of intent (LOI) (even small)
-- Ask what budget line it would come from
-- Ask how they bought their last tool
-
-If they cannot answer, you likely have a user, not a buyer.
-
-## Buyer Thesis (One Sentence)
 Write one sentence that names the buyer and the outcome they pay for.
 
-Template:
-"The buyer is [role] who will pay to [outcome] because [cost of pain]."
-
-Example (generic):
-"The buyer is the operations manager who will pay to reduce weekly
-reconciliation time because delays cost revenue."
+<div className="mt-4 rounded-xl border-2 border-fd-border p-5" style={{backgroundColor: 'hsl(var(--fd-muted) / 0.4)'}}>
+  <p className="text-[10px] font-semibold uppercase tracking-wider" style={{color: 'hsl(var(--stage-1))'}}>Buyer Thesis Formula</p>
+  <p className="mt-3 font-[family-name:var(--font-display)] text-xl text-fd-foreground">"The buyer is <strong>[role]</strong> who will pay to <strong>[outcome]</strong> because <strong>[cost of pain]</strong>."</p>
+  <div className="mt-4 rounded-lg border-2 p-4" style={{borderColor: 'hsl(var(--stage-1) / 0.4)', backgroundColor: 'hsl(var(--stage-1) / 0.06)'}}>
+    <p className="text-[10px] font-bold uppercase tracking-wider" style={{color: 'hsl(var(--stage-1))'}}>Example</p>
+    <p className="mt-2 text-xs text-fd-foreground">"The buyer is the operations manager who will pay to reduce weekly reconciliation time because delays cost revenue."</p>
+  </div>
+</div>
 
 If you cannot write this sentence, your buyer is still unclear.
 
-## Evidence Artifact
-Your evidence artifact for this module is a one-page buyer profile that
-includes:
-- The ICP summary
-- The buyer path
-- The budget signal you saw
-- The access path you can use to reach them
+## Quick Reference
 
-This becomes your target for Stage 2.
+<div className="mt-4 grid gap-4 sm:grid-cols-2">
+  <div className="rounded-xl border-2 border-fd-border p-5">
+    <div className="flex items-center gap-2">
+      <span className="flex h-6 w-6 items-center justify-center rounded-md" style={{backgroundColor: 'hsl(var(--stage-1) / 0.12)'}}>
+        <svg className="h-3.5 w-3.5" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+      </span>
+      <span className="text-sm font-semibold text-fd-foreground">Access paths</span>
+    </div>
+    <div className="mt-2 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p>Direct outreach (email, LinkedIn)</p>
+      <p>Warm intros from users or advisors</p>
+      <p>Communities where buyers gather</p>
+      <p>Existing vendor lists</p>
+    </div>
+    <p className="mt-2 text-[10px] italic" style={{color: 'hsl(var(--stage-1))'}}>Pick one you can test this week.</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-5">
+    <div className="flex items-center gap-2">
+      <span className="flex h-6 w-6 items-center justify-center rounded-md" style={{backgroundColor: 'hsl(var(--stage-1) / 0.12)'}}>
+        <svg className="h-3.5 w-3.5" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      </span>
+      <span className="text-sm font-semibold text-fd-foreground">Budget proof tests</span>
+    </div>
+    <div className="mt-2 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p>Ask for a paid pilot or LOI</p>
+      <p>Ask what budget line it comes from</p>
+      <p>Ask how they bought their last tool</p>
+    </div>
+    <p className="mt-2 text-[10px] italic" style={{color: 'hsl(var(--stage-1))'}}>If they cannot answer, you have a user.</p>
+  </div>
+</div>
 
-## Common Traps
-- Confusing a loud user with a real buyer.
-- Targeting "teams" instead of a specific role.
-- Skipping budget signals because the problem feels obvious.
-- Selling to the easiest person to reach instead of the person who can pay.
-- Hoping virality will fix a missing buyer.
+<Callout type="error" title="Common traps">
+- Confusing a loud user with a real buyer
+- Targeting "teams" instead of a specific role
+- Skipping budget signals because the problem feels obvious
+- Selling to the easiest person instead of the one who can pay
+- Hoping virality will fix a missing buyer
+</Callout>
 
-## Red Flags You Picked the Wrong Buyer
-- They love the idea but cannot tell you how it would be paid for.
-- They need to "check with someone" every time you ask about spend.
-- They cannot name any comparable tools their team already buys.
-
-If you hear these, stop guessing. Go find the buyer.
-
-## When Buyer and User Are the Same
-In some cases, the buyer and user are the same person. That is fine. Just
-prove it. Your interviews should still surface spend, workarounds, and real
-actions. Do not assume because it is consumer-facing that the buyer path is
-simple.
-
-## When Buyer and User Are Different
-This is the default in B2B. Accept it early and design for it.
-
-Users care about ease. Buyers care about outcomes and risk.
-Speak to both, but sell to the buyer.
-
-## Buyer/User Split Checklist
-Use this to lock the split:
-- I can name the primary user in one sentence.
-- I can name the budget holder in one sentence.
-- I can describe how money moves from buyer to vendor.
-- I have at least one real example of prior spend.
-
-## Small Team vs Enterprise (Quick Note)
-In small teams, the buyer and user are often the same person. Decisions are
-fast. Your job is to find the person who owns the pain and the card.
-
-In larger companies, the path gets longer. You may need a champion, an
-approver, and a payer. That is normal. Do not fight it. Map it.
-
-The key is not to win every stakeholder. The key is to reach the one with
-authority and a reason to act now.
+<div className="mt-4 grid gap-3 sm:grid-cols-2">
+  <div className="rounded-xl border border-dashed border-fd-muted-foreground/20 p-4">
+    <p className="text-xs font-semibold text-fd-foreground">When buyer = user</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">Fine. Just prove it. Interviews should still surface spend and workarounds.</p>
+  </div>
+  <div className="rounded-xl border border-dashed border-fd-muted-foreground/20 p-4">
+    <p className="text-xs font-semibold text-fd-foreground">When buyer is not user</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">Default in B2B. Users care about ease. Buyers care about outcomes. Sell to the buyer.</p>
+  </div>
+</div>
 
 ## The First Decision
-Pick one ICP where you have the clearest buyer path and the strongest
-budget signal. That is the problem you will diagnose next.
 
-If you are torn between two ICPs, choose the one you can reach fastest.
-Speed to evidence beats perfect positioning at this stage.
+Pick one ICP where you have the clearest buyer path and the strongest budget signal. If you are torn between two, choose the one you can reach fastest.
 
-**Closing line**
-If you cannot name the buyer, you are still guessing.
+<div className="mt-4 rounded-xl border-2 border-fd-border p-5" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--stage-1))'}}>
+  <p className="text-sm font-semibold text-fd-foreground">Buyer/user split checklist</p>
+  <div className="mt-3 grid gap-2 sm:grid-cols-2">
+    <div className="flex items-start gap-2 text-xs text-fd-muted-foreground">
+      <svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+      Name the primary user in one sentence
+    </div>
+    <div className="flex items-start gap-2 text-xs text-fd-muted-foreground">
+      <svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+      Name the budget holder in one sentence
+    </div>
+    <div className="flex items-start gap-2 text-xs text-fd-muted-foreground">
+      <svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+      Describe how money moves from buyer to vendor
+    </div>
+    <div className="flex items-start gap-2 text-xs text-fd-muted-foreground">
+      <svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+      At least one real example of prior spend
+    </div>
+  </div>
+</div>
+
+---
+
+<div className="mt-8 flex flex-col items-center gap-2 text-center">
+  <p className="font-[family-name:var(--font-display)] text-lg italic text-fd-muted-foreground">If you cannot name the buyer, you are still guessing.</p>
+</div>
+
+</div>
