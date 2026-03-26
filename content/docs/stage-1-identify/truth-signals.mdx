@@ -1,321 +1,243 @@
 ---
 title: "Truth Signals"
 description: "Run truth interviews that expose what people actually do, what they have tried, and what it costs them."
+full: true
 ---
 
-Opinions are easy. Behavior is expensive. That is why your job in this
-module is simple: stop collecting compliments and start collecting evidence.
+<div className="mx-auto max-w-3xl">
 
-This module takes the top friction patterns from Module 1 and turns them
-into proof. You will run interviews that expose what people actually do,
-what they have already tried, and what it costs them.
+Opinions are easy. Behavior is expensive. That is why your job in this module is simple: stop collecting compliments and start collecting evidence.
 
-**Output for this module**
+This module takes the top friction patterns from Module 1 and turns them into proof. You will run interviews that expose what people actually do, what they have already tried, and what it costs them.
+
+<Callout type="idea" title="Output for this module">
 - 5 to 8 truth interviews completed
 - Evidence notes for each interview (action, spend, workaround)
 - A clearer sense of which pain is real
+</Callout>
 
 ## What a Truth Interview Is
-A truth interview is a short, focused conversation designed to surface
-past behavior. It is not a sales call, a pitch test, or a product demo.
-It is a way to collect evidence about what people already do when the
-problem shows up.
 
-The goal is not to be liked. The goal is to be clear.
+A truth interview is a short, focused conversation designed to surface past behavior. It is not a sales call, a pitch test, or a product demo. The goal is not to be liked. The goal is to be clear.
 
-## Set the Learning Goal
-Before you invite anyone, decide what you need to learn.
-
-Write one line:
-"I need to learn whether [person] experiences [problem] often enough to
-change their behavior or spend to fix it."
-
-This keeps the interview tight. If a question does not serve that goal,
-cut it.
-
-## Prep Checklist (5 Minutes)
-- Write your problem statement in one sentence.
-- List the 3 most important questions you must answer.
-- Decide what evidence would count as a "yes."
-- Choose where you will take notes.
-
-Clarity before the call saves you from rambling during it.
-
-## The Core Rule
-Past behavior beats future promises.
-
-"I would pay for that" is not evidence. "I already paid for something like
-that" is. You are not looking for approval. You are looking for proof.
-
-If you leave this module with a stack of opinions, you did not do the work.
-
-Truth interviews can feel uncomfortable at first. That is normal. You are
-asking people to recall real moments, not to imagine a future. Stay calm,
-stay curious, and let the details surface.
+<Callout type="warn" title="The core rule">
+Past behavior beats future promises. "I would pay for that" is not evidence. "I already paid for something like that" is. You are not looking for approval. You are looking for proof.
+</Callout>
 
 ## What Truth Looks Like
+
 Truth is usually visible. It leaves a trail when the pain is real.
 
-Look for:
-- **Actions** people already take to reduce the pain
-- **Spend** (money, time, or effort) they already invest
-- **Workarounds** they built because the problem keeps showing up
+<div className="mt-4 grid gap-3 sm:grid-cols-3">
+  <div className="rounded-xl border-2 border-fd-border p-4 transition-all hover:border-[hsl(var(--stage-1)/0.3)]">
+    <span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>A</span>
+    <p className="mt-2 text-sm font-semibold text-fd-foreground">Actions</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">People already take steps to reduce the pain</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4 transition-all hover:border-[hsl(var(--stage-1)/0.3)]">
+    <span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>S</span>
+    <p className="mt-2 text-sm font-semibold text-fd-foreground">Spend</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">Money, time, or effort they already invest</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4 transition-all hover:border-[hsl(var(--stage-1)/0.3)]">
+    <span className="flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>W</span>
+    <p className="mt-2 text-sm font-semibold text-fd-foreground">Workarounds</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">Systems they built because the problem keeps showing up</p>
+  </div>
+</div>
 
-If none of those exist, the pain may still be a theory.
+If none of those exist, the pain may still be a theory. Before Nextdoor, the team built Fanbase -- a sports platform. Instead of building again after engagement stalled, they interviewed neighbors to understand real pain. Those interviews led to the pivot.
 
-### A Real Example (Fanbase to Nextdoor)
-Before Nextdoor, the team built a sports platform called Fanbase. Even with
-traction, engagement stalled. Instead of building again, they interviewed
-neighbors to understand real pain points and tested the idea with crude
-prototypes. Those interviews led to the pivot and the eventual launch of
-Nextdoor.
+## Prepare
 
-That is what truth interviews are for. You are not guessing what people do.
-You are watching evidence show up in their story.
+<div className="mt-4 rounded-xl border-2 border-fd-border p-5" style={{backgroundColor: 'hsl(var(--fd-muted) / 0.4)'}}>
+  <p className="text-[10px] font-semibold uppercase tracking-wider" style={{color: 'hsl(var(--stage-1))'}}>Learning Goal</p>
+  <p className="mt-2 font-[family-name:var(--font-display)] text-lg italic text-fd-foreground">"I need to learn whether [person] experiences [problem] often enough to change their behavior or spend to fix it."</p>
+</div>
 
-Expect to be surprised. If every interview confirms your idea, you are
-probably leading the witness. The best interviews correct you early, while
-the cost of change is still low.
+<div className="mt-4 grid gap-3 sm:grid-cols-2">
+  <div className="rounded-xl border-2 border-fd-border p-4">
+    <p className="text-sm font-semibold text-fd-foreground">Prep checklist (5 min)</p>
+    <div className="mt-2 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Problem statement in one sentence</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> 3 most important questions to answer</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> What evidence counts as a "yes"</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Where you will take notes</p>
+    </div>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4">
+    <p className="text-sm font-semibold text-fd-foreground">Who to interview</p>
+    <div className="mt-2 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Match your top friction patterns</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Have already tried to fix it</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Feel the pain often enough to remember</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Aim for 5 to 8 interviews</p>
+    </div>
+  </div>
+</div>
 
-## Who to Interview
-Do not interview random people. Talk to people who live with the problem.
-
-Start with:
-- People who match your top friction patterns
-- People who have already tried to fix it
-- People who feel the pain often enough to remember the last time
-
-Aim for 5 to 8 interviews. That is enough to see a pattern without drowning
-in noise.
-
-**Good targets**
-- Recent, specific experience ("last week" beats "sometime last year")
-- Clear context (role, workflow, environment)
-- Evidence of action (they tried something, paid someone, or built a workaround)
-
-**Avoid for now**
-- People who only have opinions
-- People who have never felt the pain
-- People who love your idea but cannot describe a real moment
-
-## How to Invite People (Simple Script)
-Keep the invite short, honest, and specific. You are asking for a favor,
-not selling a vision.
-
-**Message template**
-"Hey [name], I am researching how [role] handles [problem]. I am not
-selling anything. Could I ask you a few questions about the last time it
-happened? It will take 15 minutes."
-
-If they say yes, book it quickly. If they say no, thank them and move on.
-
-**Where to find people**
-- Past colleagues or peers in the same role
-- Industry communities or niche Slack groups
-- Forum threads where the pain is already visible
-- LinkedIn search by role and industry
-
-## Interview Setup
-Keep it short. Fifteen to twenty minutes is enough.
-
-Set the tone:
-- "I am here to learn, not to pitch."
-- "There are no right answers."
-- "Real examples help me most."
-
-**Simple timebox (15 minutes)**
-- 2 minutes: context and warm-up
-- 8 minutes: last time, tried/paid, stakes
-- 3 minutes: clarify details and costs
-- 2 minutes: thank them and ask for one referral
-
-Surveys are usually too shallow at this stage. You need stories with
-sequence and detail. Live conversations give you that context.
+<div className="mt-4 rounded-xl border border-fd-border bg-fd-background p-4">
+  <p className="text-[10px] font-semibold uppercase tracking-wider" style={{color: 'hsl(var(--stage-1))'}}>Invite script</p>
+  <p className="mt-2 font-[family-name:var(--font-display)] text-lg italic text-fd-foreground">"Hey [name], I am researching how [role] handles [problem]. I am not selling anything. Could I ask you a few questions about the last time it happened? It will take 15 minutes."</p>
+</div>
 
 ## The 4-Step Interview Path
-These interviews follow a simple flow. Keep it tight and focused.
 
-**Step 1: Context**
-- "Walk me through a normal week."
-- "Where does this problem show up?"
+<div className="mt-4 flex flex-col gap-2">
+  <div className="flex items-center gap-4 rounded-xl border-2 border-fd-border p-4">
+    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>1</span>
+    <div>
+      <p className="text-sm font-semibold text-fd-foreground">Context</p>
+      <p className="mt-0.5 text-xs text-fd-muted-foreground">"Walk me through a normal week." -- "Where does this problem show up?"</p>
+    </div>
+  </div>
+  <div className="flex items-center gap-4 rounded-xl border-2 border-fd-border p-4">
+    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>2</span>
+    <div>
+      <p className="text-sm font-semibold text-fd-foreground">Last Time</p>
+      <p className="mt-0.5 text-xs text-fd-muted-foreground">"When was the last time this happened?" -- "What did you do next?"</p>
+    </div>
+  </div>
+  <div className="flex items-center gap-4 rounded-xl border-2 border-fd-border p-4">
+    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>3</span>
+    <div>
+      <p className="text-sm font-semibold text-fd-foreground">Tried or Paid</p>
+      <p className="mt-0.5 text-xs text-fd-muted-foreground">"What have you already tried?" -- "Have you paid for anything to solve it?"</p>
+    </div>
+  </div>
+  <div className="flex items-center gap-4 rounded-xl border-2 border-fd-border p-4">
+    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>4</span>
+    <div>
+      <p className="text-sm font-semibold text-fd-foreground">Stakes</p>
+      <p className="mt-0.5 text-xs text-fd-muted-foreground">"What did it cost you when it went wrong?" -- "What does a good outcome look like?"</p>
+    </div>
+  </div>
+</div>
 
-**Step 2: Last Time**
-- "When was the last time this happened?"
-- "What did you do next?"
+This sequence forces real examples instead of hypothetical answers. Keep it to 15 minutes: 2 min context, 8 min core, 3 min clarify, 2 min thanks + referral.
 
-**Step 3: Tried or Paid**
-- "What have you already tried?"
-- "Have you paid for anything to solve it?"
+## Interview Rules
 
-**Step 4: Stakes**
-- "What did it cost you when it went wrong?"
-- "What does a good outcome look like?"
+<div className="mt-4 grid gap-3 sm:grid-cols-2">
+  <div className="rounded-xl border-2 border-fd-border p-4" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--stage-1))'}}>
+    <p className="text-sm font-semibold text-fd-foreground">Bad questions</p>
+    <div className="mt-2 space-y-2 text-xs text-fd-muted-foreground">
+      <p>"Would you use a tool that fixes this?"</p>
+      <p>"Would you pay for this?"</p>
+      <p>"Do you like this idea?"</p>
+    </div>
+    <p className="mt-2 text-[10px] italic text-red-500">Creates polite answers</p>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-4" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--stage-1))'}}>
+    <p className="text-sm font-semibold text-fd-foreground">Better questions</p>
+    <div className="mt-2 space-y-2 text-xs text-fd-muted-foreground">
+      <p>"What did you do the last time this happened?"</p>
+      <p>"Have you paid for anything to solve this?"</p>
+      <p>"What do you hate most about how you do it today?"</p>
+    </div>
+    <p className="mt-2 text-[10px] italic" style={{color: 'hsl(var(--stage-1))'}}>Creates evidence</p>
+  </div>
+</div>
 
-This sequence forces real examples instead of hypothetical answers.
+<div className="mt-4 grid gap-3 sm:grid-cols-3">
+  <div className="rounded-xl border border-dashed border-fd-muted-foreground/20 p-4">
+    <p className="text-xs font-semibold text-fd-foreground">No-Pitch Rule</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">Do not sell. Do not hint. Ask and listen. 80% listening, 20% talking.</p>
+  </div>
+  <div className="rounded-xl border border-dashed border-fd-muted-foreground/20 p-4">
+    <p className="text-xs font-semibold text-fd-foreground">Silence Advantage</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">After a short answer, pause. People fill silence with the real detail.</p>
+  </div>
+  <div className="rounded-xl border border-dashed border-fd-muted-foreground/20 p-4">
+    <p className="text-xs font-semibold text-fd-foreground">Handle Compliments</p>
+    <p className="mt-1 text-xs text-fd-muted-foreground">Redirect: "When did you last deal with this? What did you pay?"</p>
+  </div>
+</div>
 
-Diagram cue: a simple interview flow map (context -> last time -> tried/paid -> stakes).
+## Evidence Capture
 
-## Question Bank (Use as Needed)
-You do not need all of these. Pick the ones that fit the goal.
+<div className="mt-4 rounded-xl border-2 p-5" style={{borderColor: 'hsl(var(--stage-1) / 0.4)', backgroundColor: 'hsl(var(--stage-1) / 0.06)'}}>
+  <div className="flex items-center gap-2">
+    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>
+      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+    </span>
+    <span className="text-sm font-semibold text-fd-foreground">Interview Notes Template</span>
+  </div>
+  <div className="mt-4 rounded-lg border-2 border-fd-border bg-fd-background p-4">
+    <div className="space-y-3 text-sm">
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Person and role</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Problem moment (last time)</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Actions taken</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Spend or time cost</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Workarounds used</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+      <div><p className="text-[10px] font-semibold uppercase tracking-wider text-fd-muted-foreground">Quote that signals pain</p><div className="mt-1 h-8 rounded border border-dashed border-fd-muted-foreground/20 bg-fd-muted/30" /></div>
+    </div>
+  </div>
+  <p className="mt-3 text-xs italic text-fd-muted-foreground">Right after each interview, write two lines: "What did they actually do?" and "What surprised me?"</p>
+</div>
 
-Behavior questions:
-- "What is the very first thing you did?"
-- "What did you try next?"
-- "Who else was involved?"
-
-Spend questions:
-- "Did you pay for a tool or service?"
-- "How much time did it take to deal with this?"
-- "Who approved the spend?"
-
-Stakes questions:
-- "What broke when it failed?"
-- "What did it block you from doing?"
-
-## Bad Questions vs Better Questions
-Bad questions create polite answers. Better questions create evidence.
-
-- Bad: "Would you use a tool that fixes this?"
-  Better: "What did you do the last time this happened?"
-
-- Bad: "Would you pay for this?"
-  Better: "Have you paid for anything to solve this?"
-
-- Bad: "Do you like this idea?"
-  Better: "What do you hate most about how you do it today?"
-
-## How to Handle Compliments
-Some people will say, "This sounds great." Do not chase that. Bring them
-back to behavior.
-
-Try:
-- "That is helpful. When did you last deal with this?"
-- "What have you already tried?"
-- "What did you pay, if anything?"
-
-Compliments are not the goal. Evidence is.
-
-## The No-Pitch Rule
-Do not sell. Do not hint. Do not teach. Ask and listen.
-
-The moment you pitch, the interview becomes a performance. People start
-protecting your feelings and hiding their truth. Your goal is evidence, not
-encouragement.
-
-If you need a line, use this:
-"I am not selling anything. I am trying to understand how people handle
-[problem area]. Can I ask a few questions?"
-
-## The Silence Advantage
-After a short answer, pause. People often fill silence with the real detail.
-That detail is where the truth lives.
-
-Do not rush it. Let the pause do its job.
-
-**Listening ratio**
-Aim for 80% listening, 20% talking. If you are explaining, you are not
-learning.
-
-## Using the 5 Whys (Lightly)
-When you hear a real example, ask "why" one or two times to reach the root.
-Do not interrogate. You are not a prosecutor. You are trying to see the
-real cause behind the behavior.
-
-Example:
-"Why did you pick that tool?"
-Pause. Then: "Why that, instead of the alternative?"
-
-## Evidence Capture Template
-Capture evidence while it is fresh. Do not rely on memory.
-
-**Interview notes**
-- Person and role:
-- Problem moment (last time):
-- Actions taken:
-- Spend or time cost:
-- Workarounds used:
-- Quote that signals pain:
-
-You are collecting proof you can point to later.
-
-If you want to record, ask permission. If they say no, do not record.
-Written notes are enough.
-
-## Synthesize the Evidence
-After each interview, write a two-line summary:
-1) What happened last time
-2) What they did to fix it
-
-Then, after all interviews, look for repetition:
-- Same workaround shows up across people
-- Same cost shows up across contexts
-- Same trigger repeats in different roles
-
-Patterns are stronger evidence. Single stories are signals, not proof.
-
-**Evidence summary table (simple)**
-| Person | Last time | Action taken | Spend/time | Workaround |
-| --- | --- | --- | --- | --- |
-| | | | | |
-
-## Quick Debrief (2 Minutes)
-Right after each interview, write two lines:
-- "What did they actually do?"
-- "What surprised me?"
-
-Small debriefs prevent memory drift and help you see patterns sooner.
+After all interviews, look for repetition: same workaround across people, same cost across contexts, same trigger in different roles. Patterns are stronger evidence. Single stories are signals, not proof.
 
 ## Exercise: Run 5-8 Truth Interviews
-Schedule five interviews this week. Keep them short and focused.
 
-**Simple plan**
-1. Invite 8 to 12 people to get 5 to 8 interviews.
-2. Use the 4-step path. Do not improvise a pitch.
-3. Capture evidence notes within 10 minutes of each call.
-4. Look for repeatable action and spend.
+<div className="mt-4 rounded-xl border-2 p-5" style={{borderColor: 'hsl(var(--stage-1) / 0.4)', backgroundColor: 'hsl(var(--stage-1) / 0.06)'}}>
+  <div className="flex items-center gap-2">
+    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-white" style={{backgroundColor: 'hsl(var(--stage-1))'}}>
+      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
+    </span>
+    <span className="text-sm font-semibold text-fd-foreground">Schedule five interviews this week.</span>
+  </div>
+  <div className="mt-4 flex gap-6 text-xs">
+    <div className="flex items-center gap-1.5"><span className="flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold" style={{backgroundColor: 'hsl(var(--stage-1) / 0.15)', color: 'hsl(var(--stage-1))'}}>1</span> <span className="text-fd-muted-foreground">Invite 8-12 people</span></div>
+    <div className="flex items-center gap-1.5"><span className="flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold" style={{backgroundColor: 'hsl(var(--stage-1) / 0.15)', color: 'hsl(var(--stage-1))'}}>2</span> <span className="text-fd-muted-foreground">Use the 4-step path</span></div>
+    <div className="flex items-center gap-1.5"><span className="flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold" style={{backgroundColor: 'hsl(var(--stage-1) / 0.15)', color: 'hsl(var(--stage-1))'}}>3</span> <span className="text-fd-muted-foreground">Capture within 10 min</span></div>
+  </div>
+</div>
 
-If you are nervous, start with someone you already know in the space.
-Then move outward.
+## Quick Reference
 
-## What Strong Evidence Looks Like
-- They describe a recent, specific moment without guessing.
-- They name a workaround or tool they already use.
-- They mention time, money, or effort spent to cope.
+<div className="mt-4 grid gap-4 sm:grid-cols-2">
+  <div className="rounded-xl border-2 border-fd-border p-5" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--stage-1))'}}>
+    <p className="text-sm font-semibold text-fd-foreground">Strong evidence</p>
+    <div className="mt-2 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Recent, specific moment without guessing</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Names a workaround or tool already in use</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> Mentions time, money, or effort spent</p>
+    </div>
+  </div>
+  <div className="rounded-xl border-2 border-fd-border p-5" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--fd-muted-foreground))'}}>
+    <p className="text-sm font-semibold text-fd-foreground">Red flags (pain is weak)</p>
+    <div className="mt-2 space-y-1.5 text-xs text-fd-muted-foreground">
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg> Cannot remember the last time it happened</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg> Never tried to fix it</p>
+      <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg> Minor annoyance, not a repeated drain</p>
+    </div>
+  </div>
+</div>
 
-## Red Flags That Pain Is Weak
-- They cannot remember the last time it happened.
-- They have never tried to fix it.
-- The cost feels like a minor annoyance, not a repeated drain.
-
-## What to Do If Evidence Is Mixed
-Mixed evidence is normal. Do not force a conclusion too early.
-
-If half the people show real pain and half do not, zoom in:
-- Are you talking to the right role?
-- Is the context the same across interviews?
-- Did the pain show up in the same workflow?
-
-If the pattern is still unclear, run 2 to 3 more interviews with tighter
-criteria. Clarity often comes from one more round.
-
-## Common Traps
-- Asking hypothetical questions ("Would you use...?").
-- Interviewing only friends who want to be nice.
-- Talking too much and filling the silence yourself.
-- Ignoring spend and workarounds because they feel small.
-- Recording notes without concrete examples.
+<Callout type="error" title="Common traps">
+- Asking hypothetical questions ("Would you use...?")
+- Interviewing only friends who want to be nice
+- Talking too much and filling the silence yourself
+- Ignoring spend and workarounds because they feel small
+</Callout>
 
 ## When You Can Move On
-You are ready for Module 3 when you can say:
-- "I have heard the same pain in multiple interviews."
-- "I can describe what people do to fix it today."
-- "I have at least one example of spend or a visible workaround."
 
-If you cannot say those yet, keep interviewing. Do not rush this step.
+<div className="mt-4 rounded-xl border-2 border-fd-border p-5" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--stage-1))'}}>
+  <p className="text-sm text-fd-foreground">You are ready for Module 3 when you can say:</p>
+  <div className="mt-3 space-y-2 text-xs text-fd-muted-foreground">
+    <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> "I have heard the same pain in multiple interviews."</p>
+    <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> "I can describe what people do to fix it today."</p>
+    <p className="flex items-start gap-2"><svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg> "I have at least one example of spend or a visible workaround."</p>
+  </div>
+  <p className="mt-3 text-xs italic text-fd-muted-foreground">If you cannot say those yet, keep interviewing. Do not rush this step.</p>
+</div>
 
-## The Handoff to Module 3
-Once you have evidence, you have to name the buyer with budget and
-authority, not just the user with opinions. That is the next step.
+---
 
-**Closing line**
-If no one has tried to fix it, it is not pain yet.
+<div className="mt-8 flex flex-col items-center gap-2 text-center">
+  <p className="font-[family-name:var(--font-display)] text-lg italic text-fd-muted-foreground">If no one has tried to fix it, it is not pain yet.</p>
+</div>
+
+</div>
