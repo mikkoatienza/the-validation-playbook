@@ -15,7 +15,8 @@ After implementing any visual, structural, or UX change, you MUST update this ru
 - **Rule**: No one-off hex values. All colors come from CSS custom properties in `app/global.css`.
 
 ### Typography
-- **Display font**: Instrument Serif (class: `font-display`). Use for hero headings, section titles, pull quotes, stat callouts on marketing/landing pages, AND for the H1 page title on docs pages (via `docs-title` class).
+- **Display font**: Instrument Serif (class: `font-display` or `font-[family-name:var(--font-display)]`). Use for hero headings, section titles, pull quotes, stat callouts on marketing/landing pages, AND for the H1 page title on docs pages (via `docs-title` class).
+- **Instrument Serif minimum size**: Never use Instrument Serif below `text-lg` (18px). The font renders thin and loses presence at smaller sizes. Use `text-lg` minimum for inline quotes, `text-xl` for formulas/frameworks, `text-2xl`+ for headings and pull quotes.
 - **Body font**: Inter (default, no class needed). Use for all body text, UI labels, nav, H2+ headings in docs, and all documentation body content.
 - **No em dashes.** Never use `---` (em dash), `&mdash;`, or the Unicode em dash character. Use `--` instead.
 
