@@ -1,7 +1,30 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef, type RefObject } from "react";
+
+function useInView(threshold = 0.15): [RefObject<HTMLElement | null>, boolean] {
+  const ref = useRef<HTMLElement | null>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [threshold]);
+
+  return [ref, visible];
+}
 
 const stages = [
   {
@@ -11,16 +34,14 @@ const stages = [
     tagline: "Find real pain worth solving",
     question: "Is the pain real?",
     color: "var(--stage-1)",
+    readTime: "~15 min",
     modules: [
       { name: "Friction Scan", desc: "Detect repeated friction in daily work" },
       {
         name: "Truth Interviews",
         desc: "Surface past behavior, not polite opinions",
       },
-      {
-        name: "Buyer Definition",
-        desc: "Map who decides and pays",
-      },
+      { name: "Buyer Definition", desc: "Map who decides and pays" },
     ],
     href: "/docs/stage-1-identify",
   },
@@ -31,8 +52,12 @@ const stages = [
     tagline: "Prove the problem is urgent and not already owned",
     question: "Is it worth solving?",
     color: "var(--stage-2)",
+    readTime: "~15 min",
     modules: [
-      { name: "Risk Map", desc: "Name the assumption that could kill the idea" },
+      {
+        name: "Risk Map",
+        desc: "Name the assumption that could kill the idea",
+      },
       { name: "Problem Proof", desc: "Score the pain with evidence" },
       {
         name: "Alternatives Scan",
@@ -48,9 +73,13 @@ const stages = [
     tagline: "Test commitment, price, and channel",
     question: "Will anyone pay?",
     color: "var(--stage-3)",
+    readTime: "~20 min",
     modules: [
       { name: "Offer Test", desc: "Earn a real yes before you build" },
-      { name: "Price Check", desc: "Find a price people will actually pay" },
+      {
+        name: "Price Check",
+        desc: "Find a price people will actually pay",
+      },
       { name: "Channel Probe", desc: "Find a simple way to reach buyers" },
     ],
     href: "/docs/stage-3-earn",
@@ -62,9 +91,16 @@ const stages = [
     tagline: "Turn commitment into repeat use",
     question: "Do they come back?",
     color: "var(--stage-4)",
+    readTime: "~15 min",
     modules: [
-      { name: "MVP Sprint", desc: "Run the smallest test that proves demand" },
-      { name: "Fit Signals", desc: "Measure repeat use and early retention" },
+      {
+        name: "MVP Sprint",
+        desc: "Run the smallest test that proves demand",
+      },
+      {
+        name: "Fit Signals",
+        desc: "Measure repeat use and early retention",
+      },
       { name: "Fit Fixes", desc: "Fix what blocks fit, not what is shiny" },
     ],
     href: "/docs/stage-4-assess",
@@ -76,12 +112,16 @@ const stages = [
     tagline: "Commit or walk away with clarity",
     question: "Should I go all in?",
     color: "var(--stage-5)",
+    readTime: "~15 min",
     modules: [
       {
         name: "Decision Gate",
         desc: "Make the go / pivot / stop call on evidence",
       },
-      { name: "Founder Fit", desc: "Test insight, access, and credibility" },
+      {
+        name: "Founder Fit",
+        desc: "Test insight, access, and credibility",
+      },
       {
         name: "Momentum OS",
         desc: "Install the weekly rhythm that keeps you honest",
@@ -167,6 +207,14 @@ const artifacts = [
 export default function HomePage() {
   const [activeStage, setActiveStage] = useState(0);
 
+  const [costRef, costVisible] = useInView();
+  const [stepperRef, stepperVisible] = useInView();
+  const [personaRef, personaVisible] = useInView();
+  const [quoteRef, quoteVisible] = useInView();
+  const [peekRef, peekVisible] = useInView();
+  const [artifactRef, artifactVisible] = useInView();
+  const [ctaRef, ctaVisible] = useInView();
+
   return (
     <main className="flex flex-1 flex-col">
       {/* ── Hero ── */}
@@ -178,7 +226,7 @@ export default function HomePage() {
             </p>
             <h1 className="font-display text-4xl leading-[1.15] md:text-[3.5rem] md:leading-[1.12]">
               Every founder starts with a story they want to be true.
-              <span className="mt-2 block text-fd-muted-foreground">
+              <span className="mt-1 block text-fd-muted-foreground">
                 That vision is powerful -- but it is also dangerous.
               </span>
             </h1>
@@ -189,7 +237,7 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-3 pt-2 max-md:justify-center">
               <Link
                 href="/docs"
-                className="rounded-lg bg-accent-warm px-7 py-3 text-sm font-semibold text-[hsl(var(--accent-warm-foreground))] transition-opacity hover:opacity-90"
+                className="rounded-lg bg-accent-warm px-7 py-3 text-sm font-semibold text-[hsl(var(--accent-warm-foreground))] transition-all hover:scale-[1.02] hover:opacity-90"
               >
                 Start the Playbook
               </Link>
@@ -200,15 +248,22 @@ export default function HomePage() {
                 Read the 2-minute summary
               </Link>
             </div>
+            <p className="text-xs text-fd-muted-foreground">
+              15 modules -- ~2 hours of focused reading
+            </p>
           </div>
 
-          {/* Evidence Ladder */}
+          {/* Evidence Ladder -- desktop */}
           <div className="hidden flex-col gap-2 md:flex">
             <p className="mb-2 text-xs font-medium uppercase tracking-widest text-fd-muted-foreground">
               The Evidence Ladder
             </p>
             {evidenceLadder.map((rung, i) => (
-              <div key={rung.level} className="flex items-center gap-3">
+              <div
+                key={rung.level}
+                className="flex items-center gap-3 animate-fade-up"
+                style={{ animationDelay: `${400 + i * 100}ms` }}
+              >
                 <div
                   className="flex h-10 items-center rounded-md px-3 text-xs font-medium text-white/90"
                   style={{
@@ -228,10 +283,31 @@ export default function HomePage() {
             </p>
           </div>
         </div>
+
+        {/* Evidence Ladder -- mobile pills */}
+        <div className="relative z-10 mt-10 flex items-center gap-1.5 md:hidden">
+          {evidenceLadder
+            .slice()
+            .reverse()
+            .map((rung, i) => (
+              <div
+                key={rung.level}
+                className="rounded-full px-2.5 py-1 text-[10px] font-medium text-white/90"
+                style={{
+                  backgroundColor: `hsl(var(--accent-warm) / ${0.4 + i * 0.2})`,
+                }}
+              >
+                {rung.level}
+              </div>
+            ))}
+        </div>
       </section>
 
       {/* ── The Cost ── */}
-      <section className="border-y border-fd-border bg-fd-card px-6 py-24 md:py-28">
+      <section
+        ref={costRef as RefObject<HTMLElement>}
+        className="border-y border-fd-border bg-fd-card px-6 py-24 md:py-28"
+      >
         <div className="mx-auto max-w-5xl">
           <p className="mb-12 text-center text-sm font-medium uppercase tracking-widest text-fd-muted-foreground">
             The cost of building without proof
@@ -250,9 +326,15 @@ export default function HomePage() {
                 stat: "\u201CCool idea!\u201D",
                 text: "Compliments feel like traction. They are not. Behavior is the only proof.",
               },
-            ].map((item) => (
-              <div key={item.stat} className="text-center md:text-left">
-                <p className="font-display text-4xl md:text-5xl">{item.stat}</p>
+            ].map((item, i) => (
+              <div
+                key={item.stat}
+                className={`text-center ${costVisible ? "animate-fade-up" : "animate-hidden"}`}
+                style={{ animationDelay: `${i * 150}ms` }}
+              >
+                <p className="font-display text-4xl md:text-5xl">
+                  {item.stat}
+                </p>
                 <p className="mt-3 text-sm leading-relaxed text-fd-muted-foreground">
                   {item.text}
                 </p>
@@ -263,24 +345,39 @@ export default function HomePage() {
       </section>
 
       {/* ── Interactive IDEAL Journey ── */}
-      <section className="px-6 py-24 md:py-32">
+      <section
+        ref={stepperRef as RefObject<HTMLElement>}
+        className="px-6 py-24 md:py-32"
+      >
         <div className="mx-auto max-w-5xl">
           <p className="mb-3 text-center text-sm font-medium uppercase tracking-widest text-fd-muted-foreground">
             The IDEAL Framework
           </p>
-          <p className="mb-14 text-center font-display text-2xl md:text-3xl">
+          <p
+            className={`mb-14 text-center font-display text-2xl md:text-3xl ${stepperVisible ? "animate-fade-up" : "animate-hidden"}`}
+          >
             Five stages from uncertainty to conviction
           </p>
 
           {/* Desktop stepper */}
           <div className="hidden md:block">
-            {/* Letter nodes */}
-            <div className="mb-8 flex items-center justify-between">
+            <div
+              className={`relative mb-8 flex items-center justify-between ${stepperVisible ? "animate-fade-up" : "animate-hidden"}`}
+              style={{ animationDelay: "150ms" }}
+            >
+              {/* Timeline track */}
+              <div className="timeline-track">
+                <div
+                  className="timeline-fill"
+                  style={{ width: `${activeStage * 25}%` }}
+                />
+              </div>
+
               {stages.map((stage, i) => (
                 <button
                   key={stage.number}
                   onClick={() => setActiveStage(i)}
-                  className="group flex flex-col items-center gap-2"
+                  className="group relative z-10 flex flex-col items-center gap-2"
                 >
                   <div
                     className="flex h-14 w-14 items-center justify-center rounded-full text-xl font-bold transition-all"
@@ -295,6 +392,10 @@ export default function HomePage() {
                           : "hsl(var(--fd-muted-foreground))",
                       transform:
                         activeStage === i ? "scale(1.15)" : "scale(1)",
+                      boxShadow:
+                        activeStage !== i
+                          ? "none"
+                          : `0 0 0 4px hsl(${stage.color} / 0.2)`,
                     }}
                   >
                     {stage.letter}
@@ -316,16 +417,28 @@ export default function HomePage() {
 
             {/* Expanded detail */}
             <div
-              className="rounded-2xl border border-fd-border p-8 transition-all"
+              className={`rounded-2xl border border-fd-border p-8 transition-all ${stepperVisible ? "animate-fade-up" : "animate-hidden"}`}
               style={{
+                animationDelay: "300ms",
                 borderColor: `hsl(${stages[activeStage].color} / 0.3)`,
                 backgroundColor: `hsl(${stages[activeStage].color} / 0.04)`,
               }}
             >
-              <div className="mb-1 text-xs font-medium uppercase tracking-widest text-fd-muted-foreground">
-                Stage {stages[activeStage].number}
+              <div className="flex items-center gap-3">
+                <div className="text-xs font-medium uppercase tracking-widest text-fd-muted-foreground">
+                  Stage {stages[activeStage].number}
+                </div>
+                <span
+                  className="rounded-full px-2 py-0.5 text-[10px] font-medium"
+                  style={{
+                    backgroundColor: `hsl(${stages[activeStage].color} / 0.12)`,
+                    color: `hsl(${stages[activeStage].color})`,
+                  }}
+                >
+                  {stages[activeStage].readTime}
+                </span>
               </div>
-              <h3 className="font-display text-2xl">
+              <h3 className="mt-1 font-display text-2xl">
                 {stages[activeStage].name}
               </h3>
               <p className="mt-1 text-fd-muted-foreground">
@@ -342,7 +455,7 @@ export default function HomePage() {
                 {stages[activeStage].modules.map((mod) => (
                   <div
                     key={mod.name}
-                    className="rounded-lg border border-fd-border bg-fd-background p-4"
+                    className="rounded-lg border border-fd-border bg-fd-background p-4 transition-colors hover:border-t-2 hover:border-t-[hsl(var(--accent-warm))]"
                   >
                     <p className="text-sm font-semibold">{mod.name}</p>
                     <p className="mt-1 text-xs text-fd-muted-foreground">
@@ -394,8 +507,19 @@ export default function HomePage() {
                     {stage.letter}
                   </div>
                   <div className="min-w-0 flex-1">
-                    <p className="text-sm font-semibold">{stage.name}</p>
-                    <p className="truncate text-xs text-fd-muted-foreground">
+                    <div className="flex items-center gap-2">
+                      <p className="text-sm font-semibold">{stage.name}</p>
+                      <span
+                        className="rounded-full px-1.5 py-0.5 text-[9px] font-medium"
+                        style={{
+                          backgroundColor: `hsl(${stage.color} / 0.12)`,
+                          color: `hsl(${stage.color})`,
+                        }}
+                      >
+                        {stage.readTime}
+                      </span>
+                    </div>
+                    <p className="text-xs text-fd-muted-foreground">
                       {stage.tagline}
                     </p>
                   </div>
@@ -403,7 +527,9 @@ export default function HomePage() {
                     className="h-4 w-4 shrink-0 text-fd-muted-foreground transition-transform"
                     style={{
                       transform:
-                        activeStage === i ? "rotate(180deg)" : "rotate(0)",
+                        activeStage === i
+                          ? "rotate(180deg)"
+                          : "rotate(0)",
                     }}
                     fill="none"
                     viewBox="0 0 24 24"
@@ -456,7 +582,10 @@ export default function HomePage() {
       </section>
 
       {/* ── Who This Is For ── */}
-      <section className="border-t border-fd-border bg-fd-card px-6 py-24 md:py-28">
+      <section
+        ref={personaRef as RefObject<HTMLElement>}
+        className="border-t border-fd-border bg-fd-card px-6 py-24 md:py-28"
+      >
         <div className="mx-auto max-w-5xl">
           <p className="mb-3 text-center text-sm font-medium uppercase tracking-widest text-fd-muted-foreground">
             Who this is for
@@ -465,11 +594,12 @@ export default function HomePage() {
             Start where you are
           </p>
           <div className="grid gap-6 md:grid-cols-3">
-            {personas.map((p) => (
+            {personas.map((p, i) => (
               <Link
                 key={p.label}
                 href={p.href}
-                className="group rounded-2xl border border-fd-border bg-fd-background p-6 transition-all hover:border-accent-warm hover:shadow-sm"
+                className={`group rounded-2xl border border-fd-border bg-fd-background p-6 transition-all hover:-translate-y-0.5 hover:border-accent-warm hover:shadow-sm ${personaVisible ? "animate-fade-up" : "animate-hidden"}`}
+                style={{ animationDelay: `${i * 100}ms` }}
               >
                 <p className="mb-1 text-xs font-medium uppercase tracking-wider text-accent-warm">
                   {p.label}
@@ -493,13 +623,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Pull Quotes ── */}
+      {/* ── Author / Credibility ── */}
       <section className="px-6 py-20 md:py-24">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-fd-muted-foreground">
+            Why this playbook exists
+          </p>
+          <p className="font-display text-xl leading-relaxed md:text-2xl">
+            This playbook was built from real validation work -- not theory. The
+            IDEAL framework distills patterns from founders who tested before
+            they built and avoided the ideas that looked good on paper but failed
+            in practice.
+          </p>
+          <p className="mt-4 text-sm text-fd-muted-foreground">
+            Built on evidence. Written for clarity. Designed so you can act this
+            week.
+          </p>
+        </div>
+      </section>
+
+      {/* ── Pull Quotes ── */}
+      <section
+        ref={quoteRef as RefObject<HTMLElement>}
+        className="border-t border-fd-border bg-fd-card px-6 py-20 md:py-24"
+      >
         <div className="mx-auto flex max-w-4xl flex-col items-center gap-10">
-          {pullQuotes.map((q) => (
+          {pullQuotes.map((q, i) => (
             <blockquote
               key={q}
-              className="border-t border-fd-border pt-10 text-center font-display text-2xl italic text-fd-muted-foreground md:text-3xl"
+              className={`border-t border-fd-border pt-10 text-center font-display text-3xl italic text-fd-muted-foreground first:border-t-0 first:pt-0 md:text-4xl ${quoteVisible ? "animate-fade-up" : "animate-hidden"} ${i >= 2 ? "hidden md:block" : ""}`}
+              style={{ animationDelay: `${i * 200}ms` }}
             >
               &ldquo;{q}&rdquo;
             </blockquote>
@@ -507,20 +660,102 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Peek Inside ── */}
+      <section
+        ref={peekRef as RefObject<HTMLElement>}
+        className="px-6 py-24 md:py-28"
+      >
+        <div className="mx-auto max-w-5xl">
+          <p className="mb-3 text-center text-sm font-medium uppercase tracking-widest text-fd-muted-foreground">
+            Peek inside
+          </p>
+          <p className="mb-14 text-center font-display text-2xl md:text-3xl">
+            Your first exercise starts here
+          </p>
+          <div
+            className={`grid items-start gap-10 md:grid-cols-[1fr_1fr] ${peekVisible ? "animate-fade-up" : "animate-hidden"}`}
+          >
+            <div>
+              <p className="mb-1 text-xs font-medium uppercase tracking-wider text-accent-warm">
+                Stage 1, Module 1
+              </p>
+              <h3 className="font-display text-xl">
+                Exercise: 20 Frictions in 20 Minutes
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-fd-muted-foreground">
+                Set a timer for 20 minutes. Write down 20 points of friction. Do
+                not judge them. Quantity first.
+              </p>
+              <ul className="mt-4 space-y-2 text-sm text-fd-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <span className="mt-0.5 text-accent-warm">1.</span>
+                  One friction per line.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-0.5 text-accent-warm">2.</span>
+                  No solutions yet.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-0.5 text-accent-warm">3.</span>
+                  Use the language people actually use.
+                </li>
+              </ul>
+              <p className="mt-4 text-sm leading-relaxed text-fd-muted-foreground">
+                Write each friction as a single sentence: &ldquo;[Person] spends
+                [time/money/effort] on [pain] because [blocker].&rdquo;
+              </p>
+              <Link
+                href="/docs/stage-1-identify/friction-scan"
+                className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-accent-warm hover:underline"
+              >
+                Continue reading the Friction Scan
+                <span aria-hidden="true">&rarr;</span>
+              </Link>
+            </div>
+            <div
+              className={`peek-page rounded-xl border border-fd-border bg-fd-background p-6 md:p-8 ${peekVisible ? "animate-fade-up" : "animate-hidden"}`}
+              style={{ animationDelay: "200ms" }}
+            >
+              <p className="mb-4 text-[10px] font-medium uppercase tracking-widest text-fd-muted-foreground">
+                From the playbook
+              </p>
+              <p className="font-display text-base leading-relaxed md:text-lg">
+                Friction is the repeated moment where a person says, &ldquo;This
+                should be easier,&rdquo; and changes their behavior to cope. It
+                shows up as extra steps, extra tools, and extra time. That
+                behavior is signal.
+              </p>
+              <p className="mt-4 font-display text-base leading-relaxed text-fd-muted-foreground md:text-lg">
+                Friction is not the same as a preference. &ldquo;I wish it
+                looked nicer&rdquo; is a preference. &ldquo;I lose two hours
+                every week doing this by hand&rdquo; is friction.
+              </p>
+              <p className="mt-4 font-display text-base italic text-accent-warm md:text-lg">
+                This is not brainstorming. It is detection.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── What You Will Build ── */}
-      <section className="border-t border-fd-border bg-fd-card px-6 py-24 md:py-28">
+      <section
+        ref={artifactRef as RefObject<HTMLElement>}
+        className="border-t border-fd-border bg-fd-card px-6 py-24 md:py-28"
+      >
         <div className="mx-auto max-w-5xl">
           <p className="mb-3 text-center text-sm font-medium uppercase tracking-widest text-fd-muted-foreground">
             What you will build
           </p>
           <p className="mb-14 text-center font-display text-2xl md:text-3xl">
-            Six artifacts you walk away with
+            Six artifacts you build in 30 days
           </p>
           <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3">
-            {artifacts.map((a) => (
+            {artifacts.map((a, i) => (
               <div
                 key={a.name}
-                className="rounded-xl border border-fd-border bg-fd-background p-5"
+                className={`rounded-xl border border-fd-border bg-fd-background p-5 transition-all hover:-translate-y-0.5 hover:border-t-2 hover:border-t-[hsl(var(--accent-warm))] hover:shadow-sm ${artifactVisible ? "animate-fade-up" : "animate-hidden"}`}
+                style={{ animationDelay: `${i * 80}ms` }}
               >
                 <svg
                   className="mb-3 h-8 w-8 text-accent-warm"
@@ -546,8 +781,13 @@ export default function HomePage() {
       </section>
 
       {/* ── Final CTA ── */}
-      <section className="hero-grain hero-gradient relative px-6 py-24 text-center md:py-28">
-        <div className="relative z-10 mx-auto max-w-2xl">
+      <section
+        ref={ctaRef as RefObject<HTMLElement>}
+        className="hero-grain hero-gradient relative px-6 py-24 text-center md:py-28"
+      >
+        <div
+          className={`relative z-10 mx-auto max-w-2xl ${ctaVisible ? "animate-fade-up" : "animate-hidden"}`}
+        >
           <p className="font-display text-3xl md:text-4xl">
             Most founders do not need more ideas.
             <span className="mt-1 block text-fd-muted-foreground">
@@ -557,7 +797,7 @@ export default function HomePage() {
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
               href="/docs"
-              className="rounded-lg bg-accent-warm px-8 py-3 text-sm font-semibold text-[hsl(var(--accent-warm-foreground))] transition-opacity hover:opacity-90"
+              className="rounded-lg bg-accent-warm px-8 py-3 text-sm font-semibold text-[hsl(var(--accent-warm-foreground))] transition-all hover:scale-[1.02] hover:opacity-90"
             >
               Start the Playbook
             </Link>
@@ -574,14 +814,15 @@ export default function HomePage() {
       {/* ── Footer ── */}
       <footer className="border-t border-fd-border px-6 py-16">
         <div className="mx-auto grid max-w-5xl gap-12 md:grid-cols-[1fr_auto_auto]">
-          {/* Newsletter */}
           <div>
-            <p className="font-display text-lg">Get the weekly evidence brief</p>
+            <p className="font-display text-lg">
+              Get the weekly evidence brief
+            </p>
             <p className="mt-1 text-sm text-fd-muted-foreground">
               Short lessons on validation, delivered every Thursday.
             </p>
             <form
-              className="mt-4 flex max-w-sm gap-2"
+              className="mt-4 flex gap-2 max-md:max-w-sm"
               onSubmit={(e) => e.preventDefault()}
             >
               <input
@@ -591,51 +832,42 @@ export default function HomePage() {
               />
               <button
                 type="submit"
-                className="shrink-0 rounded-lg bg-accent-warm px-5 py-2.5 text-sm font-semibold text-[hsl(var(--accent-warm-foreground))] transition-opacity hover:opacity-90"
+                className="shrink-0 rounded-lg bg-accent-warm px-5 py-2.5 text-sm font-semibold text-[hsl(var(--accent-warm-foreground))] transition-all hover:scale-[1.02] hover:opacity-90"
               >
                 Subscribe
               </button>
             </form>
           </div>
 
-          {/* Quick links */}
           <div>
             <p className="mb-3 text-xs font-medium uppercase tracking-widest text-fd-muted-foreground">
               Playbook
             </p>
             <ul className="flex flex-col gap-2 text-sm">
-              <li>
-                <Link
-                  href="/docs"
-                  className="text-fd-muted-foreground transition-colors hover:text-fd-foreground"
-                >
-                  Introduction
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/docs/overview/executive-summary"
-                  className="text-fd-muted-foreground transition-colors hover:text-fd-foreground"
-                >
-                  Executive Summary
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/docs/stage-1-identify"
-                  className="text-fd-muted-foreground transition-colors hover:text-fd-foreground"
-                >
-                  Stage 1: Identify
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/docs/extensions/positioning-and-edge"
-                  className="text-fd-muted-foreground transition-colors hover:text-fd-foreground"
-                >
-                  Extensions
-                </Link>
-              </li>
+              {[
+                { label: "Introduction", href: "/docs" },
+                {
+                  label: "Executive Summary",
+                  href: "/docs/overview/executive-summary",
+                },
+                {
+                  label: "Stage 1: Identify",
+                  href: "/docs/stage-1-identify",
+                },
+                {
+                  label: "Extensions",
+                  href: "/docs/extensions/positioning-and-edge",
+                },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-fd-muted-foreground transition-all hover:translate-x-0.5 hover:text-fd-foreground"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
@@ -643,30 +875,29 @@ export default function HomePage() {
               Resources
             </p>
             <ul className="flex flex-col gap-2 text-sm">
-              <li>
-                <Link
-                  href="/docs/closing/thirty-day-proof-plan"
-                  className="text-fd-muted-foreground transition-colors hover:text-fd-foreground"
-                >
-                  30-Day Proof Plan
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/docs/stage-3-earn/offer-test"
-                  className="text-fd-muted-foreground transition-colors hover:text-fd-foreground"
-                >
-                  Offer Test Guide
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/docs/stage-5-lock/decision-gate"
-                  className="text-fd-muted-foreground transition-colors hover:text-fd-foreground"
-                >
-                  Decision Gate
-                </Link>
-              </li>
+              {[
+                {
+                  label: "30-Day Proof Plan",
+                  href: "/docs/closing/thirty-day-proof-plan",
+                },
+                {
+                  label: "Offer Test Guide",
+                  href: "/docs/stage-3-earn/offer-test",
+                },
+                {
+                  label: "Decision Gate",
+                  href: "/docs/stage-5-lock/decision-gate",
+                },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-fd-muted-foreground transition-all hover:translate-x-0.5 hover:text-fd-foreground"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
