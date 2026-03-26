@@ -82,45 +82,72 @@ Each module builds on the last. If Module 1 is weak, Module 2 turns fuzzy. If Mo
 
 Clarity is not a feeling. It is a trail of proof.
 
-## Evidence Standard
+## Quick Reference
 
-You do not need perfect data, but you do need real signals:
+<div className="mt-4 grid gap-4 sm:grid-cols-2">
+  <div className="rounded-xl border border-fd-border p-5">
+    <div className="flex items-center gap-2">
+      <span className="flex h-6 w-6 items-center justify-center rounded-md" style={{backgroundColor: 'hsl(var(--stage-1) / 0.12)'}}>
+        <svg className="h-3.5 w-3.5" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      </span>
+      <span className="text-sm font-semibold text-fd-foreground">Evidence Standard</span>
+    </div>
+    <div className="mt-3 space-y-2 text-xs text-fd-muted-foreground">
+      <p className="flex items-start gap-2"><span style={{color: 'hsl(var(--stage-1))'}}>1.</span> A buyer has tried to fix the problem before.</p>
+      <p className="flex items-start gap-2"><span style={{color: 'hsl(var(--stage-1))'}}>2.</span> The pain has a visible cost in time, money, or risk.</p>
+      <p className="flex items-start gap-2"><span style={{color: 'hsl(var(--stage-1))'}}>3.</span> The buyer can be reached this month without magic.</p>
+    </div>
+    <p className="mt-3 text-xs italic text-fd-muted-foreground">No signals? Pause and fix the gap.</p>
+  </div>
+  <div className="rounded-xl border border-fd-border p-5">
+    <div className="flex items-center gap-2">
+      <span className="flex h-6 w-6 items-center justify-center rounded-md" style={{backgroundColor: 'hsl(var(--stage-1) / 0.12)'}}>
+        <svg className="h-3.5 w-3.5" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      </span>
+      <span className="text-sm font-semibold text-fd-foreground">Pace</span>
+    </div>
+    <div className="mt-3 space-y-2 text-xs text-fd-muted-foreground">
+      <p className="flex items-start gap-2"><span style={{color: 'hsl(var(--stage-1))'}}>1.</span> One friction scan in a single sitting</p>
+      <p className="flex items-start gap-2"><span style={{color: 'hsl(var(--stage-1))'}}>2.</span> 5 to 8 interviews over two weeks</p>
+      <p className="flex items-start gap-2"><span style={{color: 'hsl(var(--stage-1))'}}>3.</span> One buyer map draft, revised after evidence</p>
+    </div>
+    <p className="mt-3 text-xs italic text-fd-muted-foreground">Surface truth, not polish.</p>
+  </div>
+</div>
 
-- A buyer has tried to fix the problem before.
-- The pain has a visible cost in time, money, or risk.
-- The buyer can be reached this month without magic.
-
-If you do not have those signals, pause and fix the gap.
-
-## Pace
-
-Speed matters here, but only if you keep the evidence clean. A good rhythm is:
-
-- One friction scan in a single sitting
-- 5 to 8 interviews over two weeks
-- One buyer map draft, revised after evidence
-
-Do not over-polish. Your job is to surface the truth, not to perfect the phrasing.
-
-## What to Ignore for Now
-
-Stage 1 is not the time for feature lists, product names, technical build choices, pricing debates, marketing channels, or fundraising. Those decisions depend on evidence you do not have yet.
-
-## Common Traps
-
+<Callout type="error" title="Common traps">
 - Falling in love with the first idea
 - Treating compliments as proof
 - Interviewing people who are not the buyer
 - Chasing edge cases instead of repeated pain
 - Writing a pitch instead of listening
+</Callout>
 
-If you recognize one, stop and reset. The goal is not speed. The goal is accuracy.
+<div className="mt-4 rounded-xl border border-dashed border-fd-muted-foreground/20 p-5">
+  <p className="text-sm font-semibold text-fd-foreground">What to ignore for now</p>
+  <p className="mt-1 text-xs text-fd-muted-foreground">Feature lists, product names, technical build choices, pricing debates, marketing channels, fundraising. Those decisions depend on evidence you do not have yet.</p>
+</div>
 
 ## What Success Feels Like
 
-By the end of this stage, your idea should feel smaller and sharper, not bigger and fuzzier. You should be able to explain the pain in one sentence, name the buyer without hesitation, and show proof that the pain is real.
-
-If you are starting without an idea, that is normal. Use the friction scan to find repeated pain. The idea will emerge from the evidence, not the other way around.
+<div className="mt-4 rounded-xl border border-fd-border p-5" style={{borderLeftWidth: '3px', borderLeftColor: 'hsl(var(--stage-1))'}}>
+  <p className="text-sm text-fd-foreground">By the end of this stage, your idea should feel <strong>smaller and sharper</strong>, not bigger and fuzzier. You should be able to:</p>
+  <div className="mt-3 grid gap-2 sm:grid-cols-3">
+    <div className="flex items-start gap-2 text-xs text-fd-muted-foreground">
+      <svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+      Explain the pain in one sentence
+    </div>
+    <div className="flex items-start gap-2 text-xs text-fd-muted-foreground">
+      <svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+      Name the buyer without hesitation
+    </div>
+    <div className="flex items-start gap-2 text-xs text-fd-muted-foreground">
+      <svg className="mt-0.5 h-3.5 w-3.5 shrink-0" style={{color: 'hsl(var(--stage-1))'}} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+      Show proof the pain is real
+    </div>
+  </div>
+  <p className="mt-3 text-xs text-fd-muted-foreground">If you are starting without an idea, that is normal. The friction scan will surface repeated pain. The idea emerges from the evidence, not the other way around.</p>
+</div>
 
 ---
 
